@@ -1,0 +1,111 @@
+site_name: Hacking Ético
+
+#nav:
+#    - Inicio: index.md
+#    - Introducción: 00_introduccion.md
+#    - Instalación: 01_instalacion.md
+#    - Conceptos Clave: 
+#        - Conceptos Clave: 02_conceptos_clave.md
+#        - Imágenes: docker/imagenes.md
+#        - Contenedores: docker/contenedores.md
+#        - Volúmenes: docker/volumenes.md
+#        - Redes: docker/redes.md 
+#    - About:
+#        - License: license.md
+#        - Release Notes: release-notes.md
+nav:
+  - 01.-KVM:
+    - ./01.-KVM/index.md
+    - 01.-Red:
+      - ./01.-KVM/01.-Red/index.md
+      - 01.-Modos de red en KVM: ./01.-KVM/01.-Red/01.-Modos de red en KVM.md
+      - 02.-Puentes e Interfaces Virtuales en Linux:
+        - 01.-Introducción a las redes en linux: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/01.-Introducción a las redes en linux.md
+        - 02.-Puentes de Red (Network Bridges): ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/02.-Puentes de Red (Network Bridges).md
+        - 03.-Interfaces Virtuales en Linux: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/03.-Interfaces Virtuales en Linux.md
+        - 04.-Gestión de Puentes con NetworkManager: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/04.-Gestión de Puentes con NetworkManager.md
+        - 05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales.md
+        - 06.-Gestión Avanzada de Puentes e Interfaces Virtuales: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/06.-Gestión Avanzada de Puentes e Interfaces Virtuales.md
+        - 07.-Herramientas y comandos útiles: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/07.-Herramientas y comandos útiles.md
+        - 08.-Consideraciones de Seguridad: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/08.-Consideraciones de Seguridad.md
+        - 09.-Ejemplo Práctico:Configuración Completa con NetworkManager: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/09.-Ejemplo Práctico:Configuración Completa con NetworkManager.md
+        - 10.-Resumen y Mejores Prácticas: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/10.-Resumen y Mejores Prácticas.md
+        - 11.-Recursos adicionales: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/11.-Recursos adicionales.md
+        - Testeo de DHCP: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/Testeo de DHCP.md
+      - 03.-Configuración de red en modo bridge: ./01.-KVM/01.-Red/03.-Configuración de red en modo bridge.md
+      - 04.-Configurar el interfaz puente con NetworkManager: ./01.-KVM/01.-Red/04.-Configurar el interfaz puente con NetworkManager.md
+      - 05.-Configurar red en modo bridge: ./01.-KVM/01.-Red/05.-Configurar red en modo bridge.md
+      - NetPlan vs Network Manager vs systemd: ./01.-KVM/01.-Red/NetPlan vs Network Manager vs systemd.md
+    - 02.-Almacenamiento:
+      - 01.-Aprovisionamiento ligero de discos: ./01.-KVM/02.-Almacenamiento/01.-Aprovisionamiento ligero de discos.md
+
+theme:
+    features:
+        - navigation.top
+        - navigation.top.sticky
+        - navigation.tabs
+        - navigation.indexes
+
+    language : es
+
+    name: 'material'
+    palette:
+
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+
+# gigante
+      primary: blue grey
+      accent: green
+
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+# gigante
+      primary: blue grey
+      accent: green
+
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+# Extensions
+markdown_extensions:
+  - footnotes
+  # - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  # - pymdownx.superfences
+  # - pymdownx.details
+  # - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - roamlinks
+  - mermaid2
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js 
+
+extra:
+  static:
+    - carpe
