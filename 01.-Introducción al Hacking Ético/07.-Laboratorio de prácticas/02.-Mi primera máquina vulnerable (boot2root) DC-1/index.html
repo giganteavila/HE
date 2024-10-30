@@ -129,6 +129,16 @@
 
         </a>
 </li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../99.-Anexos/01.-Conversor%20de%20OVA%20a%20QCOW2/">
+          
+  
+    
+  
+  99.-Anexos
+
+        </a>
+</li>
 </ul>
 </div>
 </nav>
@@ -888,6 +898,30 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    99.-Anexos
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            99.-Anexos
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../99.-Anexos/01.-Conversor%20de%20OVA%20a%20QCOW2/">
+<span class="md-ellipsis">
+    01.-Conversor de OVA a QCOW2
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -943,8 +977,17 @@
 <article class="md-content__inner md-typeset">
 <h1>02.-Mi primera máquina vulnerable (boot2root) DC-1</h1>
 <h2 id="mi-primera-maquina-vulnerable-boot2root-dc-1">Mi primera máquina vulnerable (boot2root): DC-1<a class="headerlink" href="#mi-primera-maquina-vulnerable-boot2root-dc-1" title="Permanent link">¶</a></h2>
-<p>Hackearemos una máquina que tiene diversas vulnerabilidades. Este tipo de retos llamados boot2root tienen dos objetivos. En primer lugar, lograr acceso a la máquina y obtener la primera flag de usuario, y en segundo lugar escalar privilegios y obtener la segunda flag de root o administrador.</p>
+<p>Hackearemos una máquina que tiene diversas vulnerabilidades. Este tipo de retos llamados <strong>boot2root</strong> tienen dos objetivos. En primer lugar, lograr acceso a la máquina y obtener la primera flag de usuario, y en segundo lugar escalar privilegios y obtener la segunda flag de root o administrador.</p>
 <p>Para ello se utilizará una máquina sencilla disponible en VulnHub: DC-1 (<a href="https://www.vulnhub.com/entry/de-1,292/">Máquina en VulnHub: DC-1</a>). Esta máquina fue publicada en 2019 y presenta un sitio web construido con el CMS Drupal.</p>
+<p>En multitud de ocasiones las máquinas se distribuyen en formato OVF. </p>
+<ul>
+<li>
+<p>Un <strong>paquete OVF</strong> contiene metadatos y elementos de archivo que describen las máquinas  virtuales, además de información adicional importante para la  implementación y el funcionamiento de las aplicaciones en el paquete  OVF. Su extensión de nombre de archivo es <code>.ovf</code>.</p>
+</li>
+<li>
+<p>Un <strong>dispositivo virtual abierto (OVA)</strong> es un paquete OVF en un único archivo de archivos con la extensión <code>.ova</code>.</p>
+</li>
+</ul>
 <p>Sin más dilación, hay que descargar la OVA y exportarla en VirtualBox. Emplearemos nuestra máquina atacante Kali Linux para llevar a cabo el test de intrusión. La configuración de red de las máquinas en VirtualBox será de red NAT.</p>
 <h3 id="escaneo-y-enumeracion">Escaneo y enumeración<a class="headerlink" href="#escaneo-y-enumeracion" title="Permanent link">¶</a></h3>
 <p>El primer paso tras arrancar la máquina es averiguar la dirección IP que tiene asignada. Puesto que estamos en el mismo segmento de red se puede emplear el comando netdiscover que utiliza el protocolo ARP para descubrir los equipos activos en una red local:</p>
@@ -954,7 +997,7 @@
 <p><img alt="image-20241024133319287" src="../img/image-20241024133319287.png"/></p>
 <p><strong>Figura 1.11. Dirección IP de la máquina objetivo DC-1 descubierta con netdiscover.</strong></p>
 <p>Una vez fijado el objetivo, se puede realizar un ping para comprobar que está activa. El siguiente paso es comprobar los puertos abiertos y enumerar los servicios que se están ejecutando en cada uno de ellos. Para ello se utiliza el comando <code>nmap</code> con una serie de opciones de enumeración (Apartado 3.3).</p>
-<p><img alt="image-20241024133630532" src="/home/gigante/Dropbox/2025/Hacking Ético/docs/01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/img/image-20241024133630532.png"/></p>
+<p><img alt="image-20241024133630532" src="../img/image-20241024133630532.png"/></p>
 <p>La salida muestra tres puertos abiertos. El que resulta más interesante es el puerto 80 donde se ejecuta el CMS Drupal en su versión 7. Al visitar la web se ve un formulario de login sin ningún enlace más a simple vista. Las credenciales predeterminadas no funcionan, por lo que se podría comenzar a realizar fuzzing web (Apartado 3.4.3). También se podría usar una herramienta específica de enumeración para Drupal como <code>droopescan</code> o <code>drupwn</code> para tratar de averiguar los plugins y temas instalados, la versión específica, las cuentas de usuario, etc. Nos saltaremos estos pasos.</p>
 <p>Durante la labor de pentesting es importante tener en cuenta el periodo temporal en el que se lleva a cabo y conocer las vulnerabilidades más graves recientemente publicadas. La máquina se publicó en 2019 y en aquel momento la versión 7 de Drupal puede que estuviera desactualizada, por lo que se puede ver si existe algún exploit para esta. El comando <code>searchsploit</code> permite realizar esta búsqueda de forma sencilla.</p>
 <pre><code class="language-bash">$ searchsploit drupal 7
