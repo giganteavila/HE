@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../../08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/" rel="prev"/>
-<link href="../02.-Copiar%20y%20Pegar/" rel="next"/>
+<link href="../" rel="prev"/>
+<link href="../02.-Solucionario/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.35" name="generator"/>
-<title>01.-Uso de los puertos USB en KVM - Hacking Ético</title>
+<title>01.-Instrucciones para la captura - Hacking Ético</title>
 <link href="../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tutorial-uso-de-un-puerto-usb-en-una-maquina-virtual-kvmqemu">
+<a class="md-skip" href="#ejercicio-1-verificacion-del-soporte-de-virtualizacion-en-el-host">
           Saltar a contenido
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              01.-Uso de los puertos USB en KVM
+              01.-Instrucciones para la captura
             
           </span>
 </div>
@@ -618,31 +618,66 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_10" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_10" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
 <span class="md-ellipsis">
     09.-Anexos
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_10_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_2_10_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_10">
 <span class="md-nav__icon md-icon"></span>
             09.-Anexos
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/">
+<span class="md-ellipsis">
+    01.-Uso de los puertos USB en KVM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../09.-Anexos/02.-Copiar%20y%20Pegar/">
+<span class="md-ellipsis">
+    02.-Copiar y Pegar
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_11" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    10.-Prácticas
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_2_11_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_11">
+<span class="md-nav__icon md-icon"></span>
+            10.-Prácticas
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    01.-Uso de los puertos USB en KVM
+    01.-Instrucciones para la captura
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    01.-Uso de los puertos USB en KVM
+    01.-Instrucciones para la captura
   </span>
 </a>
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
@@ -652,105 +687,80 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tutorial-uso-de-un-puerto-usb-en-una-maquina-virtual-kvmqemu">
+<a class="md-nav__link" href="#ejercicio-1-verificacion-del-soporte-de-virtualizacion-en-el-host">
 <span class="md-ellipsis">
-      Tutorial: Uso de un puerto USB en una máquina virtual KVM/QEMU
-    </span>
-</a>
-<nav aria-label="Tutorial: Uso de un puerto USB en una máquina virtual KVM/QEMU" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#requisitos-previos">
-<span class="md-ellipsis">
-      Requisitos previos
+      Ejercicio 1: Verificación del soporte de virtualización en el host
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pasos-para-usar-un-puerto-usb-en-una-mv-kvmqemu">
+<a class="md-nav__link" href="#ejercicio-2-instalacion-de-kvm-y-herramientas-de-virtualizacion">
 <span class="md-ellipsis">
-      Pasos para usar un puerto USB en una MV KVM/QEMU
+      Ejercicio 2: Instalación de KVM y herramientas de virtualización
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-verificar-dispositivos-usb-en-el-host">
+<a class="md-nav__link" href="#ejercicio-3-creacion-de-una-maquina-virtual-desde-la-cli">
 <span class="md-ellipsis">
-      1. Verificar dispositivos USB en el host
+      Ejercicio 3: Creación de una máquina virtual desde la CLI
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-anadir-el-dispositivo-usb-a-la-mv-con-virt-manager">
+<a class="md-nav__link" href="#ejercicio-4-creacion-de-un-disco-virtual-adicional-para-una-mv-existente">
 <span class="md-ellipsis">
-      2. Añadir el dispositivo USB a la MV con virt-manager
+      Ejercicio 4: Creación de un disco virtual adicional para una MV existente
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-anadir-el-dispositivo-usb-a-la-mv-desde-la-linea-de-comandos-virsh">
+<a class="md-nav__link" href="#ejercicio-5-migracion-en-vivo-de-una-mv-a-otro-host-opcional">
 <span class="md-ellipsis">
-      3. Añadir el dispositivo USB a la MV desde la línea de comandos (virsh)
+      Ejercicio 5: Migración en vivo de una MV a otro host (Opcional)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#4-verificar-el-dispositivo-usb-en-la-mv">
+<a class="md-nav__link" href="#ejercicio-6-uso-de-snapshots-en-mvs">
 <span class="md-ellipsis">
-      4. Verificar el dispositivo USB en la MV
+      Ejercicio 6: Uso de Snapshots en MVs
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#notas-adicionales">
+<a class="md-nav__link" href="#ejercicio-7-configuracion-de-nat-en-la-red-virtual">
 <span class="md-ellipsis">
-      Notas adicionales:
+      Ejercicio 7: Configuración de NAT en la Red Virtual
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ejercicio-8-creacion-de-una-mv-con-virt-manager">
+<span class="md-ellipsis">
+      Ejercicio 8: Creación de una MV con Virt-Manager
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ejercicio-9-clonacion-de-una-maquina-virtual">
+<span class="md-ellipsis">
+      Ejercicio 9: Clonación de una Máquina Virtual
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ejercicio-10-implementacion-de-contenedores-lxc">
+<span class="md-ellipsis">
+      Ejercicio 10: Implementación de Contenedores LXC
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../02.-Copiar%20y%20Pegar/">
-<span class="md-ellipsis">
-    02.-Copiar y Pegar
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_11" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../10.-Pr%C3%A1cticas/">
-<span class="md-ellipsis">
-    10.-Prácticas
-  </span>
-</a>
-<label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_11_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_11">
-<span class="md-nav__icon md-icon"></span>
-            10.-Prácticas
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/">
-<span class="md-ellipsis">
-    01.-Instrucciones para la captura
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../10.-Pr%C3%A1cticas/02.-Solucionario/">
+<a class="md-nav__link" href="../02.-Solucionario/">
 <span class="md-ellipsis">
     02.-Solucionario
   </span>
@@ -931,64 +941,74 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tutorial-uso-de-un-puerto-usb-en-una-maquina-virtual-kvmqemu">
+<a class="md-nav__link" href="#ejercicio-1-verificacion-del-soporte-de-virtualizacion-en-el-host">
 <span class="md-ellipsis">
-      Tutorial: Uso de un puerto USB en una máquina virtual KVM/QEMU
-    </span>
-</a>
-<nav aria-label="Tutorial: Uso de un puerto USB en una máquina virtual KVM/QEMU" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#requisitos-previos">
-<span class="md-ellipsis">
-      Requisitos previos
+      Ejercicio 1: Verificación del soporte de virtualización en el host
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pasos-para-usar-un-puerto-usb-en-una-mv-kvmqemu">
+<a class="md-nav__link" href="#ejercicio-2-instalacion-de-kvm-y-herramientas-de-virtualizacion">
 <span class="md-ellipsis">
-      Pasos para usar un puerto USB en una MV KVM/QEMU
+      Ejercicio 2: Instalación de KVM y herramientas de virtualización
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-verificar-dispositivos-usb-en-el-host">
+<a class="md-nav__link" href="#ejercicio-3-creacion-de-una-maquina-virtual-desde-la-cli">
 <span class="md-ellipsis">
-      1. Verificar dispositivos USB en el host
+      Ejercicio 3: Creación de una máquina virtual desde la CLI
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-anadir-el-dispositivo-usb-a-la-mv-con-virt-manager">
+<a class="md-nav__link" href="#ejercicio-4-creacion-de-un-disco-virtual-adicional-para-una-mv-existente">
 <span class="md-ellipsis">
-      2. Añadir el dispositivo USB a la MV con virt-manager
+      Ejercicio 4: Creación de un disco virtual adicional para una MV existente
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-anadir-el-dispositivo-usb-a-la-mv-desde-la-linea-de-comandos-virsh">
+<a class="md-nav__link" href="#ejercicio-5-migracion-en-vivo-de-una-mv-a-otro-host-opcional">
 <span class="md-ellipsis">
-      3. Añadir el dispositivo USB a la MV desde la línea de comandos (virsh)
+      Ejercicio 5: Migración en vivo de una MV a otro host (Opcional)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#4-verificar-el-dispositivo-usb-en-la-mv">
+<a class="md-nav__link" href="#ejercicio-6-uso-de-snapshots-en-mvs">
 <span class="md-ellipsis">
-      4. Verificar el dispositivo USB en la MV
+      Ejercicio 6: Uso de Snapshots en MVs
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#notas-adicionales">
+<a class="md-nav__link" href="#ejercicio-7-configuracion-de-nat-en-la-red-virtual">
 <span class="md-ellipsis">
-      Notas adicionales:
+      Ejercicio 7: Configuración de NAT en la Red Virtual
     </span>
 </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ejercicio-8-creacion-de-una-mv-con-virt-manager">
+<span class="md-ellipsis">
+      Ejercicio 8: Creación de una MV con Virt-Manager
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ejercicio-9-clonacion-de-una-maquina-virtual">
+<span class="md-ellipsis">
+      Ejercicio 9: Clonación de una Máquina Virtual
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ejercicio-10-implementacion-de-contenedores-lxc">
+<span class="md-ellipsis">
+      Ejercicio 10: Implementación de Contenedores LXC
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -997,91 +1017,187 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>01.-Uso de los puertos USB en KVM</h1>
-<h2 id="tutorial-uso-de-un-puerto-usb-en-una-maquina-virtual-kvmqemu">Tutorial: Uso de un puerto USB en una máquina virtual KVM/QEMU<a class="headerlink" href="#tutorial-uso-de-un-puerto-usb-en-una-maquina-virtual-kvmqemu" title="Permanent link">¶</a></h2>
-<h3 id="requisitos-previos">Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">¶</a></h3>
-<ul>
-<li>Tienes instalado y configurado <strong>KVM</strong> y <strong>QEMU</strong> en tu máquina host.</li>
-<li>Tienes una máquina virtual (MV) ya creada y en funcionamiento en tu sistema de virtualización KVM/QEMU.</li>
-<li>El puerto USB y los dispositivos que quieres conectar deben estar físicamente accesibles en tu host.</li>
-</ul>
-<h3 id="pasos-para-usar-un-puerto-usb-en-una-mv-kvmqemu">Pasos para usar un puerto USB en una MV KVM/QEMU<a class="headerlink" href="#pasos-para-usar-un-puerto-usb-en-una-mv-kvmqemu" title="Permanent link">¶</a></h3>
-<h3 id="1-verificar-dispositivos-usb-en-el-host">1. Verificar dispositivos USB en el host<a class="headerlink" href="#1-verificar-dispositivos-usb-en-el-host" title="Permanent link">¶</a></h3>
-<p>Primero, debemos identificar los dispositivos USB conectados en el host que queremos pasar a la máquina virtual.</p>
-<ol>
-<li>Abre una terminal en el host.</li>
-<li>Ejecuta el comando:
-   <code>bash
-   lsusb</code>
-   Esto listará todos los dispositivos USB conectados. El formato de salida se verá algo como esto:
-   <code>Bus 001 Device 003: ID 0951:16a4 Kingston Technology
-   Bus 001 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub</code></li>
-</ol>
-<p>Toma nota del <strong>Bus</strong> y <strong>Device ID</strong> del dispositivo USB que deseas conectar a tu máquina virtual (en este caso, <code>Bus 001 Device 003</code>).</p>
-<h3 id="2-anadir-el-dispositivo-usb-a-la-mv-con-virt-manager">2. Añadir el dispositivo USB a la MV con virt-manager<a class="headerlink" href="#2-anadir-el-dispositivo-usb-a-la-mv-con-virt-manager" title="Permanent link">¶</a></h3>
-<p>Si prefieres una interfaz gráfica, puedes usar <strong>virt-manager</strong> para añadir el dispositivo USB a tu MV.</p>
-<ol>
-<li>Abre <strong>virt-manager</strong>:
-   <code>bash
-   virt-manager</code></li>
-<li>Selecciona la máquina virtual a la que deseas conectar el USB.</li>
-<li>Haz clic en el botón de <strong>Detalles</strong> de la MV (icono de herramientas).</li>
-<li>Navega a la pestaña <strong>Add Hardware</strong> (Agregar Hardware).</li>
-<li>Selecciona <strong>USB Host Device</strong> en la lista y elige el dispositivo USB que aparece en la lista (ej. "Kingston Technology").</li>
-<li>Haz clic en <strong>Finish</strong> o <strong>Apply</strong> para añadir el dispositivo USB a la máquina virtual.</li>
-</ol>
-<h3 id="3-anadir-el-dispositivo-usb-a-la-mv-desde-la-linea-de-comandos-virsh">3. Añadir el dispositivo USB a la MV desde la línea de comandos (virsh)<a class="headerlink" href="#3-anadir-el-dispositivo-usb-a-la-mv-desde-la-linea-de-comandos-virsh" title="Permanent link">¶</a></h3>
-<p>Si prefieres trabajar con la terminal, puedes añadir el dispositivo USB usando el comando <code>virsh</code>.</p>
+<h1>01.-Instrucciones para la captura</h1>
+<h3 id="ejercicio-1-verificacion-del-soporte-de-virtualizacion-en-el-host">Ejercicio 1: Verificación del soporte de virtualización en el host<a class="headerlink" href="#ejercicio-1-verificacion-del-soporte-de-virtualizacion-en-el-host" title="Permanent link">¶</a></h3>
+<p><strong>Instrucciones para la captura:</strong></p>
 <ol>
 <li>
-<p>Asegúrate de que tu MV esté detenida antes de agregar el dispositivo USB:
-   <code>bash
-   virsh shutdown &lt;nombreMV&gt;</code></p>
+<p>Abre una terminal en tu sistema Linux.</p>
 </li>
 <li>
-<p>Agrega el dispositivo USB usando el comando <code>virsh attach-device</code>:
-   <code>bash
-   virsh attach-device &lt;nombreMV&gt; --file &lt;path_al_xml_del_dispositivo&gt;</code></p>
+<p>Ejecuta el comando:<br/>
+<code>bash
+   egrep -c '(vmx|svm)' /proc/cpuinfo</code></p>
 </li>
-</ol>
-<p>El archivo XML debe tener la siguiente estructura:
-   <code>xml
-   &lt;hostdev mode='subsystem' type='usb'&gt;
-     &lt;source&gt;
-       &lt;vendor id='0x0951'/&gt;
-       &lt;product id='0x16a4'/&gt;
-     &lt;/source&gt;
-   &lt;/hostdev&gt;</code></p>
-<p>Donde <code>vendor id</code> y <code>product id</code> son los valores que obtuviste con <code>lsusb</code>. En este caso, <code>0951</code> es el <strong>vendor id</strong> de Kingston, y <code>16a4</code> es el <strong>product id</strong>.</p>
-<ol>
-<li>Inicia la máquina virtual de nuevo:
-   <code>bash
-   virsh start &lt;nombreMV&gt;</code></li>
-</ol>
-<h3 id="4-verificar-el-dispositivo-usb-en-la-mv">4. Verificar el dispositivo USB en la MV<a class="headerlink" href="#4-verificar-el-dispositivo-usb-en-la-mv" title="Permanent link">¶</a></h3>
-<p>Una vez que hayas agregado el dispositivo USB, inicia sesión en tu máquina virtual (por ejemplo, mediante <code>virt-manager</code> o SSH). Luego:</p>
-<ol>
-<li>Abre una terminal en la MV.</li>
-<li>Ejecuta el comando:
-   <code>bash
-   lsusb</code>
-   El dispositivo USB debería aparecer en la lista dentro de la MV.</li>
+<li>
+<p>Asegúrate de que el resultado del comando sea visible en la terminal.</p>
+</li>
+<li>
+<p>Haz una captura de pantalla mostrando claramente la terminal con el comando ejecutado y el resultado visible.</p>
+</li>
 </ol>
 <hr/>
-<h3 id="notas-adicionales">Notas adicionales:<a class="headerlink" href="#notas-adicionales" title="Permanent link">¶</a></h3>
-<ul>
+<h3 id="ejercicio-2-instalacion-de-kvm-y-herramientas-de-virtualizacion">Ejercicio 2: Instalación de KVM y herramientas de virtualización<a class="headerlink" href="#ejercicio-2-instalacion-de-kvm-y-herramientas-de-virtualizacion" title="Permanent link">¶</a></h3>
+<p><strong>Instrucciones para la captura:</strong></p>
+<ol>
 <li>
-<p><strong>Desconectar el dispositivo USB</strong>: Para desconectar el dispositivo USB de la MV mientras está en funcionamiento, puedes usar el siguiente comando:
-  <code>bash
-  virsh detach-device &lt;nombreMV&gt; &lt;path_al_xml_del_dispositivo&gt;</code></p>
+<p>Abre una terminal.</p>
 </li>
 <li>
-<p><strong>Acceso exclusivo</strong>: Cuando conectas un dispositivo USB a una MV, este dispositivo ya no estará accesible desde el host hasta que se desasocie de la MV.</p>
+<p>Ejecuta el siguiente comando para mostrar que los paquetes necesarios están instalados: 
+   <code>bash
+   dpkg -l | grep -E 'qemu-kvm|libvirt-bin|virt-manager'</code></p>
 </li>
 <li>
-<p><strong>Compatibilidad</strong>: Asegúrate de que los drivers necesarios para el dispositivo USB están instalados tanto en el host como en la máquina virtual para evitar problemas de compatibilidad.</p>
+<p>Asegúrate de que la salida de los paquetes instalados se vea completa en la terminal.</p>
 </li>
-</ul>
+<li>
+<p>Haz una captura de pantalla mostrando el resultado en la terminal con el comando ejecutado.</p>
+</li>
+</ol>
+<hr/>
+<h3 id="ejercicio-3-creacion-de-una-maquina-virtual-desde-la-cli">Ejercicio 3: Creación de una máquina virtual desde la CLI<a class="headerlink" href="#ejercicio-3-creacion-de-una-maquina-virtual-desde-la-cli" title="Permanent link">¶</a></h3>
+<p><strong>Instrucciones para la captura:</strong></p>
+<ol>
+<li>
+<p>Tras haber creado la máquina virtual usando el comando <code>virt-install</code>, abre una terminal.</p>
+</li>
+<li>
+<p>Ejecuta el comando para listar las máquinas virtuales:
+   <code>bash
+   virsh list --all</code></p>
+</li>
+<li>
+<p>Asegúrate de que el nombre de la MV que has creado esté en la lista.</p>
+</li>
+<li>
+<p>Haz una captura de pantalla de la terminal mostrando el comando y la salida con la MV visible.</p>
+</li>
+</ol>
+<hr/>
+<h3 id="ejercicio-4-creacion-de-un-disco-virtual-adicional-para-una-mv-existente">Ejercicio 4: Creación de un disco virtual adicional para una MV existente<a class="headerlink" href="#ejercicio-4-creacion-de-un-disco-virtual-adicional-para-una-mv-existente" title="Permanent link">¶</a></h3>
+<p><strong>Instrucciones para la captura:</strong></p>
+<ol>
+<li>
+<p>Abre una terminal y ejecuta el siguiente comando para verificar que el segundo disco ha sido añadido correctamente:
+   <code>bash
+   virsh domblklist &lt;nombreMV&gt;</code></p>
+</li>
+<li>
+<p>Asegúrate de que la salida muestre tanto el disco principal como el disco adicional (<code>vdb</code>).</p>
+</li>
+<li>
+<p>Haz una captura de pantalla de la terminal con el comando ejecutado y los discos listados.</p>
+</li>
+</ol>
+<hr/>
+<h3 id="ejercicio-5-migracion-en-vivo-de-una-mv-a-otro-host-opcional">Ejercicio 5: Migración en vivo de una MV a otro host (Opcional)<a class="headerlink" href="#ejercicio-5-migracion-en-vivo-de-una-mv-a-otro-host-opcional" title="Permanent link">¶</a></h3>
+<p><strong>Instrucciones para la captura:</strong></p>
+<ol>
+<li>
+<p>Realiza la migración en vivo de la MV a otro host.</p>
+</li>
+<li>
+<p>En el host de origen, ejecuta el comando:
+   <code>bash
+   virsh list --all</code></p>
+</li>
+<li>
+<p>Asegúrate de que la MV ya no esté en la lista del host de origen.</p>
+</li>
+<li>
+<p>En el host de destino, ejecuta el mismo comando <code>virsh list --all</code> y asegúrate de que la MV aparece en la lista.</p>
+</li>
+<li>
+<p>Haz una captura de pantalla de ambas terminales (host origen y host destino) mostrando la migración completada.</p>
+</li>
+</ol>
+<hr/>
+<h3 id="ejercicio-6-uso-de-snapshots-en-mvs">Ejercicio 6: Uso de Snapshots en MVs<a class="headerlink" href="#ejercicio-6-uso-de-snapshots-en-mvs" title="Permanent link">¶</a></h3>
+<p><strong>Instrucciones para la captura:</strong></p>
+<ol>
+<li>
+<p>Tras crear el snapshot, ejecuta el siguiente comando para listar los snapshots de la máquina virtual:
+   <code>bash
+   virsh snapshot-list &lt;nombreMV&gt;</code></p>
+</li>
+<li>
+<p>Asegúrate de que el snapshot creado esté en la lista.</p>
+</li>
+<li>
+<p>Haz una captura de pantalla de la terminal con el comando ejecutado y el snapshot visible.</p>
+</li>
+</ol>
+<hr/>
+<h3 id="ejercicio-7-configuracion-de-nat-en-la-red-virtual">Ejercicio 7: Configuración de NAT en la Red Virtual<a class="headerlink" href="#ejercicio-7-configuracion-de-nat-en-la-red-virtual" title="Permanent link">¶</a></h3>
+<p><strong>Instrucciones para la captura:</strong></p>
+<ol>
+<li>
+<p>Abre una terminal y edita la red predeterminada con el comando:
+   <code>bash
+   virsh net-edit default</code></p>
+</li>
+<li>
+<p>Captura la ventana mostrando la configuración de la red en modo de edición.</p>
+</li>
+<li>
+<p>Luego, ejecuta el comando:
+   <code>bash
+   virsh net-list</code></p>
+</li>
+<li>
+<p>Asegúrate de que la red NAT esté activa.</p>
+</li>
+<li>
+<p>Haz una captura de pantalla mostrando la configuración y el estado de la red.</p>
+</li>
+</ol>
+<hr/>
+<h3 id="ejercicio-8-creacion-de-una-mv-con-virt-manager">Ejercicio 8: Creación de una MV con Virt-Manager<a class="headerlink" href="#ejercicio-8-creacion-de-una-mv-con-virt-manager" title="Permanent link">¶</a></h3>
+<p><strong>Instrucciones para la captura:</strong></p>
+<ol>
+<li>
+<p>Abre <code>virt-manager</code> y navega hasta la máquina virtual que creaste con esta herramienta.</p>
+</li>
+<li>
+<p>Muestra la ventana de la MV donde se vea su nombre, los recursos asignados (RAM, disco, etc.), y que está en ejecución.</p>
+</li>
+<li>
+<p>Haz una captura de pantalla de la interfaz de <code>virt-manager</code> con estos detalles visibles.</p>
+</li>
+</ol>
+<hr/>
+<h3 id="ejercicio-9-clonacion-de-una-maquina-virtual">Ejercicio 9: Clonación de una Máquina Virtual<a class="headerlink" href="#ejercicio-9-clonacion-de-una-maquina-virtual" title="Permanent link">¶</a></h3>
+<p><strong>Instrucciones para la captura:</strong></p>
+<ol>
+<li>
+<p>Después de haber clonado la MV, ejecuta en una terminal:
+   <code>bash
+   virsh list --all</code></p>
+</li>
+<li>
+<p>Asegúrate de que tanto la máquina original como el clon están en la lista, mostrando claramente los dos nombres.</p>
+</li>
+<li>
+<p>Haz una captura de pantalla de la terminal con ambos nombres de máquinas visibles.</p>
+</li>
+</ol>
+<hr/>
+<h3 id="ejercicio-10-implementacion-de-contenedores-lxc">Ejercicio 10: Implementación de Contenedores LXC<a class="headerlink" href="#ejercicio-10-implementacion-de-contenedores-lxc" title="Permanent link">¶</a></h3>
+<p><strong>Instrucciones para la captura:</strong></p>
+<ol>
+<li>
+<p>Después de crear el contenedor LXC, ejecuta el siguiente comando para verificar que el contenedor está en funcionamiento:
+   <code>bash
+   lxc-ls --fancy</code></p>
+</li>
+<li>
+<p>Asegúrate de que el contenedor que has creado esté listado con su nombre y estado.</p>
+</li>
+<li>
+<p>Haz una captura de pantalla mostrando el comando y la lista de contenedores.</p>
+</li>
+</ol>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
