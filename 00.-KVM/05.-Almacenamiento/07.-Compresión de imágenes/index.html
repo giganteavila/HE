@@ -20,7 +20,7 @@
     
     
       
-        <title>07.-Compresión de imágenes - SRI</title>
+        <title>07.-Compresión de imágenes - Hacking Ético</title>
       
     
     
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../../.." title="SRI" class="md-header__button md-logo" aria-label="SRI" data-md-component="logo">
+    <a href="../../.." title="Hacking Ético" class="md-header__button md-logo" aria-label="Hacking Ético" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            SRI
+            Hacking Ético
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -297,13 +297,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="SRI" class="md-nav__button md-logo" aria-label="SRI" data-md-component="logo">
+    <a href="../../.." title="Hacking Ético" class="md-nav__button md-logo" aria-label="Hacking Ético" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    SRI
+    Hacking Ético
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1302,6 +1302,15 @@
   <a href="#por-que-usar-virt-sparsify" class="md-nav__link">
     <span class="md-ellipsis">
       ¿Por qué usar virt-sparsify?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación
     </span>
   </a>
   
@@ -2461,8 +2470,6 @@
       
         
       
-        
-      
     
     
       
@@ -2502,27 +2509,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/.Text%20File.txt.kate-swp" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    .Text File.txt
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -2780,6 +2766,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#uso-basico" class="md-nav__link">
     <span class="md-ellipsis">
       Uso Básico
@@ -2862,6 +2857,13 @@
 <h3 id="por-que-usar-virt-sparsify">¿Por qué usar <code>virt-sparsify</code>?<a class="headerlink" href="#por-que-usar-virt-sparsify" title="Permanent link">&para;</a></h3>
 <p>En entornos de virtualización, las imágenes de disco pueden contener bloques vacíos debido a archivos eliminados o a la expansión del sistema de archivos. Estos bloques vacíos ocupan espacio en el almacenamiento físico. <code>virt-sparsify</code> permite optimizar las imágenes eliminando estos bloques y creando una imagen "esparcida" que ocupa menos espacio en disco.</p>
 <hr />
+<h3 id="instalacion">Instalación<a class="headerlink" href="#instalacion" title="Permanent link">&para;</a></h3>
+<p>Puedes instalar <code>virt-sparsify</code>, una herramienta de la suite <code>libguestfs</code>, mediante el paquete <code>libguestfs-tools</code> mediante:</p>
+<pre><code class="language-bash">sudo apt install libguestfs-tools
+</code></pre>
+<p>o bien en Arch con</p>
+<pre><code class="language-bash">sudo pacman -S guestfs-tools
+</code></pre>
 <h3 id="uso-basico">Uso Básico<a class="headerlink" href="#uso-basico" title="Permanent link">&para;</a></h3>
 <p>La sintaxis básica del comando <code>virt-sparsify</code> es:</p>
 <pre><code class="language-bash">virt-sparsify &lt;imagen-entrada&gt; &lt;imagen-salida&gt;
