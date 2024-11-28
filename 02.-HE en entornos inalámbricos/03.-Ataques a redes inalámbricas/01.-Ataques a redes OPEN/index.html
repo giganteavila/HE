@@ -3405,6 +3405,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Tipos de Ataque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceso-no-autorizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso No Autorizado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausencia-de-cifrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ausencia de Cifrado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3742,6 +3766,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Tipos de Ataque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceso-no-autorizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso No Autorizado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausencia-de-cifrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ausencia de Cifrado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3771,15 +3819,13 @@
   <h1>01.-Ataques a redes OPEN</h1>
 
 <p>Las redes de tipo OPEN no establecen contraseña para que los dispositivos clientes se conecten. Esto significa que todos los datos transmitidos por la red, que no utilicen protocolos cifrados como HTTP, FTP o telnet, quedan expuestos.</p>
-<hr />
-<h4 id="usos"><strong>Usos</strong><a class="headerlink" href="#usos" title="Permanent link">&para;</a></h4>
+<h2 id="usos">Usos<a class="headerlink" href="#usos" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Normalmente se utilizan para proporcionar conectividad a <strong>invitados externos</strong> a una organización.</li>
 <li>Hotspots en restaurantes, bares u hoteles.</li>
 <li>Consideradas <strong>poco confiables</strong>, se limitan al acceso a internet y están abiertas a cualquier individuo.</li>
 </ul>
-<hr />
-<h4 id="problemas-asociados"><strong>Problemas Asociados</strong><a class="headerlink" href="#problemas-asociados" title="Permanent link">&para;</a></h4>
+<h2 id="problemas-asociados">Problemas Asociados<a class="headerlink" href="#problemas-asociados" title="Permanent link">&para;</a></h2>
 <ol>
 <li>No establecen autenticación.</li>
 <li>No ofrecen cifrado del canal, por lo que los datos se transmiten en claro.</li>
@@ -3788,52 +3834,62 @@
 <li>Pueden ser utilizadas para ataques externos, dejando registros como origen.</li>
 <li>Si no están correctamente segmentadas, pueden causar fugas de información o acceso a otras redes.</li>
 </ol>
-<hr />
-<h4 id="tipos-de-ataque"><strong>Tipos de Ataque</strong><a class="headerlink" href="#tipos-de-ataque" title="Permanent link">&para;</a></h4>
-<ol>
-<li><strong>Acceso No Autorizado</strong></li>
+<h2 id="tipos-de-ataque">Tipos de Ataque<a class="headerlink" href="#tipos-de-ataque" title="Permanent link">&para;</a></h2>
+<h3 id="acceso-no-autorizado">Acceso No Autorizado<a class="headerlink" href="#acceso-no-autorizado" title="Permanent link">&para;</a></h3>
+<ul>
 <li>Es el ataque más sencillo: solo es necesario conectarse a la red.</li>
 <li>Una vez dentro, se pueden comprometer otros equipos conectados.</li>
-<li>
-<p>Comandos útiles:
-     <code>bash
-     $ iwconfig wlan0 mode Managed essid 'nombre_de_red'
-     $ dhclient -v wlan0</code></p>
-</li>
-<li>
-<p><strong>Ausencia de Cifrado</strong></p>
-</li>
+<li>Comandos útiles:</li>
+</ul>
+<pre><code class="language-bash">     $ iwconfig wlan0 mode Managed essid 'nombre_de_red'
+     $ dhclient -v wlan0
+</code></pre>
+<h3 id="ausencia-de-cifrado">Ausencia de Cifrado<a class="headerlink" href="#ausencia-de-cifrado" title="Permanent link">&para;</a></h3>
+<ul>
 <li>Captura el tráfico no cifrado transmitido en la red:<ul>
-<li>Configura la tarjeta en modo monitor y establece un filtro para capturar tramas de la red específica:
-   <code>bash
-   $ airodump-ng wlan0 --encrypt OPN --band bga -c 100 --essid 'nombre_de_red'</code></li>
-<li>Usa <strong>Wireshark</strong> para analizar los paquetes capturados.</li>
-<li>Guarda la información en un archivo <code>.pcap</code> para analizar posteriormente:
-   <code>bash
-   $ airodump-ng wlan0 --encrypt OPN --band bga -c 100 --essid 'nombre_de_red' -w captura_red</code></li>
+<li>Configura la tarjeta en modo monitor y establece un filtro para capturar tramas de la red específica:</li>
 </ul>
 </li>
-</ol>
-<hr />
-<h3 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h3>
+</ul>
+<pre><code class="language-bash">       $ airodump-ng wlan0 --encrypt OPN --band bga -c 100 --essid 'nombre_de_red'
+</code></pre>
+<ul>
+<li>Usa <strong>Wireshark</strong> para analizar los paquetes capturados.<ul>
+<li>Guarda la información en un archivo <code>.pcap</code> para analizar posteriormente:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-bash">       $ airodump-ng wlan0 --encrypt OPN --band bga -c 100 --essid 'nombre_de_red' -w captura_red
+</code></pre>
+<h2 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Para acceder a una red OPEN no hace falta autenticación.</strong></li>
 <li>
-<p><strong>Verdadero / Falso:</strong> Verdadero<br />
-     &gt; Este tipo de redes no solicitan autenticación de acceso.</p>
+<p><strong>Para acceder a una red OPEN no hace falta autenticación.</strong></p>
+<ol>
+<li><strong>Verdadero / Falso:</strong> Verdadero  <blockquote>
+<p>Este tipo de redes no solicitan autenticación de acceso.</p>
+</blockquote>
+</li>
+</ol>
 </li>
 <li>
 <p><strong>Este tipo de redes no proporcionan cifrado del canal de comunicaciones en la capa de enlace.</strong></p>
+<ul>
+<li><strong>Verdadero / Falso:</strong> Verdadero  <blockquote>
+<p>La información transmitida por la capa de enlace no se cifra, quedando expuesta salvo cifrado en capas superiores del modelo OSI.</p>
+</blockquote>
 </li>
-<li>
-<p><strong>Verdadero / Falso:</strong> Verdadero<br />
-     &gt; La información transmitida por la capa de enlace no se cifra, quedando expuesta salvo cifrado en capas superiores del modelo OSI.</p>
+</ul>
 </li>
 <li>
 <p><strong>En una red OPEN puedes capturar información de otros equipos de la red.</strong></p>
+<ul>
+<li><strong>Verdadero / Falso:</strong> Verdadero  <blockquote>
+<p>Configurando la tarjeta en modo monitor, puedes recibir datos transmitidos por otros equipos conectados a la misma red.</p>
+</blockquote>
 </li>
-<li><strong>Verdadero / Falso:</strong> Verdadero<br />
-     &gt; Configurando la tarjeta en modo monitor, puedes recibir datos transmitidos por otros equipos conectados a la misma red.</li>
+</ul>
+</li>
 </ol>
 
 

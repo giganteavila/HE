@@ -3254,9 +3254,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Tarjetas de Red y Antenas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#tarjetas" class="md-nav__link">
     <span class="md-ellipsis">
       Tarjetas
@@ -3264,8 +3265,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#antenas" class="md-nav__link">
     <span class="md-ellipsis">
       Antenas
@@ -3273,8 +3274,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#software-y-herramientas-para-la-monitorizacion" class="md-nav__link">
     <span class="md-ellipsis">
       Software y Herramientas para la Monitorización
@@ -3282,13 +3283,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#autoevaluacion" class="md-nav__link">
     <span class="md-ellipsis">
       Autoevaluación
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3733,9 +3739,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Tarjetas de Red y Antenas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#tarjetas" class="md-nav__link">
     <span class="md-ellipsis">
       Tarjetas
@@ -3743,8 +3750,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#antenas" class="md-nav__link">
     <span class="md-ellipsis">
       Antenas
@@ -3752,8 +3759,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#software-y-herramientas-para-la-monitorizacion" class="md-nav__link">
     <span class="md-ellipsis">
       Software y Herramientas para la Monitorización
@@ -3761,13 +3768,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#autoevaluacion" class="md-nav__link">
     <span class="md-ellipsis">
       Autoevaluación
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3788,104 +3800,122 @@
 
   <h1>01.-Necesidades Técnicas para la Monitorización</h1>
 
-<h4 id="tarjetas-de-red-y-antenas"><strong>Tarjetas de Red y Antenas</strong><a class="headerlink" href="#tarjetas-de-red-y-antenas" title="Permanent link">&para;</a></h4>
+<h2 id="tarjetas-de-red-y-antenas"><strong>Tarjetas de Red y Antenas</strong><a class="headerlink" href="#tarjetas-de-red-y-antenas" title="Permanent link">&para;</a></h2>
 <p>Para realizar pruebas de monitorización es esencial contar con hardware específico. Dependiendo de la red a auditar, los requisitos pueden variar.</p>
-<hr />
-<h4 id="tarjetas"><strong>Tarjetas</strong><a class="headerlink" href="#tarjetas" title="Permanent link">&para;</a></h4>
+<h3 id="tarjetas"><strong>Tarjetas</strong><a class="headerlink" href="#tarjetas" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Modo Monitor</strong>:</li>
-<li>La tarjeta debe soportar este modo de operación y el driver del sistema operativo debe permitir habilitarlo.</li>
 <li>
-<p>Sin este modo, no se podrán capturar paquetes en el espacio radioeléctrico.</p>
+<p><strong>Modo Monitor</strong>:</p>
+<ul>
+<li>La tarjeta debe soportar este modo de operación y el driver del sistema operativo debe permitir habilitarlo.</li>
+<li>Sin este modo, no se podrán capturar paquetes en el espacio radioeléctrico.</li>
+</ul>
 </li>
 <li>
 <p><strong>Soporte para Frecuencias de 2,4 GHz y 5 GHz</strong>:</p>
-</li>
-<li>
-<p>Es preferible que la tarjeta soporte ambas bandas, ya que la mayoría de los dispositivos modernos operan en 5 GHz.</p>
+<ul>
+<li>Es preferible que la tarjeta soporte ambas bandas, ya que la mayoría de los dispositivos modernos operan en 5 GHz.</li>
+</ul>
 </li>
 <li>
 <p><strong>Antenas Extraíbles</strong>:</p>
-</li>
-<li>
-<p>Permiten acoplar antenas externas, ya sean direccionales u omnidireccionales, para mejorar la captura de señal.</p>
+<ul>
+<li>Permiten acoplar antenas externas, ya sean direccionales u omnidireccionales, para mejorar la captura de señal.</li>
+</ul>
 </li>
 <li>
 <p><strong>USB 3.0</strong>:</p>
-</li>
+<ul>
 <li>Permite mayor velocidad de transmisión entre la tarjeta y el equipo de auditoría, esencial para capturar tramas de red de manera eficiente.</li>
+</ul>
+</li>
 </ol>
-<hr />
-<h4 id="antenas"><strong>Antenas</strong><a class="headerlink" href="#antenas" title="Permanent link">&para;</a></h4>
+<h3 id="antenas"><strong>Antenas</strong><a class="headerlink" href="#antenas" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Omnidireccionales</strong>:</li>
-<li>Emiten en todas direcciones.</li>
 <li>
-<p>Se utilizan para abarcar grandes áreas o para configurar Puntos de Acceso fraudulentos con máxima cobertura.</p>
+<p><strong>Omnidireccionales</strong>:</p>
+<ul>
+<li>Emiten en todas direcciones.</li>
+<li>Se utilizan para abarcar grandes áreas o para configurar Puntos de Acceso fraudulentos con máxima cobertura.</li>
+</ul>
 </li>
 <li>
 <p><strong>Direccionales</strong>:</p>
-</li>
+<ul>
 <li>Emiten en una única dirección.</li>
 <li>Ideales para redes fuera del rango de cobertura o en áreas restringidas.</li>
+</ul>
+</li>
 </ol>
-<hr />
-<h4 id="software-y-herramientas-para-la-monitorizacion"><strong>Software y Herramientas para la Monitorización</strong><a class="headerlink" href="#software-y-herramientas-para-la-monitorizacion" title="Permanent link">&para;</a></h4>
+<h3 id="software-y-herramientas-para-la-monitorizacion"><strong>Software y Herramientas para la Monitorización</strong><a class="headerlink" href="#software-y-herramientas-para-la-monitorizacion" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>airmon-ng</strong>:</li>
+<li>
+<p><strong>airmon-ng</strong>:</p>
+<ul>
 <li>Configura la tarjeta de red en modo monitor.</li>
 <li>Disponible en Linux (parte de aircrack-ng).</li>
 <li>Uso mediante consola.</li>
-<li>
-<p><a href="https://www.aircrack-ng.org/">Página oficial</a></p>
+<li><a href="https://www.aircrack-ng.org/">Página oficial</a></li>
+</ul>
 </li>
 <li>
 <p><strong>airodump-ng</strong>:</p>
-</li>
+<ul>
 <li>Monitoreo de redes Wi-Fi en las bandas de 2,4 GHz y 5 GHz.</li>
 <li>Disponible en Linux (parte de aircrack-ng).</li>
 <li>Uso mediante consola.</li>
-<li>
-<p><a href="https://www.aircrack-ng.org/">Página oficial</a></p>
+<li><a href="https://www.aircrack-ng.org/">Página oficial</a></li>
+</ul>
 </li>
 <li>
 <p><strong>NetStumbler</strong>:</p>
-</li>
+<ul>
 <li>Monitoreo de redes Wi-Fi en Windows.</li>
 <li>Uso mediante interfaz gráfica.</li>
 <li>Sólo soporta monitorización en 2,4 GHz.</li>
 <li>Desactualizado (última versión en mayo de 2011).</li>
-<li>
-<p><a href="http://stumbler.net/">Página oficial</a></p>
+<li><a href="http://stumbler.net/">Página oficial</a></li>
+</ul>
 </li>
 <li>
 <p><strong>Kismet</strong>:</p>
-</li>
+<ul>
 <li>Monitorización de redes en Linux y macOS.</li>
 <li>Uso mediante consola o interfaz gráfica.</li>
 <li>Soporta bandas de 2,4 GHz y 5 GHz.</li>
 <li><a href="https://www.kismetwireless.net/">Página oficial</a></li>
+</ul>
+</li>
 </ol>
-<hr />
 <h3 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Para establecer un Punto de Acceso falso, la tarjeta tiene que estar configurada en modo Managed.</strong></li>
 <li>
-<p><strong>Verdadero / Falso:</strong> Falso<br />
-     &gt; Para establecer un Punto de Acceso falso el modo de la tarjeta ha de ser <strong>Master</strong>.</p>
+<p><strong>Para establecer un Punto de Acceso falso, la tarjeta tiene que estar configurada en modo Managed.</strong></p>
+<ul>
+<li><strong>Verdadero / Falso:</strong> Falso  <blockquote>
+<p>Para establecer un Punto de Acceso falso el modo de la tarjeta ha de ser <strong>Master</strong>.</p>
+</blockquote>
+</li>
+</ul>
 </li>
 <li>
 <p><strong>A la hora de establecer un Punto de Acceso falso, para garantizar mejor cobertura se pueden utilizar antenas omnidireccionales externas.</strong></p>
+<ul>
+<li><strong>Verdadero / Falso:</strong> Verdadero  <blockquote>
+<p>Las antenas omnidireccionales externas amplían la cobertura en todas direcciones, mejorando la señal.</p>
+</blockquote>
 </li>
-<li>
-<p><strong>Verdadero / Falso:</strong> Verdadero<br />
-     &gt; Las antenas omnidireccionales externas amplían la cobertura en todas direcciones, mejorando la señal.</p>
+</ul>
 </li>
 <li>
 <p><strong>Para que podamos realizar tareas de deautenticación de clientes, la tarjeta inalámbrica y el driver han de permitir la inyección de paquetes.</strong></p>
+<ul>
+<li><strong>Verdadero / Falso:</strong> Verdadero  <blockquote>
+<p>Para realizar el proceso de deautenticación hay que inyectar tramas específicas de gestión en la red inalámbrica, la tarjeta y el driver deben permitir la inyección de estas tramas.</p>
+</blockquote>
 </li>
-<li><strong>Verdadero / Falso:</strong> Verdadero<br />
-     &gt; Para realizar el proceso de deautenticación hay que inyectar tramas específicas de gestión en la red inalámbrica, la tarjeta y el driver deben permitir la inyección de estas tramas.</li>
+</ul>
+</li>
 </ol>
 
 

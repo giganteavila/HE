@@ -3682,52 +3682,60 @@
 
 <h1 id="02-analisis-y-recoleccion-de-datos-en-redes-inalambricas">02.-Análisis y recolección de datos en redes inalámbricas<a class="headerlink" href="#02-analisis-y-recoleccion-de-datos-en-redes-inalambricas" title="Permanent link">&para;</a></h1>
 <p>La <strong>monitorización de redes inalámbricas</strong> consiste en observar el espectro radioeléctrico para determinar y caracterizar las distintas señales de redes Wi-Fi disponibles. Esta fase inicial en pruebas de hacking ético permite identificar redes y sus características:</p>
-<h4 id="caracteristicas-a-monitorear"><strong>Características a Monitorear</strong><a class="headerlink" href="#caracteristicas-a-monitorear" title="Permanent link">&para;</a></h4>
+<h2 id="caracteristicas-a-monitorear"><strong>Características a Monitorear</strong><a class="headerlink" href="#caracteristicas-a-monitorear" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>SSID</strong>:</li>
-<li>Indica el nombre de la red.</li>
 <li>
-<p>Ayuda a identificar redes de interés, como domésticas o empresariales, basándose en el nombre.</p>
+<p><strong>SSID</strong>:</p>
+<ul>
+<li>Indica el nombre de la red.</li>
+<li>Ayuda a identificar redes de interés, como domésticas o empresariales, basándose en el nombre.</li>
+</ul>
 </li>
 <li>
 <p><strong>BSSID</strong>:</p>
-</li>
+<ul>
 <li>Dirección MAC del Punto de Acceso que publica la red.</li>
-<li>
-<p>Esencial para monitorizar un punto de acceso específico y capturar paquetes de red.</p>
+<li>Esencial para monitorizar un punto de acceso específico y capturar paquetes de red.</li>
+</ul>
 </li>
 <li>
 <p><strong>Canales Operativos</strong>:</p>
-</li>
+<ul>
 <li>Las redes Wi-Fi utilizan canales no consecutivos para evitar interferencias.</li>
-<li>
-<p>Conocer el canal permite fijar la señal para capturar paquetes.</p>
+<li>Conocer el canal permite fijar la señal para capturar paquetes.</li>
+</ul>
 </li>
 <li>
 <p><strong>Tipo de Red y Seguridad</strong>:</p>
-</li>
+<ul>
 <li>Clasificación de la red: OPEN, WEP, WPA-PSK, WPA/WPA2-Enterprise.</li>
-<li>
-<p>Ayuda a determinar qué pruebas realizar dependiendo del tipo de red.</p>
+<li>Ayuda a determinar qué pruebas realizar dependiendo del tipo de red.</li>
+</ul>
 </li>
 <li>
 <p><strong>Clientes Conectados</strong>:</p>
-</li>
+<ul>
 <li>Número de clientes conectados al Punto de Acceso.</li>
 <li>Algunas técnicas son más efectivas en redes con múltiples clientes conectados.</li>
+</ul>
+</li>
 </ol>
-<h4 id="tipos-de-paquetes-analizados"><strong>Tipos de Paquetes Analizados</strong><a class="headerlink" href="#tipos-de-paquetes-analizados" title="Permanent link">&para;</a></h4>
+<h2 id="tipos-de-paquetes-analizados"><strong>Tipos de Paquetes Analizados</strong><a class="headerlink" href="#tipos-de-paquetes-analizados" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Beacon Frames</strong>:</li>
-<li>Anuncios de los Puntos de Acceso para informar sobre el SSID, BSSID y tipo de red.</li>
 <li>
-<p>Siempre se transmiten sin cifrar.</p>
+<p><strong>Beacon Frames</strong>:</p>
+<ul>
+<li>Anuncios de los Puntos de Acceso para informar sobre el SSID, BSSID y tipo de red.</li>
+<li>Siempre se transmiten sin cifrar.</li>
+</ul>
 </li>
 <li>
 <p><strong>Tramas de Gestión</strong>:</p>
-</li>
+<ul>
 <li>Paquetes que garantizan la conexión Wi-Fi o emiten órdenes (autenticación, desconexión, asociación).</li>
 <li>Estos paquetes tampoco van cifrados y contienen información útil para análisis.</li>
+</ul>
+</li>
 </ol>
 <blockquote>
 <p><strong>Nota</strong>: La monitorización se centra en capturar y analizar estos paquetes propagados por el espectro radioeléctrico.</p>

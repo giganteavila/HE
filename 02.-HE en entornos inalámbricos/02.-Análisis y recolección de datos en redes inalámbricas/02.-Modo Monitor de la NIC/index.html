@@ -3753,32 +3753,31 @@
   <h1>02.-Modo Monitor de la NIC</h1>
 
 <p>Para monitorizar una red inalámbrica utilizando la suite <strong>aircrack-ng</strong>, es necesario poner primero la tarjeta de red en modo monitor. Este apartado detalla el procedimiento.</p>
-<hr />
-<h4 id="recomendacion-inicial"><strong>Recomendación Inicial</strong><a class="headerlink" href="#recomendacion-inicial" title="Permanent link">&para;</a></h4>
+<h2 id="recomendacion-inicial"><strong>Recomendación Inicial</strong><a class="headerlink" href="#recomendacion-inicial" title="Permanent link">&para;</a></h2>
 <p>Antes de iniciar la operativa, es importante saber que el servicio <strong>NetworkManager</strong> de Linux puede interferir en las pruebas, ya que intenta usar la tarjeta en modo Managed para conectarse a redes Wi-Fi. 
 Es recomendable detener este servicio de forma temporal utilizando el siguiente comando:</p>
 <pre><code class="language-bash">$ systemctl stop NetworkManager
 </code></pre>
-<hr />
-<h4 id="poner-la-tarjeta-en-modo-monitor"><strong>Poner la Tarjeta en Modo Monitor</strong><a class="headerlink" href="#poner-la-tarjeta-en-modo-monitor" title="Permanent link">&para;</a></h4>
+<h2 id="poner-la-tarjeta-en-modo-monitor">Poner la Tarjeta en Modo Monitor<a class="headerlink" href="#poner-la-tarjeta-en-modo-monitor" title="Permanent link">&para;</a></h2>
 <p>Aunque las versiones modernas de <strong>aircrack-ng</strong> realizan este cambio automáticamente, es útil conocer cómo hacerlo manualmente.</p>
 <ol>
-<li><strong>Usando iwconfig</strong>:
-   El comando <code>iwconfig</code> permite configurar la interfaz inalámbrica en modo monitor.<br />
-   Ejemplo para iniciar la interfaz "wlan0" en modo monitor:</li>
+<li><strong>Usando iwconfig</strong>: El comando <code>iwconfig</code> permite configurar la interfaz inalámbrica en modo monitor.<ul>
+<li>Ejemplo para iniciar la interfaz "wlan0" en modo monitor:</li>
+</ul>
+</li>
 </ol>
-<p><code>bash
-   $ iwconfig wlan0 mode Monitor</code></p>
+<pre><code class="language-bash">        $ iwconfig wlan0 mode Monitor
+</code></pre>
 <ol>
-<li><strong>Usando airmon-ng</strong>:
-   La herramienta <code>airmon-ng</code> crea una nueva interfaz virtual en modo monitor.<br />
-   Ejemplo suponiendo que la interfaz original se denomina "wlan0":</li>
+<li><strong>Usando airmon-ng</strong>: La herramienta <code>airmon-ng</code> crea una nueva interfaz virtual en modo monitor.<ul>
+<li>Ejemplo suponiendo que la interfaz original se denomina "wlan0":</li>
+</ul>
+</li>
 </ol>
-<p><code>bash
-   $ airmon-ng start wlan0</code></p>
-<p>Al completar esta acción, se creará una nueva interfaz llamada <code>wlan0mon</code>.</p>
-<hr />
-<h4 id="verificar-la-configuracion"><strong>Verificar la Configuración</strong><a class="headerlink" href="#verificar-la-configuracion" title="Permanent link">&para;</a></h4>
+<pre><code class="language-bash">        $ airmon-ng start wlan0
+</code></pre>
+<p>Al completar estas acciones, se creará una nueva interfaz llamada <code>wlan0mon</code>.</p>
+<h2 id="verificar-la-configuracion">Verificar la Configuración<a class="headerlink" href="#verificar-la-configuracion" title="Permanent link">&para;</a></h2>
 <p>Para comprobar que la tarjeta está en modo monitor y revisar sus propiedades, utiliza el comando <code>iwconfig</code>:</p>
 <pre><code class="language-bash">$ iwconfig
 </code></pre>

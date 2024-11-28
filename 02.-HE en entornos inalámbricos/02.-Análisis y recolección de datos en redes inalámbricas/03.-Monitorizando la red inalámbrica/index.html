@@ -3296,10 +3296,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="airodump-ng">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#uso-basico" class="md-nav__link">
     <span class="md-ellipsis">
       Uso Básico
@@ -3307,8 +3306,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#filtros-importantes" class="md-nav__link">
     <span class="md-ellipsis">
       Filtros Importantes
@@ -3316,17 +3315,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#nota-importante" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nota Importante
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#comandos-utiles" class="md-nav__link">
     <span class="md-ellipsis">
       Comandos Útiles
@@ -3334,18 +3324,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#recursos-adicionales" class="md-nav__link">
     <span class="md-ellipsis">
       Recursos Adicionales
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3757,10 +3742,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="airodump-ng">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#uso-basico" class="md-nav__link">
     <span class="md-ellipsis">
       Uso Básico
@@ -3768,8 +3752,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#filtros-importantes" class="md-nav__link">
     <span class="md-ellipsis">
       Filtros Importantes
@@ -3777,17 +3761,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#nota-importante" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nota Importante
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#comandos-utiles" class="md-nav__link">
     <span class="md-ellipsis">
       Comandos Útiles
@@ -3795,18 +3770,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#recursos-adicionales" class="md-nav__link">
     <span class="md-ellipsis">
       Recursos Adicionales
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3836,107 +3806,117 @@
 
   <h1>03.-Monitorizando la red inalámbrica</h1>
 
-<h3 id="airodump-ng"><code>airodump-ng</code><a class="headerlink" href="#airodump-ng" title="Permanent link">&para;</a></h3>
+<h2 id="airodump-ng"><code>airodump-ng</code><a class="headerlink" href="#airodump-ng" title="Permanent link">&para;</a></h2>
 <p>La herramienta <strong>airodump-ng</strong> permite monitorizar redes inalámbricas y filtrar el tráfico capturado. Es parte de la suite <strong>aircrack-ng</strong> y funciona mediante consola.</p>
 <p><img alt="image-20241120144452758" src="../img/image-20241120144452758.png" /></p>
-<hr />
-<h4 id="uso-basico"><strong>Uso Básico</strong><a class="headerlink" href="#uso-basico" title="Permanent link">&para;</a></h4>
+<h2 id="uso-basico"><strong>Uso Básico</strong><a class="headerlink" href="#uso-basico" title="Permanent link">&para;</a></h2>
 <p>Para listar las redes disponibles utilizando la interfaz <code>wlan0</code>:</p>
 <pre><code class="language-bash">$ airodump-ng wlan0
 </code></pre>
-<hr />
-<h4 id="filtros-importantes"><strong>Filtros Importantes</strong><a class="headerlink" href="#filtros-importantes" title="Permanent link">&para;</a></h4>
-<ol>
-<li><strong>Filtrar por Banda de Frecuencia</strong>:</li>
+<h2 id="filtros-importantes"><strong>Filtros Importantes</strong><a class="headerlink" href="#filtros-importantes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Filtrar por Banda de Frecuencia</strong>:<ul>
 <li>Utiliza el operador <code>--band</code> para seleccionar una banda específica:<ul>
 <li><strong>a</strong>: 5 GHz</li>
 <li><strong>bgn</strong>: 2,4 GHz</li>
 </ul>
 </li>
-<li>
-<p>Ejemplo:
-     <code>bash
-     $ airodump-ng wlan0 --band a
-     $ airodump-ng wlan0 --band bg</code></p>
+<li>Ejemplo:</li>
+</ul>
 </li>
-<li>
-<p><strong>Filtrar por Canales Específicos</strong>:</p>
-</li>
+</ul>
+<pre><code class="language-bash">        $ airodump-ng wlan0 --band a
+        $ airodump-ng wlan0 --band bg
+</code></pre>
+<ul>
+<li><strong>Filtrar por Canales Específicos</strong>:<ul>
 <li>Usa el operador <code>-c</code> o <code>--channel</code> para filtrar canales específicos o rangos.</li>
-<li>
-<p>Ejemplo:
-     <code>bash
-     $ airodump-ng wlan0 --channel 1-11
-     $ airodump-ng wlan0 --channel 36-136
-     $ airodump-ng wlan0 --channel 1,3,5-7,36</code></p>
+<li>Ejemplo:</li>
+</ul>
 </li>
+</ul>
+<pre><code class="language-bash">        $ airodump-ng wlan0 --channel 1-11
+        $ airodump-ng wlan0 --channel 36-136
+        $ airodump-ng wlan0 --channel 1,3,5-7,36
+</code></pre>
+<ul>
 <li>
 <p><strong>Filtrar por Nombre de Red</strong>:</p>
-</li>
-<li>Para un nombre específico:
-     <code>bash
-     $ airodump-ng wlan0 --essid Wi-Fi-Hotel</code></li>
-<li>
-<p>Para nombres que coincidan con un patrón (regex):
-     <code>bash
-     $ airodump-ng wlan0 --essid-regex ".*Hotel.*"</code></p>
+<ul>
+<li>Para un nombre específico:</li>
+</ul>
+<p><code>$ airodump-ng wlan0 --essid Wi-Fi-Hotel</code></p>
+<ul>
+<li>Para nombres que coincidan con un patrón (regex):</li>
+</ul>
+<p><code>$ airodump-ng wlan0 --essid-regex ".*Hotel.*"</code></p>
 </li>
 <li>
 <p><strong>Filtrar por Dirección MAC del Punto de Acceso</strong>:</p>
-</li>
-<li>
-<p>Usa el operador <code>--bssid</code> para capturar datos de un Punto de Acceso específico:
-     <code>bash
-     $ airodump-ng wlan0 --bssid AA:BB:CC:DD:EE:FF</code></p>
+<ul>
+<li>Usa el operador <code>--bssid</code> para capturar datos de un Punto de Acceso específico:</li>
+</ul>
+<p><code>$ airodump-ng wlan0 --bssid AA:BB:CC:DD:EE:FF</code></p>
 </li>
 <li>
 <p><strong>Filtrar por Tipo de Cifrado</strong>:</p>
-</li>
+<ul>
 <li>Usa el operador <code>--encrypt</code> para capturar redes con un cifrado específico:<ul>
 <li><strong>OPN</strong>: Abierto.</li>
 <li><strong>WEP</strong>, <strong>WPA1</strong>, <strong>WPA2</strong>.</li>
 </ul>
 </li>
-<li>Ejemplo:
-     <code>bash
-     $ airodump-ng wlan0 --encrypt WPA2 --band bga</code></li>
-</ol>
-<hr />
-<h4 id="nota-importante"><strong>Nota Importante</strong><a class="headerlink" href="#nota-importante" title="Permanent link">&para;</a></h4>
-<p>Si no fijas un canal con <code>--channel</code>, la tarjeta realizará saltos de frecuencia entre canales para buscar los patrones definidos en otros filtros (como <code>--bssid</code>).</p>
-<hr />
-<h4 id="comandos-utiles"><strong>Comandos Útiles</strong><a class="headerlink" href="#comandos-utiles" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Para acceder a la ayuda y opciones avanzadas:
-  <code>bash
-  $ airodump-ng --help</code></li>
+<li>Ejemplo:</li>
 </ul>
+</li>
+</ul>
+<pre><code class="language-bash">$ airodump-ng wlan0 --encrypt WPA2 --band bga
+</code></pre>
 <hr />
-<h4 id="recursos-adicionales"><strong>Recursos Adicionales</strong><a class="headerlink" href="#recursos-adicionales" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Nota Importante</strong>
+Si no fijas un canal con <code>--channel</code>, la tarjeta realizará saltos de frecuencia entre canales para buscar los patrones definidos en otros filtros (como <code>--bssid</code>).</p>
+</blockquote>
+<h2 id="comandos-utiles"><strong>Comandos Útiles</strong><a class="headerlink" href="#comandos-utiles" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Para acceder a la ayuda y opciones avanzadas:</li>
+</ul>
+<pre><code class="language-bash">$ airodump-ng --help
+</code></pre>
+<h2 id="recursos-adicionales"><strong>Recursos Adicionales</strong><a class="headerlink" href="#recursos-adicionales" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=WfYxrLaqlN8">Monitorización con airodump-ng (Inglés)</a></li>
 </ul>
-<hr />
-<h3 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h3>
+<h2 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h2>
 <p>Indica si las siguientes afirmaciones son verdaderas o falsas según corresponda:</p>
 <ol>
-<li><strong>La banda de tipo "a" utiliza los canales 36-136.</strong></li>
 <li>
-<p><strong>Verdadero / Falso:</strong> Verdadero<br />
-     &gt; La banda de tipo "a" es la banda de los 5 GHz y utiliza los canales del 36 al 136.</p>
+<p><strong>La banda de tipo "a" utiliza los canales 36-136.</strong></p>
+<ul>
+<li><strong>Verdadero / Falso:</strong> Verdadero<blockquote>
+<p>La banda de tipo "a" es la banda de los 5 GHz y utiliza los canales del 36 al 136.</p>
+</blockquote>
+</li>
+</ul>
 </li>
 <li>
 <p><strong>Cuando queremos capturar toda la transmisión de un Punto de Acceso en concreto (por ejemplo, para capturar la autenticación), no hace falta fijar un canal de monitorización.</strong></p>
+<ul>
+<li><strong>Verdadero / Falso:</strong> Falso<blockquote>
+<p>Si no se indica un canal para que se quede fijo, la tarjeta de red va dando saltos entre canales y monitoriza un canal específico cada cierto espacio de tiempo.</p>
+</blockquote>
 </li>
-<li>
-<p><strong>Verdadero / Falso:</strong> Falso<br />
-     &gt; Si no se indica un canal para que se quede fijo, la tarjeta de red va dando saltos entre canales y monitoriza un canal específico cada cierto espacio de tiempo.</p>
+</ul>
 </li>
 <li>
 <p><strong>A la hora de monitorizar sobre un Punto de Acceso sólo hace falta filtrar por SSID y canal en el que opera.</strong></p>
+<ul>
+<li><strong>Verdadero / Falso:</strong> Falso<blockquote>
+<p>En caso de que existan varios Puntos de Acceso dentro de la misma red que utilicen los mismos canales, es posible que monitorices varios puntos de acceso de la misma red que compartan canal y estén en tu radio de cobertura.</p>
+</blockquote>
 </li>
-<li><strong>Verdadero / Falso:</strong> Falso<br />
-     &gt; En caso de que existan varios Puntos de Acceso dentro de la misma red que utilicen los mismos canales, es posible que monitorices varios puntos de acceso de la misma red que compartan canal y estén en tu radio de cobertura.</li>
+</ul>
+</li>
 </ol>
 
 
