@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/05.-Snapshots%20de%20MV/">
+        <link rel="prev" href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/05.-Pr%C3%A1cticas/01.-Revisi%C3%B3n%20del%20dise%C3%B1o%20de%20la%20red%20Wi-Fi/">
       
       
-        <link rel="next" href="../02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/">
+        <link rel="next" href="01.-Fase%20de%20reconocimiento%20%28Footprinting%29/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
-        <title>01.-Introduccion - Hacking Ético</title>
+        <title>Ataque y defensa en entorno de pruebas - Hacking Ético</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tipos-de-redes-virtuales-privadas" class="md-skip">
+        <a href="#ataque-y-defensa-en-entorno-de-pruebas" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../../.." title="Hacking Ético" class="md-header__button md-logo" aria-label="Hacking Ético" data-md-component="logo">
+    <a href=".." title="Hacking Ético" class="md-header__button md-logo" aria-label="Hacking Ético" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              01.-Introduccion
+              Ataque y defensa en entorno de pruebas
             
           </span>
         </div>
@@ -201,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
     
@@ -216,13 +216,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../00.-KVM/" class="md-tabs__link">
           
   
     
@@ -242,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/" class="md-tabs__link">
+        <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/" class="md-tabs__link">
           
   
     
@@ -262,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-tabs__link">
+        <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-tabs__link">
           
   
     
@@ -278,11 +276,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -302,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../99.-Anexos/" class="md-tabs__link">
+        <a href="../99.-Anexos/" class="md-tabs__link">
           
   
     
@@ -337,7 +337,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Hacking Ético" class="md-nav__button md-logo" aria-label="Hacking Ético" data-md-component="logo">
+    <a href=".." title="Hacking Ético" class="md-nav__button md-logo" aria-label="Hacking Ético" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -355,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -372,8 +372,6 @@
       
   
   
-    
-  
   
   
     
@@ -406,22 +404,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../00.-KVM/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -432,13 +427,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             00.-KVM
@@ -504,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/" class="md-nav__link">
+      <a href="../00.-KVM/01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -525,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n/02.-Tipos/" class="md-nav__link">
+      <a href="../00.-KVM/01.-Introducci%C3%B3n/02.-Tipos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n/03.-qemu-kvm/" class="md-nav__link">
+      <a href="../00.-KVM/01.-Introducci%C3%B3n/03.-qemu-kvm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n/04.-libvirt/" class="md-nav__link">
+      <a href="../00.-KVM/01.-Introducci%C3%B3n/04.-libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n/05.-LXC/" class="md-nav__link">
+      <a href="../00.-KVM/01.-Introducci%C3%B3n/05.-LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-Instalaci%C3%B3n/01.-Escenario%20de%20instalaci%C3%B3n/" class="md-nav__link">
+      <a href="../00.-KVM/02.-Instalaci%C3%B3n/01.-Escenario%20de%20instalaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-Instalaci%C3%B3n/02.-Instalacion/" class="md-nav__link">
+      <a href="../00.-KVM/02.-Instalaci%C3%B3n/02.-Instalacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-Instalaci%C3%B3n/03.-Conexi%C3%B3n%20local%20no%20privilegiada%20a%20libvirt/" class="md-nav__link">
+      <a href="../00.-KVM/02.-Instalaci%C3%B3n/03.-Conexi%C3%B3n%20local%20no%20privilegiada%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-Instalaci%C3%B3n/04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/" class="md-nav__link">
+      <a href="../00.-KVM/02.-Instalaci%C3%B3n/04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota%20a%20libvirt/" class="md-nav__link">
+      <a href="../00.-KVM/02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/" class="md-nav__link">
+      <a href="../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/02.-Caracter%C3%ADsticas%20de%20la%20MV/" class="md-nav__link">
+      <a href="../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/02.-Caracter%C3%ADsticas%20de%20la%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/03.-Gesti%C3%B3n%20de%20MV%20con%20virsh/" class="md-nav__link">
+      <a href="../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/03.-Gesti%C3%B3n%20de%20MV%20con%20virsh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/04.-Definici%C3%B3n%20XML%20de%20una%20MV/" class="md-nav__link">
+      <a href="../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/04.-Definici%C3%B3n%20XML%20de%20una%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/05.-Modificaci%C3%B3n%20de%20una%20MV/" class="md-nav__link">
+      <a href="../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/05.-Modificaci%C3%B3n%20de%20una%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -993,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/01.-Primeros%20pasos%20con%20virt-manager/" class="md-nav__link">
+      <a href="../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/01.-Primeros%20pasos%20con%20virt-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/02.-Creaci%C3%B3n%20de%20MV%20linux/" class="md-nav__link">
+      <a href="../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/02.-Creaci%C3%B3n%20de%20MV%20linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1035,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/03.-Gesti%C3%B3n%20de%20MV/" class="md-nav__link">
+      <a href="../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/03.-Gesti%C3%B3n%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/04.-Detalles%20de%20las%20MV/" class="md-nav__link">
+      <a href="../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/04.-Detalles%20de%20las%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1077,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/05.-Creaci%C3%B3n%20de%20MV%20Wndows/" class="md-nav__link">
+      <a href="../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/05.-Creaci%C3%B3n%20de%20MV%20Wndows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/01.-Introducci%C3%B3n%20al%20almacenamiento/" class="md-nav__link">
+      <a href="../00.-KVM/05.-Almacenamiento/01.-Introducci%C3%B3n%20al%20almacenamiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/02.-Introducci%C3%B3n%20al%20almacenamiento%20en%20QEMU%E2%81%84KVM%20%2B%20libvirt/" class="md-nav__link">
+      <a href="../00.-KVM/05.-Almacenamiento/02.-Introducci%C3%B3n%20al%20almacenamiento%20en%20QEMU%E2%81%84KVM%20%2B%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/03.-Gesti%C3%B3n%20de%20Pools%20de%20Almacenamiento/" class="md-nav__link">
+      <a href="../00.-KVM/05.-Almacenamiento/03.-Gesti%C3%B3n%20de%20Pools%20de%20Almacenamiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/04.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20libvirt/" class="md-nav__link">
+      <a href="../00.-KVM/05.-Almacenamiento/04.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/05.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20herramientas%20espec%C3%ADficas/" class="md-nav__link">
+      <a href="../00.-KVM/05.-Almacenamiento/05.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20herramientas%20espec%C3%ADficas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/06.-Trabajar%20con%20vol%C3%BAmenes%20en%20las%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
+      <a href="../00.-KVM/05.-Almacenamiento/06.-Trabajar%20con%20vol%C3%BAmenes%20en%20las%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/07.-Compresi%C3%B3n%20de%20im%C3%A1genes/" class="md-nav__link">
+      <a href="../00.-KVM/05.-Almacenamiento/07.-Compresi%C3%B3n%20de%20im%C3%A1genes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1346,7 +1341,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/" class="md-nav__link ">
+            <a href="../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1379,7 +1374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/01.-Clonaci%C3%B3n%20de%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
+      <a href="../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/01.-Clonaci%C3%B3n%20de%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1400,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/02.-Plantillas%20de%20MV/" class="md-nav__link">
+      <a href="../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/02.-Plantillas%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1421,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/03.-Clonaci%C3%B3n%20completa%20con%20plantillas/" class="md-nav__link">
+      <a href="../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/03.-Clonaci%C3%B3n%20completa%20con%20plantillas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1442,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/04.-Clonaci%C3%B3n%20enlazada%20con%20plantillas/" class="md-nav__link">
+      <a href="../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/04.-Clonaci%C3%B3n%20enlazada%20con%20plantillas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1463,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/05.-Snapshots%20de%20MV/" class="md-nav__link">
+      <a href="../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/05.-Snapshots%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1489,10 +1484,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1514,11 +1507,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
         
           
           <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
@@ -1532,7 +1525,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             07.-Redes
@@ -1543,28 +1536,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    01.-Introduccion
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../00.-KVM/07.-Redes/01.-Introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1573,99 +1548,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-redes-virtuales-privadas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de Redes Virtuales (Privadas)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de Redes Virtuales (Privadas)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#redes-virtuales-de-tipo-nat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redes Virtuales de tipo NAT
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#redes-virtuales-aisladas-isolated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redes Virtuales aisladas (Isolated)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#redes-virtuales-muy-aisladas-very-isolated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redes Virtuales muy aisladas (Very Isolated)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-redes-puente-publicas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de Redes Puente (Públicas)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de Redes Puente (Públicas)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#redes-puente-conectadas-a-un-bridge-externo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redes Puente conectadas a un bridge externo
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#redes-puente-compartiendo-la-interfaz-fisica-del-host" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redes Puente compartiendo la interfaz física del host
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1678,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/" class="md-nav__link">
+      <a href="../00.-KVM/07.-Redes/02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1699,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.-Gesti%C3%B3n%20de%20RV/" class="md-nav__link">
+      <a href="../00.-KVM/07.-Redes/03.-Gesti%C3%B3n%20de%20RV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1720,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-Creaci%C3%B3n%20de%20un%20Puerte%20Externo%20con%20Linux%20Bridge/" class="md-nav__link">
+      <a href="../00.-KVM/07.-Redes/04.-Creaci%C3%B3n%20de%20un%20Puerte%20Externo%20con%20Linux%20Bridge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1741,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05.-Gesti%C3%B3n%20de%20Redes%20Puentes%20%28P%C3%BAblicas%29/" class="md-nav__link">
+      <a href="../00.-KVM/07.-Redes/05.-Gesti%C3%B3n%20de%20Redes%20Puentes%20%28P%C3%BAblicas%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1762,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06.-Configuraci%C3%B3n%20de%20red%20en%20MV/" class="md-nav__link">
+      <a href="../00.-KVM/07.-Redes/06.-Configuraci%C3%B3n%20de%20red%20en%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1843,7 +1725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/01.-Introduccion%20a%20LXC/" class="md-nav__link">
+      <a href="../00.-KVM/08.-LXC/01.-Introduccion%20a%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1864,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/02.-Creaci%C3%B3n%20y%20gesti%C3%B3n%20de%20contenedores/" class="md-nav__link">
+      <a href="../00.-KVM/08.-LXC/02.-Creaci%C3%B3n%20y%20gesti%C3%B3n%20de%20contenedores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1885,7 +1767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/03.-Configuraci%C3%B3n%20de%20contenedores%20LXC/" class="md-nav__link">
+      <a href="../00.-KVM/08.-LXC/03.-Configuraci%C3%B3n%20de%20contenedores%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1906,7 +1788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/04.-Redes%20en%20LXC/" class="md-nav__link">
+      <a href="../00.-KVM/08.-LXC/04.-Redes%20en%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1927,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/05.-Almacenamiento%20en%20LXC/" class="md-nav__link">
+      <a href="../00.-KVM/08.-LXC/05.-Almacenamiento%20en%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1948,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/" class="md-nav__link">
+      <a href="../00.-KVM/08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2021,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/" class="md-nav__link">
+      <a href="../00.-KVM/09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2042,7 +1924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../09.-Anexos/02.-Copiar%20y%20Pegar/" class="md-nav__link">
+      <a href="../00.-KVM/09.-Anexos/02.-Copiar%20y%20Pegar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2096,7 +1978,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../10.-Pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../00.-KVM/10.-Pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2129,7 +2011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/" class="md-nav__link">
+      <a href="../00.-KVM/10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2150,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/02.-Solucionario/" class="md-nav__link">
+      <a href="../00.-KVM/10.-Pr%C3%A1cticas/02.-Solucionario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2223,7 +2105,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/" class="md-nav__link ">
+            <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2256,7 +2138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/01.-Historia%20del%20hacking/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/01.-Historia%20del%20hacking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2277,7 +2159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/02.-Conceptos%20b%C3%A1sicos%20de%20la%20seguridad%20de%20la%20informaci%C3%B3n/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/02.-Conceptos%20b%C3%A1sicos%20de%20la%20seguridad%20de%20la%20informaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2298,7 +2180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/03.-Amenazas%20a%20la%20seguridad%20de%20la%20informaci%C3%B3n/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/03.-Amenazas%20a%20la%20seguridad%20de%20la%20informaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2319,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/04.-Test%20de%20intrusi%C3%B3n%20%28Pentest%29/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/04.-Test%20de%20intrusi%C3%B3n%20%28Pentest%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2340,7 +2222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/05.-C%C3%B3mo%20convertirse%20en%20Hacker%20%28from%20zero%20to%20hero%29/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/05.-C%C3%B3mo%20convertirse%20en%20Hacker%20%28from%20zero%20to%20hero%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2361,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/06.-Links%20de%20inter%C3%A9s/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/06.-Links%20de%20inter%C3%A9s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2415,7 +2297,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2448,7 +2330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/01.-Retos%20de%20la%20plataforma%20Atenea/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/01.-Retos%20de%20la%20plataforma%20Atenea/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2469,7 +2351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/02.-Mi%20primera%20m%C3%A1quina%20vulnerable%20%28boot2root%29%20DC-1/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/02.-Mi%20primera%20m%C3%A1quina%20vulnerable%20%28boot2root%29%20DC-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2517,7 +2399,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/" class="md-nav__link ">
+            <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2550,7 +2432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/01.-De%20comprobaci%C3%B3n/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/01.-De%20comprobaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2571,7 +2453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/02.-De%20aplicaci%C3%B3n/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/02.-De%20aplicaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2592,7 +2474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/03.-De%20ampliaci%C3%B3n/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/03.-De%20ampliaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2621,7 +2503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/04.-Laboratorios%20de%20Introducci%C3%B3n%20al%20hacking%20en%20Tryhackme/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/04.-Laboratorios%20de%20Introducci%C3%B3n%20al%20hacking%20en%20Tryhackme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2684,7 +2566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/04.-Soluci%C3%B3n/Informe_Auditoria_Seguridad_Fernandez_Automocion/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/04.-Soluci%C3%B3n/Informe_Auditoria_Seguridad_Fernandez_Automocion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2713,7 +2595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/05.-Fichero%20de%20configuraci%C3%B3n%20de%20Tmux/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/05.-Fichero%20de%20configuraci%C3%B3n%20de%20Tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2765,7 +2647,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/" class="md-nav__link ">
+            <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2831,7 +2713,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/" class="md-nav__link ">
+            <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2864,7 +2746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/01.-%20Dise%C3%B1ar%20el%20plan%20de%20auditor%C3%ADa/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/01.-%20Dise%C3%B1ar%20el%20plan%20de%20auditor%C3%ADa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2885,7 +2767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/02.-Organiza%20las%20fases%20de%20la%20auditor%C3%ADa/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/02.-Organiza%20las%20fases%20de%20la%20auditor%C3%ADa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2906,7 +2788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/03.-Presentaci%C3%B3n%20y%20valoraci%C3%B3n%20de%20vulnerabilidades/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/03.-Presentaci%C3%B3n%20y%20valoraci%C3%B3n%20de%20vulnerabilidades/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2927,7 +2809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/04.-Informaci%C3%B3n%20de%20inter%C3%A9s/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/04.-Informaci%C3%B3n%20de%20inter%C3%A9s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2948,7 +2830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/05.-Entrega/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/05.-Entrega/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2969,7 +2851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/06.-Soluci%C3%B3n/" class="md-nav__link">
+      <a href="../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/06.-Soluci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3044,7 +2926,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-nav__link ">
+            <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3110,7 +2992,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-nav__link ">
+            <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3143,7 +3025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/01.-Diferencias%20entre%20bandas%20de%20frecuencia/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/01.-Diferencias%20entre%20bandas%20de%20frecuencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3164,7 +3046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/02.-Componentes%20de%20una%20Red%20inal%C3%A1mbrica/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/02.-Componentes%20de%20una%20Red%20inal%C3%A1mbrica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3185,7 +3067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/03.-Terminolog%C3%ADa%20Redes%20WiFi/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/03.-Terminolog%C3%ADa%20Redes%20WiFi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3206,7 +3088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/04.-Tipos%20Redes%20Inalambricas/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/04.-Tipos%20Redes%20Inalambricas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3227,7 +3109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/05.-Equipamiento%20Hacking%20Inal%C3%A1mbrico/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/05.-Equipamiento%20Hacking%20Inal%C3%A1mbrico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3248,7 +3130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/06.-Modos%20Operaci%C3%B3n%20tarjetas%20WiFi/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/06.-Modos%20Operaci%C3%B3n%20tarjetas%20WiFi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3304,7 +3186,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/" class="md-nav__link ">
+            <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3337,7 +3219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/01.-Necesidades%20T%C3%A9cnicas%20para%20la%20Monitorizaci%C3%B3n/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/01.-Necesidades%20T%C3%A9cnicas%20para%20la%20Monitorizaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3358,7 +3240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/02.-Modo%20Monitor%20de%20la%20NIC/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/02.-Modo%20Monitor%20de%20la%20NIC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3379,7 +3261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/03.-Monitorizando%20la%20red%20inal%C3%A1mbrica/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/03.-Monitorizando%20la%20red%20inal%C3%A1mbrica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3437,7 +3319,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/" class="md-nav__link ">
+            <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3470,7 +3352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/01.-Ataques%20a%20redes%20OPEN/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/01.-Ataques%20a%20redes%20OPEN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3491,7 +3373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/02.-Ataques%20a%20redes%20WEP/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/02.-Ataques%20a%20redes%20WEP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3512,7 +3394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/03.-Ataques%20Redes%20WPA-WPA2_PSK/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/03.-Ataques%20Redes%20WPA-WPA2_PSK/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3533,7 +3415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/04.-Ataques%20Redes%20WPA%20WPA2%20Enterprise/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/04.-Ataques%20Redes%20WPA%20WPA2%20Enterprise/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3562,7 +3444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/04.-Reporting%20%28Generaci%C3%B3n%20de%20Informes%29/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/04.-Reporting%20%28Generaci%C3%B3n%20de%20Informes%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3606,7 +3488,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/05.-Pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/05.-Pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3639,7 +3521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/05.-Pr%C3%A1cticas/01.-Revisi%C3%B3n%20del%20dise%C3%B1o%20de%20la%20red%20Wi-Fi/" class="md-nav__link">
+      <a href="../02.-HE%20en%20entornos%20inal%C3%A1mbricos/05.-Pr%C3%A1cticas/01.-Revisi%C3%B3n%20del%20dise%C3%B1o%20de%20la%20red%20Wi-Fi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3672,6 +3554,8 @@
       
   
   
+    
+  
   
   
     
@@ -3688,19 +3572,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
@@ -3711,13 +3598,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             03.-Ataque y defensa en entorno de pruebas
@@ -3760,7 +3647,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/" class="md-nav__link ">
+            <a href="01.-Fase%20de%20reconocimiento%20%28Footprinting%29/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3793,7 +3680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/01.-Tipos%20de%20reconocimiento/" class="md-nav__link">
+      <a href="01.-Fase%20de%20reconocimiento%20%28Footprinting%29/01.-Tipos%20de%20reconocimiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3814,7 +3701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/02.-Reconocimiento%20pasivo/" class="md-nav__link">
+      <a href="01.-Fase%20de%20reconocimiento%20%28Footprinting%29/02.-Reconocimiento%20pasivo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3835,7 +3722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/03.-Reconocimiento%20activo/" class="md-nav__link">
+      <a href="01.-Fase%20de%20reconocimiento%20%28Footprinting%29/03.-Reconocimiento%20activo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3897,7 +3784,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/" class="md-nav__link ">
+            <a href="02.-Fase%20de%20escaneo%20%28Fingerprinting%29/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3930,7 +3817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/01.-Tipos%20y%20enfoque%20de%20los%20escaneos/" class="md-nav__link">
+      <a href="02.-Fase%20de%20escaneo%20%28Fingerprinting%29/01.-Tipos%20y%20enfoque%20de%20los%20escaneos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3951,7 +3838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/02.-Escaneo%20de%20red/" class="md-nav__link">
+      <a href="02.-Fase%20de%20escaneo%20%28Fingerprinting%29/02.-Escaneo%20de%20red/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3972,7 +3859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/03.-Escaneo%20de%20servicios/" class="md-nav__link">
+      <a href="02.-Fase%20de%20escaneo%20%28Fingerprinting%29/03.-Escaneo%20de%20servicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3993,7 +3880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/04.-Escaneo%20de%20vulnerabilidades/" class="md-nav__link">
+      <a href="02.-Fase%20de%20escaneo%20%28Fingerprinting%29/04.-Escaneo%20de%20vulnerabilidades/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4014,7 +3901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/05.-Opciones%20Avanzadas%20de%20Nmap/" class="md-nav__link">
+      <a href="02.-Fase%20de%20escaneo%20%28Fingerprinting%29/05.-Opciones%20Avanzadas%20de%20Nmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4035,7 +3922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/06.-Herramientas%20adicionales%20de%20b%C3%BAsqueda%20de%20vulnerabilidades/" class="md-nav__link">
+      <a href="02.-Fase%20de%20escaneo%20%28Fingerprinting%29/06.-Herramientas%20adicionales%20de%20b%C3%BAsqueda%20de%20vulnerabilidades/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4094,7 +3981,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../99.-Anexos/" class="md-nav__link ">
+            <a href="../99.-Anexos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4127,7 +4014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/01.-Conversor%20de%20OVA%20a%20QCOW2/" class="md-nav__link">
+      <a href="../99.-Anexos/01.-Conversor%20de%20OVA%20a%20QCOW2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4165,6 +4052,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4173,77 +4062,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tipos-de-redes-virtuales-privadas" class="md-nav__link">
+  <a href="#contenidos-principales" class="md-nav__link">
     <span class="md-ellipsis">
-      Tipos de Redes Virtuales (Privadas)
+      Contenidos Principales
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Tipos de Redes Virtuales (Privadas)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#redes-virtuales-de-tipo-nat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redes Virtuales de tipo NAT
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#redes-virtuales-aisladas-isolated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redes Virtuales aisladas (Isolated)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#redes-virtuales-muy-aisladas-very-isolated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redes Virtuales muy aisladas (Very Isolated)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-redes-puente-publicas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de Redes Puente (Públicas)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de Redes Puente (Públicas)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#redes-puente-conectadas-a-un-bridge-externo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redes Puente conectadas a un bridge externo
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#redes-puente-compartiendo-la-interfaz-fisica-del-host" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redes Puente compartiendo la interfaz física del host
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4262,51 +4085,41 @@
                   
 
 
-  <h1>01.-Introduccion</h1>
-
-<p>libvirt nos proporciona las herramientas necesarias para gestionar las redes virtuales a las que se conectan nuestras máquinas virtuales.</p>
-<p>Tenemos dos grandes grupos de redes que podemos configurar:</p>
+<h1 id="ataque-y-defensa-en-entorno-de-pruebas">Ataque y defensa en entorno de pruebas<a class="headerlink" href="#ataque-y-defensa-en-entorno-de-pruebas" title="Permanent link">&para;</a></h1>
+<p>En esta unidad de trabajo aprenderás los conceptos generales de <strong>"Ataque y defensa en entorno de pruebas, de redes y sistemas"</strong>. A lo largo de esta unidad se desarrollarán las técnicas comúnmente utilizadas para:</p>
 <ul>
-<li><strong>Redes Virtuales (Privadas)</strong>: Son <strong>redes privadas</strong> que podemos configurar para que tengan distintas características.</li>
-<li><strong>Redes Puente (Públicas)</strong>: Las podemos considerar como <strong>redes públicas</strong>, desde el punto de vista que las máquinas virtuales estarán conectadas a la misma red a la que está conectada el host.</li>
+<li>Realizar un primer análisis del objetivo y obtener los servicios ofrecidos por el sistema remoto.</li>
+<li>Detectar posibles vulnerabilidades presentes en los sistemas.</li>
 </ul>
-<p>Recordemos un <strong>puente o bridge/switch</strong> es un dispositivo de interconexión de redes. La gestión de redes de libvirt se basa en el concepto de <strong>switch virtual</strong>, para ello utiliza <strong>Linux Bridge</strong>, que es un software que nos permite crear bridge virtuales con la misma funcionalidad que un bridge físico.</p>
-<h2 id="tipos-de-redes-virtuales-privadas">Tipos de Redes Virtuales (Privadas)<a class="headerlink" href="#tipos-de-redes-virtuales-privadas" title="Permanent link">&para;</a></h2>
-<p>La clasificación dependerá de la configuración que hagamos a la <strong>Red Virtual</strong>:</p>
-<h3 id="redes-virtuales-de-tipo-nat">Redes Virtuales de tipo NAT<a class="headerlink" href="#redes-virtuales-de-tipo-nat" title="Permanent link">&para;</a></h3>
-<p>Es un Red Virtual Privada, las máquinas virtual tendrán un direccionamiento privado y se nos proporciona un mecanismo de <strong>router/nat</strong> para que tengan conectividad al exterior.</p>
-<p><img alt="red_nat" src="../img/red_nat.drawio.png" /></p>
-<p>La red <code>default</code> con la que hemos trabajado es de este tipo. Veamos sus características:</p>
-<ul>
-<li>Crea un bridge virtual donde se conectan las máquinas virtuales. En el caso de la red <code>default</code> se llama <code>vmbr0</code>. A este bridge también está conectado el host.</li>
-<li>Las máquinas virtuales se configuraran de forma dinámica por medio de un servidor DHCP. En el caso de la red <code>default</code>, el <strong>rango de direcciones</strong> es <code>192.168.122.2</code> - <code>192.168.122.254</code>. La <strong>puerta de enlace</strong> de las máquinas se configura con la dirección IP <code>192.168.122.1</code> que corresponde al host. El <strong>servidor DHCP</strong> esta configurado en el host. </li>
-<li>En el host también se configura un <strong>servidor DNS</strong> que es el que se configura en las máquinas virtuales.</li>
+<p>Además, se introducirán herramientas estándar en el mercado y de uso común para el reconocimiento del objetivo, el análisis posterior y la detección de vulnerabilidades. También se mostrará el uso básico de estas herramientas.</p>
+<h3 id="contenidos-principales">Contenidos Principales<a class="headerlink" href="#contenidos-principales" title="Permanent link">&para;</a></h3>
+<ol>
 <li>
-<p>El host hace la función de <strong>router/nat</strong> de tal manera que las máquinas virtuales tienen conectividad al exterior, usando la dirección IP de la interfaz de red del host que está conectada al exterior.</p>
-<p>Existen otros mecanismos para que las máquinas virtuales tengan acceso al exterior:</p>
+<p><strong>Fase de Explotación:</strong></p>
 <ul>
-<li><strong>Modo bridge</strong>: Donde se usan rutas de encaminamiento en el host. En este modo hay que configurar con rutas estáticas los elementos de enrutamiento de la red local para que funcione de manera adecuada.</li>
-<li><strong>Modo abierto</strong>: Similar a la anterior, excepto que no se añaden reglas de firewall para asegurar que cualquier tráfico pase o no. Se asume que, o bien no son necesarias, o bien se configuran fuera del ámbito de libvirt.</li>
+<li>Desarrollo de técnicas para explotar vulnerabilidades existentes en las infraestructuras y sistemas identificados en la fase previa.</li>
 </ul>
-<p>En este curso vamos a trabajar con Redes Virtuales de tipo NAT.</p>
 </li>
+<li>
+<p><strong>Técnicas de Monitorización, Interceptación e Inyección de Tráfico:</strong></p>
+<ul>
+<li>Métodos para interceptar y manipular tráfico en las redes objetivo.</li>
 </ul>
-<h3 id="redes-virtuales-aisladas-isolated">Redes Virtuales aisladas (Isolated)<a class="headerlink" href="#redes-virtuales-aisladas-isolated" title="Permanent link">&para;</a></h3>
-<p>Es un Red Virtual Privada, donde las máquinas virtuales tomas direccionamiento privado. No tenemos un mecanismo de router/nat, por lo que las máquinas virtuales no tienen conectividad con el exterior. </p>
-<p><img alt="red_aislada" src="../img/red_aislada.drawio.png" /></p>
-<p>Por lo tanto tienen las mismas características que una Red Virtual de tipo NAT, pero sin la característica de router/nat. Se gestiona un bridge virtual donde se conectan las máquinas virtuales y el host, seguimos teniendo un servidor DNS y es posible tener un servidor DHCP en el host que asigna dinámicamente un direccionamiento privado a las máquinas.</p>
-<h3 id="redes-virtuales-muy-aisladas-very-isolated">Redes Virtuales muy aisladas (Very Isolated)<a class="headerlink" href="#redes-virtuales-muy-aisladas-very-isolated" title="Permanent link">&para;</a></h3>
-<p>Es un Red Virtual Aislada, en la que el host no está conectado a las máquians virtuales. Por lo tanto,no tenemos servidor DNS ni DHCP para ser utilizados por las máquinas. Al ser aislada, tampoco tienen salida al exterior.</p>
-<p><img alt="red_muy_aislada" src="../img/red_muy_aislada.drawio.png" /></p>
-<p>En este tipo de red se suele configurar la red de las máquinas virtuales de forma estática.</p>
-<h2 id="tipos-de-redes-puente-publicas">Tipos de Redes Puente (Públicas)<a class="headerlink" href="#tipos-de-redes-puente-publicas" title="Permanent link">&para;</a></h2>
-<p>La clasificación depende de la forma utilizada para conectar las máquinas virtuales al exterior.</p>
-<h3 id="redes-puente-conectadas-a-un-bridge-externo">Redes Puente conectadas a un bridge externo<a class="headerlink" href="#redes-puente-conectadas-a-un-bridge-externo" title="Permanent link">&para;</a></h3>
-<p>En este caso necesitamos crear un bridge virtual (normalmente llamado <code>br0</code>) al que conectaremos la máquina física y las máquinas virtuales. En este caso las máquinas virtuales estarán en la misma red red que el host y estarán conectadas directamente al router de esta red, tomando la configuración dhcp (si la hubiera) del mismo modo que la toma el host.</p>
-<p><img alt="red_bridge" src="../img/red_bridge.drawio.png" /></p>
-<h3 id="redes-puente-compartiendo-la-interfaz-fisica-del-host">Redes Puente compartiendo la interfaz física del host<a class="headerlink" href="#redes-puente-compartiendo-la-interfaz-fisica-del-host" title="Permanent link">&para;</a></h3>
-<p>En este caso vamos a usar una conexión macvtap, que nos permite conectarnos a la red física directamente a través de una interfaz física del host (sin usar un dispositivo bridge). Al igual que con la red anterior, las máquinas virtuales estarán conectados directamente a la red física, por lo que sus direcciones IP estarán todas en la subred de la red física. Existe una una limitación en la implementación de macvtap: estas conexiones no permiten la comunicación directa entre el host y los invitados.</p>
-<p><img alt="red_bridge" src="../img/red_bridge2.drawio.png" /></p>
+</li>
+<li>
+<p><strong>Ingeniería Social y Phishing:</strong></p>
+<ul>
+<li>Introducción a conceptos clave y técnicas utilizadas para acceder a sistemas mediante vectores humanos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Elevación de Privilegios:</strong></p>
+<ul>
+<li>Detalle del proceso de elevación de privilegios, incluyendo las técnicas más comunes utilizadas para obtener mayor control sobre los sistemas objetivo.</li>
+</ul>
+</li>
+</ol>
+<p>Esta unidad está diseñada para ofrecer una visión práctica y detallada de las herramientas y metodologías esenciales en pruebas de seguridad, permitiéndote comprender y aplicar los conceptos de ataque y defensa en sistemas y redes de manera efectiva.</p>
 
 
 
@@ -4359,12 +4172,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
