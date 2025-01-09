@@ -3938,6 +3938,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="nmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -4991,6 +5006,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="nmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -5114,7 +5144,6 @@ nc -u dirección_ip puerto
 # Escaneo de un rango de puertos
 nc -zv dirección_ip pto_inicial-pto_final
 </code></pre>
-<hr />
 <h3 id="nmap"><strong>nmap</strong><a class="headerlink" href="#nmap" title="Permanent link">&para;</a></h3>
 <p><code>nmap</code> es una herramienta de red que permite realizar escaneos para:
 - Identificar puertos abiertos.
@@ -5130,7 +5159,67 @@ nmap [IP/rango] -p [puerto/rango] --script &quot;version&quot;
 # Escaneo avanzado (incluye detección de sistema operativo y traceroute)
 nmap [IP/rango] -p [puerto/rango] -A
 </code></pre>
-<hr />
+<h4 id="ejemplos">Ejemplos<a class="headerlink" href="#ejemplos" title="Permanent link">&para;</a></h4>
+<p><strong>Escaneo de Puertos en Redes Auditadas</strong></p>
+<p>En una red auditada, pueden existir protecciones a nivel de red, como <strong>firewalls</strong>, que bloqueen o restrinjan el acceso a ciertos servicios. Sin embargo, es posible emplear diversas técnicas de escaneo para determinar si un puerto está abierto.</p>
+<p>En el caso del protocolo <strong>TCP</strong>, se puede aprovechar el mecanismo del <strong>"three-way handshake"</strong>, que es fundamental para establecer la comunicación.</p>
+<p>El siguiente comando en <strong>nmap</strong> realiza un escaneo utilizando la opción <strong>-sT</strong>, que establece una conexión completa para identificar puertos abiertos:</p>
+<pre><code class="language-bash">└─$ nmap -Pn 10.20.50.1 -sT
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-01-09 17:31 CET
+Nmap scan report for 10.20.50.1
+Host is up (0.0041s latency).
+Not shown: 993 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+53/tcp   open  domain
+80/tcp   open  http
+443/tcp  open  https
+1723/tcp open  pptp
+2000/tcp open  cisco-sccp
+8291/tcp open  unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 0.18 seconds
+
+</code></pre>
+<p><strong>Identificación de Servicios y Software en Puertos Abiertos</strong></p>
+<p>Además de verificar si un puerto está abierto en un sistema remoto, es fundamental identificar:</p>
+<pre><code>El servicio activo en ese puerto (por ejemplo, servidor web, base de datos, etc.).
+El software utilizado y su versión (por ejemplo, Microsoft IIS como servidor web).
+</code></pre>
+<p>Esta información permite tener una visión más exhaustiva de los servicios operativos en cada sistema remoto y comprender mejor la función de dicho equipo dentro de la infraestructura. Además, conocer el tipo y versión del software ayuda a localizar vulnerabilidades específicas asociadas a la versión concreta en uso.
+Técnica de "Banner Grabbing"</p>
+<p>El banner grabbing es una técnica que consiste en observar la información devuelta por cada aplicación remota al establecer una comunicación activa. La mayoría de los servicios, en su configuración predeterminada, exponen al menos el tipo y la versión del software que están ejecutando.
+Uso de Nmap para "Banner Grabbing"</p>
+<p>Para ejecutar esta técnica con nmap, es necesario realizar un escaneo TCP (full scan o stealth scan) o UDP y añadir el operador -sV (Service Version). Este operador permite que nmap solicite el banner del servicio, lo compare con su base de datos y devuelva el software utilizado y su versión (o, en algunos casos, una aproximación).
+Ejemplo de Comando Nmap:</p>
+<pre><code class="language-bash">└─$ nmap -Pn 10.20.50.2 -sV
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-01-09 17:40 CET
+Nmap scan report for 10.20.50.2
+Host is up (0.018s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
+22/tcp  open  ssh        Cisco SSH 1.25 (protocol 2.0)
+23/tcp  open  telnet     Cisco router telnetd (password required but not set)
+80/tcp  open  http       Cisco IOS http config
+443/tcp open  ssl/https?
+MAC Address: 00:17:95:8C:FD:41 (Cisco Systems)
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.53 seconds
+</code></pre>
+<p><strong>Uso de Scripts de Nmap para Descubrimiento Avanzado</strong>
+Además de las funcionalidades básicas, nmap incluye una serie de scripts que permiten realizar consultas avanzadas sobre los objetivos. Estos scripts forman parte del Nmap Scripting Engine (NSE) y están organizados en diferentes categorías, diseñadas para tareas específicas.</p>
+<p>Una de estas categorías es "version", que se enfoca en realizar tareas adicionales de descubrimiento de servicios. Estos scripts proporcionan información detallada sobre ciertos servicios, ampliando las capacidades de detección de software y versión más allá del simple "banner grabbing".
+Comando para Usar los Scripts de la Categoría "version"</p>
+<p>El siguiente comando invoca todos los scripts de la categoría "version":</p>
+<pre><code>nmap -Pn -p [puerto/rango] --script version [IP/rango]
+</code></pre>
+<p>Parámetros Explicados
+Pn: Desactiva el escaneo previo de ping.
+    -p [puerto/rango]: Indica el puerto o rango de puertos que deseas escanear. Por ejemplo, -p 80 o -p 1-1000.
+    --script version: Invoca todos los scripts relacionados con la categoría "version".
+    [IP/rango]: Especifica la dirección IP o rango de direcciones objetivo.</p>
 <h2 id="tipos-de-escaneo-en-nmap">Tipos de Escaneo en <code>nmap</code><a class="headerlink" href="#tipos-de-escaneo-en-nmap" title="Permanent link">&para;</a></h2>
 <h3 id="tcp-connect-full-open-scan"><strong>TCP Connect (Full Open Scan)</strong><a class="headerlink" href="#tcp-connect-full-open-scan" title="Permanent link">&para;</a></h3>
 <p>Establece una conexión completa utilizando el "three-way handshake".</p>

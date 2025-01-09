@@ -3826,6 +3826,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#autoevaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoevaluación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solución
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4956,6 +4974,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#autoevaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoevaluación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solución
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4975,7 +5011,6 @@
 
 <p>A diferencia del reconocimiento pasivo, el reconocimiento activo se define como el proceso de recolección de información sobre el objetivo de las pruebas mediante consultas directas a los sistemas remotos. Esto implica establecer una comunicación con los sistemas dentro del alcance de la auditoría, dejando así trazas en el objetivo.</p>
 <p>La información recopilada en esta fase complementa la obtenida durante el reconocimiento pasivo, ya que ciertas consultas directas a servicios específicos (como DNS, SMTP, SNMP, SMB, etc.) permiten obtener datos que no están disponibles públicamente. Sin embargo, dado que se interactúa directamente con los activos, existe la posibilidad de que el objetivo detecte estas actividades, dependiendo de sus capacidades de monitorización.</p>
-<hr />
 <h3 id="tecnicas-de-reconocimiento-activo"><strong>Técnicas de Reconocimiento Activo</strong><a class="headerlink" href="#tecnicas-de-reconocimiento-activo" title="Permanent link">&para;</a></h3>
 <h4 id="enumeracion-dns"><strong>Enumeración DNS</strong><a class="headerlink" href="#enumeracion-dns" title="Permanent link">&para;</a></h4>
 <p>El servicio <strong>DNS (Domain Name System)</strong> es un protocolo que traduce nombres de máquinas en direcciones IP y viceversa, organizando su información en una base de datos distribuida.</p>
@@ -4992,7 +5027,6 @@
 <li><strong>dnsrecon:</strong> Automatiza consultas DNS y presenta los resultados estructurados.</li>
 <li><strong>dnsenum:</strong> Además de las funcionalidades de dnsrecon, realiza descubrimiento de hosts y subdominios mediante fuerza bruta.</li>
 </ul>
-<hr />
 <h4 id="enumeracion-smtp"><strong>Enumeración SMTP</strong><a class="headerlink" href="#enumeracion-smtp" title="Permanent link">&para;</a></h4>
 <p>El protocolo <strong>SMTP (Simple Mail Transfer Protocol)</strong> gestiona la entrega de correos electrónicos y dispone de comandos que permiten verificar la existencia de usuarios en el sistema remoto.</p>
 <p><strong>Comandos de enumeración SMTP:</strong></p>
@@ -5003,16 +5037,17 @@
 </ul>
 <p><strong>Herramientas comunes:</strong></p>
 <ul>
-<li><strong>smtp-user-enum:</strong> Automatiza la enumeración de usuarios a través de SMTP.</li>
+<li><strong><a href="https://pentestmonkey.net/tools/user-enumeration/smtp-user-enum">smtp-user-enum</a>:</strong> Automatiza la enumeración de usuarios a través de SMTP .</li>
 </ul>
-<hr />
 <h4 id="enumeracion-snmp"><strong>Enumeración SNMP</strong><a class="headerlink" href="#enumeracion-snmp" title="Permanent link">&para;</a></h4>
 <p>El protocolo <strong>SNMP (Simple Network Management Protocol)</strong> se utiliza para gestionar dispositivos de red como routers, switches e impresoras, además de sistemas Windows y UNIX.</p>
 <p><strong>Características principales:</strong></p>
 <ul>
-<li>Los dispositivos utilizan "community strings" para autenticarse:</li>
+<li>Los dispositivos utilizan "community strings" para autenticarse:<ul>
 <li><strong>public:</strong> Permite acceso de solo lectura.</li>
 <li><strong>private:</strong> Permite acceso de lectura y escritura.</li>
+</ul>
+</li>
 <li>SNMPv1 y SNMPv2 son inseguros, ya que no cifran las comunicaciones.</li>
 <li>SNMPv3 introduce mejoras de seguridad, pero versiones antiguas aún son comunes.</li>
 </ul>
@@ -5021,7 +5056,6 @@
 <li><strong>onesixtyone:</strong> Utiliza fuerza bruta para descubrir community strings.</li>
 <li><strong>snmpwalk:</strong> Permite explorar la configuración de dispositivos con community strings conocidas.</li>
 </ul>
-<hr />
 <h4 id="enumeracion-smb"><strong>Enumeración SMB</strong><a class="headerlink" href="#enumeracion-smb" title="Permanent link">&para;</a></h4>
 <p>El protocolo <strong>SMB (Server Message Block)</strong> facilita el intercambio de archivos e impresoras en redes, y opera en los puertos TCP 139 y 445. Es posible extraer información sin credenciales válidas mediante sesiones SMB nulas.</p>
 <p><strong>Información obtenible:</strong></p>
@@ -5032,22 +5066,44 @@
 <p><strong>Herramientas comunes:</strong></p>
 <ul>
 <li>
-<p>nbtscan:</p>
+<p><strong>nbtscan</strong>:</p>
 <p>Obtiene información básica mediante conexiones SMB.</p>
 <p><code>bash
 nbtscan -r &lt;IP o subred&gt;</code>
-- enum4linux:</p>
+- <strong>enum4linux</strong>:</p>
 <p>Proporciona detalles extensos de la configuración SMB.
 <code>bash
 enum4linux -a &lt;IP&gt;</code></p>
 </li>
 <li>
-<p>Nmap:</p>
+<p><strong>Nmap</strong>:</p>
 <p>Scripts específicos para enumerar SMB.
 <code>bash
 nmap -p 139,445 &lt;dirección_IP&gt; -sV --script=smb-*</code></p>
+<h3 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h3>
 </li>
 </ul>
+<p><strong>¿Qué objetivo trata de conseguir un atacante al recopilar información de usuarios del objetivo a través de la red social LinkedIn?</strong></p>
+<ol>
+<li>Recopilar información de los gustos y aficiones de los empleados de una compañía para diseñar posibles contraseñas basadas en esas aficiones.</li>
+<li>Recopilar información sobre las tecnologías que utilizan en la empresa objetivo para enumerar los sistemas de protección que pudieran existir en la red, así como localizar vulnerabilidades públicas en esas tecnologías.</li>
+<li>Recopilar credenciales y usuarios que pudieran exponerse en el código fuente intercambiado.</li>
+</ol>
+<h3 id="solucion">Solución<a class="headerlink" href="#solucion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Incorrecto</strong><br />
+    Aunque los gustos y aficiones pueden ser útiles para ingeniería social, no es el principal objetivo en este caso.</p>
+</li>
+<li>
+<p><strong>Correcto</strong><br />
+    El objetivo principal de un atacante al analizar perfiles en LinkedIn es recopilar información sobre las tecnologías utilizadas en la empresa, lo que les permite identificar posibles sistemas de protección y vulnerabilidades públicas.</p>
+</li>
+<li>
+<p><strong>Incorrecto</strong><br />
+    Recopilar credenciales en código fuente no es algo que se pueda lograr directamente desde LinkedIn; esto está relacionado más con la revisión de repositorios de código público, como GitHub.</p>
+</li>
+</ol>
 
 
 
