@@ -5068,21 +5068,27 @@
 <li>
 <p><strong>nbtscan</strong>:</p>
 <p>Obtiene información básica mediante conexiones SMB.</p>
-<p><code>bash
-nbtscan -r &lt;IP o subred&gt;</code>
-- <strong>enum4linux</strong>:</p>
-<p>Proporciona detalles extensos de la configuración SMB.
-<code>bash
-enum4linux -a &lt;IP&gt;</code></p>
-</li>
-<li>
-<p><strong>Nmap</strong>:</p>
-<p>Scripts específicos para enumerar SMB.
-<code>bash
-nmap -p 139,445 &lt;dirección_IP&gt; -sV --script=smb-*</code></p>
-<h3 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h3>
 </li>
 </ul>
+<pre><code class="language-bash">    nbtscan -r &lt;IP o subred&gt;
+</code></pre>
+<ul>
+<li>
+<p><strong>enum4linux</strong>:</p>
+<p>Proporciona detalles extensos de la configuración SMB.</p>
+</li>
+</ul>
+<pre><code class="language-bash">    enum4linux -a &lt;IP&gt;
+</code></pre>
+<ul>
+<li>
+<p><strong>Nmap</strong>:</p>
+<p>Scripts específicos para enumerar SMB.</p>
+</li>
+</ul>
+<pre><code class="language-bash">    nmap -p 139,445 &lt;dirección_IP&gt; -sV --script=smb-*
+</code></pre>
+<h3 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h3>
 <p><strong>¿Qué objetivo trata de conseguir un atacante al recopilar información de usuarios del objetivo a través de la red social LinkedIn?</strong></p>
 <ol>
 <li>Recopilar información de los gustos y aficiones de los empleados de una compañía para diseñar posibles contraseñas basadas en esas aficiones.</li>

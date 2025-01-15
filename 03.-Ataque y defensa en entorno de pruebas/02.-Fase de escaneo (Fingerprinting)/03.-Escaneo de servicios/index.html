@@ -3977,6 +3977,43 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="TCP Connect (Full Open Scan)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detalles-del-tcp-connect-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detalles del "TCP Connect Scan"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desventajas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-en-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso en Nmap:
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
@@ -3985,6 +4022,11 @@
       Stealth Scan (SYN Scan)
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -5045,6 +5087,43 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="TCP Connect (Full Open Scan)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detalles-del-tcp-connect-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detalles del "TCP Connect Scan"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desventajas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-en-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso en Nmap:
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
@@ -5053,6 +5132,11 @@
       Stealth Scan (SYN Scan)
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -5130,34 +5214,49 @@
 </ul>
 <h2 id="herramientas-para-escaneo-de-servicios">Herramientas para Escaneo de Servicios<a class="headerlink" href="#herramientas-para-escaneo-de-servicios" title="Permanent link">&para;</a></h2>
 <h3 id="nc-netcat"><strong>nc (Netcat)</strong><a class="headerlink" href="#nc-netcat" title="Permanent link">&para;</a></h3>
-<p>Netcat, o <code>nc</code>, es una herramienta de red que permite:
-- Abrir puertos TCP/UDP para que queden a la escucha.
-- Asociar una shell a un puerto específico.
-- Forzar conexiones TCP/UDP para realizar escaneos de puertos o transferencias de archivos.</p>
+<p>Netcat o <code>nc</code>, es una herramienta de red que permite:</p>
+<ul>
+<li>Abrir puertos TCP/UDP para que queden a la escucha.</li>
+<li>Asociar una shell a un puerto específico.</li>
+<li>Forzar conexiones TCP/UDP para realizar escaneos de puertos o transferencias de archivos.</li>
+</ul>
 <p><strong>Uso básico:</strong></p>
-<pre><code class="language-bash"># Conexión a un puerto específico
-nc dirección_ip puerto
-
-# Comunicación en un puerto UDP
-nc -u dirección_ip puerto
-
-# Escaneo de un rango de puertos
+<ul>
+<li>Conexión a un puerto específico</li>
+</ul>
+<pre><code>nc dirección_ip puerto
+</code></pre>
+<pre><code class="language-bash">└─$ nc 172.31.1.1 22    
+SSH-2.0-ROSSSH
+</code></pre>
+<ul>
+<li>Comunicación en un puerto UDP</li>
+</ul>
+<pre><code>nc -u dirección_ip puerto
+</code></pre>
+<pre><code class="language-bash"># Escaneo de un rango de puertos
 nc -zv dirección_ip pto_inicial-pto_final
 </code></pre>
 <h3 id="nmap"><strong>nmap</strong><a class="headerlink" href="#nmap" title="Permanent link">&para;</a></h3>
-<p><code>nmap</code> es una herramienta de red que permite realizar escaneos para:
-- Identificar puertos abiertos.
-- Reconocer servicios activos y sus versiones.
-- Localizar vulnerabilidades conocidas.</p>
-<p><strong>Comandos básicos:</strong></p>
-<pre><code class="language-bash"># Escaneo de servicios con detección de versiones
-nmap [IP/rango] -p [puerto/rango] -sV
-
-# Escaneo con scripts específicos de la categoría &quot;version&quot;
-nmap [IP/rango] -p [puerto/rango] --script &quot;version&quot;
-
-# Escaneo avanzado (incluye detección de sistema operativo y traceroute)
-nmap [IP/rango] -p [puerto/rango] -A
+<p><code>nmap</code> es una herramienta de red que permite realizar escaneos para:</p>
+<ul>
+<li>Identificar puertos abiertos.</li>
+<li>Reconocer servicios activos y sus versiones.</li>
+<li>Localizar vulnerabilidades conocidas.</li>
+</ul>
+<p><strong>Comandos básicos:</strong>
+- Escaneo de servicios con detección de versiones</p>
+<pre><code>nmap [IP/rango] -p [puerto/rango] -sV
+</code></pre>
+<ul>
+<li>Escaneo con scripts específicos de la categoría "version"</li>
+</ul>
+<pre><code>nmap [IP/rango] -p [puerto/rango] --script &quot;version&quot;
+</code></pre>
+<ul>
+<li>Escaneo avanzado (incluye detección de sistema operativo y traceroute)</li>
+</ul>
+<pre><code>nmap [IP/rango] -p [puerto/rango] -A
 </code></pre>
 <h4 id="ejemplos">Ejemplos<a class="headerlink" href="#ejemplos" title="Permanent link">&para;</a></h4>
 <p><strong>Escaneo de Puertos en Redes Auditadas</strong></p>
@@ -5183,14 +5282,15 @@ Nmap done: 1 IP address (1 host up) scanned in 0.18 seconds
 </code></pre>
 <p><strong>Identificación de Servicios y Software en Puertos Abiertos</strong></p>
 <p>Además de verificar si un puerto está abierto en un sistema remoto, es fundamental identificar:</p>
-<pre><code>El servicio activo en ese puerto (por ejemplo, servidor web, base de datos, etc.).
-El software utilizado y su versión (por ejemplo, Microsoft IIS como servidor web).
-</code></pre>
-<p>Esta información permite tener una visión más exhaustiva de los servicios operativos en cada sistema remoto y comprender mejor la función de dicho equipo dentro de la infraestructura. Además, conocer el tipo y versión del software ayuda a localizar vulnerabilidades específicas asociadas a la versión concreta en uso.
-Técnica de "Banner Grabbing"</p>
-<p>El banner grabbing es una técnica que consiste en observar la información devuelta por cada aplicación remota al establecer una comunicación activa. La mayoría de los servicios, en su configuración predeterminada, exponen al menos el tipo y la versión del software que están ejecutando.
-Uso de Nmap para "Banner Grabbing"</p>
-<p>Para ejecutar esta técnica con nmap, es necesario realizar un escaneo TCP (full scan o stealth scan) o UDP y añadir el operador -sV (Service Version). Este operador permite que nmap solicite el banner del servicio, lo compare con su base de datos y devuelva el software utilizado y su versión (o, en algunos casos, una aproximación).
+<ul>
+<li>El servicio activo en ese puerto (por ejemplo, servidor web, base de datos, etc.).</li>
+<li>El software utilizado y su versión (por ejemplo, Microsoft IIS como servidor web).</li>
+</ul>
+<p>Esta información permite tener una visión más exhaustiva de los servicios operativos en cada sistema remoto y comprender mejor la función de dicho equipo dentro de la infraestructura. Además, conocer el tipo y versión del software ayuda a localizar vulnerabilidades específicas asociadas a la versión concreta en uso.</p>
+<p><strong>Técnica de "Banner Grabbing"</strong></p>
+<p>El banner grabbing es una técnica que consiste en observar la información devuelta por cada aplicación remota al establecer una comunicación activa. La mayoría de los servicios, en su configuración predeterminada, exponen al menos el tipo y la versión del software que están ejecutando.</p>
+<p><strong>Uso de Nmap para "Banner Grabbing"</strong></p>
+<p>Para ejecutar esta técnica con <code>nmap</code>, es necesario realizar un escaneo TCP (full scan o stealth scan) o UDP y añadir el operador <code>-sV</code> (Service Version). Este operador permite que nmap solicite el banner del servicio, lo compare con su base de datos y devuelva el software utilizado y su versión (o, en algunos casos, una aproximación).
 Ejemplo de Comando Nmap:</p>
 <pre><code class="language-bash">└─$ nmap -Pn 10.20.50.2 -sV
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-01-09 17:40 CET
@@ -5208,24 +5308,50 @@ Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 8.53 seconds
 </code></pre>
-<p><strong>Uso de Scripts de Nmap para Descubrimiento Avanzado</strong>
-Además de las funcionalidades básicas, nmap incluye una serie de scripts que permiten realizar consultas avanzadas sobre los objetivos. Estos scripts forman parte del Nmap Scripting Engine (NSE) y están organizados en diferentes categorías, diseñadas para tareas específicas.</p>
-<p>Una de estas categorías es "version", que se enfoca en realizar tareas adicionales de descubrimiento de servicios. Estos scripts proporcionan información detallada sobre ciertos servicios, ampliando las capacidades de detección de software y versión más allá del simple "banner grabbing".
-Comando para Usar los Scripts de la Categoría "version"</p>
+<p><strong>Uso de Scripts de Nmap para Descubrimiento Avanzado</strong></p>
+<p>Además de las funcionalidades básicas, nmap incluye una serie de scripts que permiten realizar consultas avanzadas sobre los objetivos. Estos scripts forman parte del Nmap Scripting Engine (NSE) y están organizados en diferentes categorías, diseñadas para tareas específicas.</p>
+<p>Una de estas categorías es "version", que se enfoca en realizar tareas adicionales de descubrimiento de servicios. Estos scripts proporcionan información detallada sobre ciertos servicios, ampliando las capacidades de detección de software y versión más allá del simple "banner grabbing".</p>
+<p><strong>Comando para Usar los Scripts de la Categoría "version"</strong></p>
 <p>El siguiente comando invoca todos los scripts de la categoría "version":</p>
 <pre><code>nmap -Pn -p [puerto/rango] --script version [IP/rango]
 </code></pre>
 <p>Parámetros Explicados
-Pn: Desactiva el escaneo previo de ping.
-    -p [puerto/rango]: Indica el puerto o rango de puertos que deseas escanear. Por ejemplo, -p 80 o -p 1-1000.
-    --script version: Invoca todos los scripts relacionados con la categoría "version".
-    [IP/rango]: Especifica la dirección IP o rango de direcciones objetivo.</p>
+- <code>-Pn</code>: Desactiva el escaneo previo de ping.
+- <code>-p [puerto/rango]</code>: Indica el puerto o rango de puertos que deseas escanear. Por ejemplo, -p 80 o -p 1-1000.
+- <code>--script version</code>: Invoca todos los scripts relacionados con la categoría <code>version</code>.
+- <code>[IP/rango]</code>: Especifica la dirección IP o rango de direcciones objetivo.</p>
 <h2 id="tipos-de-escaneo-en-nmap">Tipos de Escaneo en <code>nmap</code><a class="headerlink" href="#tipos-de-escaneo-en-nmap" title="Permanent link">&para;</a></h2>
 <h3 id="tcp-connect-full-open-scan"><strong>TCP Connect (Full Open Scan)</strong><a class="headerlink" href="#tcp-connect-full-open-scan" title="Permanent link">&para;</a></h3>
-<p>Establece una conexión completa utilizando el "three-way handshake".</p>
+<p>La técnica de escaneo de puertos descrita corresponde al <strong>"Escaneo TCP Connect"</strong> (<code>-sT</code> en Nmap). Es el método por defecto utilizado por Nmap si no se tienen privilegios de administrador en el sistema (cuando no se puede enviar paquetes TCP personalizados).</p>
+<h4 id="detalles-del-tcp-connect-scan">Detalles del <strong>"TCP Connect Scan"</strong><a class="headerlink" href="#detalles-del-tcp-connect-scan" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Realiza una conexión completa mediante el <strong>three-way handshake</strong>:<ol>
+<li>Envío de un paquete <code>SYN</code> al puerto objetivo.</li>
+<li>Si el puerto está abierto, se recibe un paquete <code>SYN/ACK</code>.</li>
+<li>A continuación, se envía un paquete <code>ACK</code> para completar la conexión.</li>
+</ol>
+</li>
+<li>Si el puerto está cerrado:<ul>
+<li>Se recibe un paquete <code>RST</code> (Reset) como respuesta.</li>
+</ul>
+</li>
+<li>Una vez identificado el estado del puerto, se cierra la conexión inmediatamente.</li>
+</ul>
+<p><img alt="image-20250115142858964" src="../img/image-20250115142858964.png" /></p>
+<h4 id="ventajas">Ventajas:<a class="headerlink" href="#ventajas" title="Permanent link">&para;</a></h4>
+<ul>
+<li>No requiere privilegios de superusuario porque utiliza las funciones estándar del sistema operativo para establecer conexiones.</li>
+<li>Es más fiable en entornos donde no se pueden usar técnicas de escaneo que manipulen paquetes directamente.</li>
+</ul>
+<h4 id="desventajas">Desventajas:<a class="headerlink" href="#desventajas" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Es más fácil de detectar porque se generan registros en los sistemas de registro del servidor objetivo, ya que la conexión se completa.</li>
+</ul>
+<h4 id="uso-en-nmap">Uso en Nmap:<a class="headerlink" href="#uso-en-nmap" title="Permanent link">&para;</a></h4>
+<p>Para realizar un escaneo <code>-sT</code>, simplemente usa:</p>
 <pre><code class="language-bash">nmap -sT [IP/rango] -p [puerto/rango]
 </code></pre>
-<h3 id="stealth-scan-syn-scan"><strong>Stealth Scan (SYN Scan)</strong><a class="headerlink" href="#stealth-scan-syn-scan" title="Permanent link">&para;</a></h3>
+<h4 id="stealth-scan-syn-scan"><strong>Stealth Scan (SYN Scan)</strong><a class="headerlink" href="#stealth-scan-syn-scan" title="Permanent link">&para;</a></h4>
 <p>Envía un paquete SYN pero no completa el handshake, haciendo el escaneo más rápido.</p>
 <pre><code class="language-bash">nmap -sS [IP/rango] -p [puerto/rango]
 </code></pre>

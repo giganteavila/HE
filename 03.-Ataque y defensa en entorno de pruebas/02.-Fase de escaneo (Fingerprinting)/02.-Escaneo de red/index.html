@@ -3902,36 +3902,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-netdiscover" class="md-nav__link">
+  <a href="#netdiscover" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Netdiscover
+      Netdiscover
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-arp-scan" class="md-nav__link">
+  <a href="#wireshark-tcpdump" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Arp-scan
+      Wireshark / Tcpdump
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-wireshark-tcpdump" class="md-nav__link">
+  <a href="#nmap-como-escaner-de-red" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Wireshark / Tcpdump
+      Nmap como escáner de red
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-nmap-como-escaner-de-red" class="md-nav__link">
+  <a href="#autoevaluacion" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Nmap como escáner de red
+      Autoevaluación
     </span>
   </a>
   
@@ -3939,15 +3939,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autoevaluacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Autoevaluación
-    </span>
-  </a>
   
 </li>
       
@@ -4925,36 +4916,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-netdiscover" class="md-nav__link">
+  <a href="#netdiscover" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Netdiscover
+      Netdiscover
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-arp-scan" class="md-nav__link">
+  <a href="#wireshark-tcpdump" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Arp-scan
+      Wireshark / Tcpdump
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-wireshark-tcpdump" class="md-nav__link">
+  <a href="#nmap-como-escaner-de-red" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Wireshark / Tcpdump
+      Nmap como escáner de red
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-nmap-como-escaner-de-red" class="md-nav__link">
+  <a href="#autoevaluacion" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Nmap como escáner de red
+      Autoevaluación
     </span>
   </a>
   
@@ -4962,15 +4953,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autoevaluacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Autoevaluación
-    </span>
-  </a>
   
 </li>
       
@@ -4999,26 +4981,65 @@
 <li>Sistemas operativos de los dispositivos.</li>
 </ul>
 <p>Las técnicas y resultados de un escaneo de red varían según si se realiza sobre una red interna (red privada de la organización) o sobre el perímetro externo (segmento de red publicado en Internet).</p>
-<h3 id="herramientas-para-escaneo-de-red"><strong>Herramientas para Escaneo de Red</strong><a class="headerlink" href="#herramientas-para-escaneo-de-red" title="Permanent link">&para;</a></h3>
-<h4 id="1-netdiscover"><strong>1. Netdiscover</strong><a class="headerlink" href="#1-netdiscover" title="Permanent link">&para;</a></h4>
+<h2 id="herramientas-para-escaneo-de-red">Herramientas para Escaneo de Red<a class="headerlink" href="#herramientas-para-escaneo-de-red" title="Permanent link">&para;</a></h2>
+<h3 id="netdiscover">Netdiscover<a class="headerlink" href="#netdiscover" title="Permanent link">&para;</a></h3>
 <p>Netdiscover permite el descubrimiento de equipos en la red mediante mensajes ARP Discovery, recopilando información de las direcciones IP observadas a través del tráfico broadcast ARP.<br />
 <strong>Características:</strong></p>
 <ul>
 <li>Detecta direcciones IP activas en la red.</li>
 <li>Funciona únicamente en redes internas, ya que se basa en el protocolo ARP.</li>
 </ul>
-<p><img alt="image-20250109171635525" src="../img/image-20250109171635525.png" /></p>
-<h4 id="2-arp-scan"><strong>2. Arp-scan</strong><a class="headerlink" href="#2-arp-scan" title="Permanent link">&para;</a></h4>
-<p>Arp-scan realiza consultas ARP Discovery en el dominio de broadcast para identificar equipos activos en la red.<br />
-<strong>Características:</strong></p>
-<ul>
-<li>Permite especificar la interfaz de red desde donde realizar el escaneo.</li>
-<li>Detecta direcciones IP activas respondiendo a solicitudes ARP.</li>
-<li>Al igual que Netdiscover, es útil únicamente en redes internas.</li>
-</ul>
-<p><img alt="image-20250109172248799" src="../img/image-20250109172248799.png" /></p>
+<p>```bash
+   Currently scanning: Finished!   |   Screen View: Unique Hosts                                                </p>
+<p>1447 Captured ARP Req/Rep packets, from 11 hosts.   Total size: 82662                                        </p>
 <hr />
-<h4 id="3-wireshark-tcpdump"><strong>3. Wireshark / Tcpdump</strong><a class="headerlink" href="#3-wireshark-tcpdump" title="Permanent link">&para;</a></h4>
+<p>IP            At MAC Address     Count     Len  MAC Vendor / Hostname      </p>
+<hr />
+<p>10.20.50.30     bc:24:11:26:7b:03   1154   69240  Unknown vendor                                           <br />
+ 10.20.50.139    08:3a:f2:aa:96:74    135    5670  Espressif Inc.                                           <br />
+ 10.20.50.44     e8:65:d4:fe:0b:80     26    1560  Tenda Technology Co.,Ltd.Dongguan branch                 <br />
+ 10.20.50.138    48:e7:29:89:c3:4c      5     210  Espressif Inc.                                           <br />
+ 10.20.50.166    9c:6b:00:0b:f4:09      1      60  Unknown vendor                                           <br />
+ 10.20.50.193    90:0f:0c:23:cf:45      1      42  CLOUD NETWORK TECHNOLOGY SINGAPORE PTE. LTD.             <br />
+ 10.20.50.192    48:e7:da:ce:1b:0d     85    3570  AzureWave Technology Inc.                                <br />
+ 10.20.50.95     bc:24:11:89:3c:f7     11     660  Unknown vendor                                           <br />
+ 10.20.50.100    bc:24:11:8f:b0:09     10     600  Unknown vendor                                           <br />
+ 10.20.50.99     bc:24:11:36:b2:d8     14     840  Unknown vendor                                           <br />
+ 10.20.50.46     dc:ed:83:68:0f:1b      5     210  Beijing Xiaomi Mobile Software Co., Ltd   </p>
+<pre><code>
+### Arp-scan
+
+Arp-scan realiza consultas ARP Discovery en el dominio de broadcast para identificar equipos activos en la red.  
+**Características:**
+
+- Permite especificar la interfaz de red desde donde realizar el escaneo.
+- Detecta direcciones IP activas respondiendo a solicitudes ARP.
+- Al igual que Netdiscover, es útil únicamente en redes internas.
+
+```bash  
+└─# arp-scan 10.20.50.0/24  
+Interface: wlan0, type: EN10MB, MAC: 5c:ba:ef:58:4d:a5, IPv4: 10.20.50.123  
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)  
+10.20.50.1      dc:2c:6e:d6:9f:ec       Routerboard.com  
+10.20.50.2      00:17:95:8c:fd:41       Cisco Systems, Inc  
+10.20.50.7      00:23:18:0c:a5:47       Toshiba  
+10.20.50.10     64:00:f1:37:28:06       Cisco Systems, Inc  
+10.20.50.30     bc:24:11:26:7b:03       (Unknown)  
+10.20.50.44     e8:65:d4:fe:0b:80       Tenda Technology Co.,Ltd.Dongguan branch  
+10.20.50.166    9c:6b:00:0b:f4:09       (Unknown)  
+10.20.50.179    a8:a1:59:9e:99:6b       ASRock Incorporation  
+10.20.50.24     10:4a:7d:91:5f:50       Intel Corporate  
+10.20.50.42     48:55:19:5d:62:91       Espressif Inc.  
+10.20.50.45     f4:cf:a2:30:80:18       Espressif Inc.  
+10.20.50.47     94:be:46:b0:10:ee       Motorola (Wuhan) Mobility Technologies Communication Co., Ltd.  
+10.20.50.46     dc:ed:83:68:0f:1b       Beijing Xiaomi Mobile Software Co., Ltd  
+10.20.50.192    48:e7:da:ce:1b:0d       AzureWave Technology Inc.  
+10.20.50.195    22:9c:f7:57:d3:0c       (Unknown: locally administered)  
+
+15 packets received by filter, 0 packets dropped by kernel  
+Ending arp-scan 1.10.0: 256 hosts scanned in 2.065 seconds (123.97 hosts/sec). 15 responded
+</code></pre>
+<h3 id="wireshark-tcpdump">Wireshark / Tcpdump<a class="headerlink" href="#wireshark-tcpdump" title="Permanent link">&para;</a></h3>
 <p>Wireshark y Tcpdump no son herramientas de escaneo, sino analizadores de tráfico que capturan y analizan los datos transmitidos en la red.<br />
 <strong>Características:</strong></p>
 <ul>
@@ -5026,8 +5047,7 @@
 <li>Permiten identificar subredes, VLAN y otra información útil.</li>
 <li>Al no realizar comunicación activa, se consideran herramientas de escaneo pasivo.</li>
 </ul>
-<hr />
-<h4 id="4-nmap-como-escaner-de-red"><strong>4. Nmap como escáner de red</strong><a class="headerlink" href="#4-nmap-como-escaner-de-red" title="Permanent link">&para;</a></h4>
+<h3 id="nmap-como-escaner-de-red">Nmap como escáner de red<a class="headerlink" href="#nmap-como-escaner-de-red" title="Permanent link">&para;</a></h3>
 <p>Nmap es una herramienta versátil que puede usarse para escaneos de red, servicios y vulnerabilidades. En este caso, se utiliza como escáner de red para identificar equipos activos y las direcciones IP asignadas.<br />
 <strong>Características:</strong></p>
 <ul>
@@ -5038,12 +5058,31 @@
 <ul>
 <li>Escaneo ARP:</li>
 </ul>
-<pre><code class="language-bash">nmap -PR 192.168.0.*
+<pre><code class="language-bash">└─$ nmap -PR 172.31.*.*  
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-01-09 18:14 CET  
+Nmap scan report for 172.31.1.1  
+Host is up (0.00023s latency).  
+Not shown: 993 closed tcp ports (reset)  
+PORT     STATE SERVICE  
+21/tcp   open  ftp  
+22/tcp   open  ssh  
+23/tcp   open  telnet  
+53/tcp   open  domain  
+80/tcp   open  http  
+2000/tcp open  cisco-sccp  
+8291/tcp open  unknown  
+MAC Address: 2C:C8:1B:9C:B4:FC (Routerboard.com)
 </code></pre>
 <ul>
 <li>Escaneo ICMP:</li>
 </ul>
-<pre><code class="language-bash">nmap -sP 192.168.0.*
+<pre><code class="language-bash">└─$ nmap -sP 172.31.*.*    
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-01-09 18:16 CET  
+Nmap scan report for 172.31.1.1  
+Host is up (0.000089s latency).  
+MAC Address: 2C:C8:1B:9C:B4:FC (Routerboard.com)  
+Nmap scan report for 172.31.1.204  
+Host is up.
 </code></pre>
 <h3 id="autoevaluacion"><strong>Autoevaluación</strong><a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h3>
 <p><strong>Pregunta:</strong><br />
@@ -5055,12 +5094,10 @@ Indica cuáles de las siguientes herramientas realizan un descubrimiento o escan
 <li>Arp-scan</li>
 </ol>
 <p><strong>Solución:</strong></p>
-<ul>
-<li><strong>1. Correcto:</strong> Wireshark analiza el tráfico existente sin generar actividad.</li>
-<li><strong>2. Incorrecto:</strong> Netdiscover utiliza mensajes ARP, lo que implica comunicación activa.</li>
-<li><strong>3. Incorrecto:</strong> Nmap genera tráfico activo durante el escaneo.</li>
-<li><strong>4. Incorrecto:</strong> Arp-scan realiza consultas activas en la red.</li>
-</ul>
+<p><strong>1. Correcto:</strong> Wireshark analiza el tráfico existente sin generar actividad.
+<strong>2. Incorrecto:</strong> Netdiscover utiliza mensajes ARP, lo que implica comunicación activa.
+<strong>3. Incorrecto:</strong> Nmap genera tráfico activo durante el escaneo.
+<strong>4. Incorrecto:</strong> Arp-scan realiza consultas activas en la red.</p>
 
 
 
