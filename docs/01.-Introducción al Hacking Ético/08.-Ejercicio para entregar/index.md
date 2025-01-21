@@ -1,0 +1,23 @@
+# Fernández Automoción
+
+**Teresa** es la responsable de **TI** de la empresa *“Fernández Automoción”*, una empresa de gran tamaño dedicada a la **fabricación de piezas de salpicadero** en la industria del automóvil, con delegaciones en varios países de *tres continentes* en los que dispone de fábricas operativas.
+
+Recientemente han sufrido un **incidente de seguridad** que ha paralizado parte de la producción durante *dos semanas*. Como consecuencia de este hecho, se han tomado una serie de decisiones para **aumentar el nivel de madurez en ciberseguridad** de la empresa. Entre estas acciones se encuentra la creación de la figura del **responsable de ciberseguridad (CISO Chief Information Security Officer)** que recae sobre la propia *Teresa*.
+
+Entre las acciones que debe tomar Teresa está la creación de varios departamentos que sustenten las operativas de **ciberseguridad** de la empresa. Teresa opina que una de las claves es disponer de un departamento de **“ciberseguridad ofensiva”** dedicado a probar activamente las **medidas de seguridad** implantadas en la empresa y descubrir posibles **vulnerabilidades** que pudieran volver a poner en riesgo el negocio.
+
+Para ello, Teresa pone al frente de este departamento a *Juan*, compañero de profesión desde hace varios años y en el que Teresa confía plenamente.
+
+Dado que **Juan** dispone de *más de 10 años* gestionando proyectos de **TI**, pero nunca antes había tenido que gestionar proyectos de **“seguridad ofensiva”** o **“hacking ético”**, decide, en primer lugar, documentarse sobre las cuestiones principales de esta especialidad para poder diseñar un **plan de acción adecuado** que siente las bases de la gestión de este nuevo departamento, los proyectos que se realizarán y el **objetivo de los mismos**.
+
+Una vez que **Juan** recopila la información general de la disciplina *"hacking ético"*, entiende que tiene que existir un mecanismo para poder **medir y catalogar debidamente las vulnerabilidades** que se vayan descubriendo a lo largo de la infraestructura y el **riesgo** que pueden presentar a la compañía. En este caso, deciden que la siguiente encargada de recopilar toda esta información sea *María*.
+
+Una vez que el equipo determina la manera de catalogar y medir una determinada vulnerabilidad, ya están en disposición de poder **priorizar distintos tipos de vulnerabilidades** dependiendo de la **criticidad** de cada una y el **impacto** que tendría en el negocio. Sin más dilación, acuerdan que es necesario iniciar un **proceso** que les permita empezar a **descubrir vulnerabilidades** en los sistemas informáticos y aplicativos de la compañía.
+
+Sin embargo, no saben por dónde empezar, no tienen claro cuál sería el mejor punto de partida teniendo en cuenta que este proceso no se ha realizado nunca. Otro componente del equipo comenta que tiene un antiguo compañero del módulo de **ASIR** que trabaja en el departamento de **hacking ético** de una reconocida empresa de consultoría, así que, con la ayuda de su amigo, se ofrece a realizar un **estudio** del tipo de **auditorías de seguridad** que se realizan en este tipo de casos, así como las distintas fases en las que se dividiría el proceso.
+
+Una vez que el departamento convoca otra reunión interna para explicar todo el proceso que conlleva la realización de una **auditoría de seguridad**, las distintas tipologías de pruebas y las fases de las mismas, deciden que, para poder empezar a realizar este tipo de pruebas, necesitan conocer, al menos a grandes rasgos, los **tipos de herramientas más generales** que se pueden utilizar en cada una de las fases de prueba, deciden repartirlas de la siguiente manera:
+
+- **Juan** se encargará de documentarse sobre las herramientas de las fases de **descubrimiento y escaneo**, dado que son fases muy dependientes una de la otra, existen herramientas que operan en ambas fases.
+- **Marisa** elige investigar las herramientas de **explotación**, le parece un campo muy interesante y siempre ha tenido ganas de iniciarse en la materia.
+- **Luis** tuvo en el ciclo de **ASIR** una asignatura en la que se introducían conceptos de **ciberseguridad** y tuvo que realizar varias prácticas en las que se les encomendaba utilizar varias herramientas de explotación para comprometer sistemas vulnerables. Por este motivo le gustaría investigar en la parte de **Postexplotación** y comprobar qué posibilidades tiene un atacante una vez que ha conseguido comprometer un sistema.

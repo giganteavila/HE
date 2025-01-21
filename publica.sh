@@ -19,7 +19,7 @@ if [ "$respuesta" = "w" ]; then
   export MOZ_X11_EGL=1
   export MOZ_ENABLE_WAYLAND=1
   export MOZ_WEBRENDER=1
-  firefox https://giganteavila.github.io/SRI
+  firefox https://giganteavila.github.io/HE
 / >/dev/null 2>&1
 elif [ "$respuesta" = "l" ]; then
   # Si la respuesta es "l", verifica si el servidor local ya está en funcionamiento

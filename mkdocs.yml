@@ -15,30 +15,171 @@ site_name: Hacking Ético
 #        - Release Notes: release-notes.md
 nav:
   - ./index.md
-  - 01.-KVM:
-    - ./01.-KVM/index.md
-    - 01.-Red:
-      - ./01.-KVM/01.-Red/index.md
-      - 01.-Modos de red en KVM: ./01.-KVM/01.-Red/01.-Modos de red en KVM.md
-      - 02.-Puentes e Interfaces Virtuales en Linux:
-        - 01.-Introducción a las redes en linux: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/01.-Introducción a las redes en linux.md
-        - 02.-Puentes de Red (Network Bridges): ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/02.-Puentes de Red (Network Bridges).md
-        - 03.-Interfaces Virtuales en Linux: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/03.-Interfaces Virtuales en Linux.md
-        - 04.-Gestión de Puentes con NetworkManager: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/04.-Gestión de Puentes con NetworkManager.md
-        - 05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales.md
-        - 06.-Gestión Avanzada de Puentes e Interfaces Virtuales: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/06.-Gestión Avanzada de Puentes e Interfaces Virtuales.md
-        - 07.-Herramientas y comandos útiles: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/07.-Herramientas y comandos útiles.md
-        - 08.-Consideraciones de Seguridad: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/08.-Consideraciones de Seguridad.md
-        - 09.-Ejemplo Práctico:Configuración Completa con NetworkManager: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/09.-Ejemplo Práctico:Configuración Completa con NetworkManager.md
-        - 10.-Resumen y Mejores Prácticas: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/10.-Resumen y Mejores Prácticas.md
-        - 11.-Recursos adicionales: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/11.-Recursos adicionales.md
-        - Testeo de DHCP: ./01.-KVM/01.-Red/02.-Puentes e Interfaces Virtuales en Linux/Testeo de DHCP.md
-      - 03.-Configuración de red en modo bridge: ./01.-KVM/01.-Red/03.-Configuración de red en modo bridge.md
-      - 04.-Configurar el interfaz puente con NetworkManager: ./01.-KVM/01.-Red/04.-Configurar el interfaz puente con NetworkManager.md
-      - 05.-Configurar red en modo bridge: ./01.-KVM/01.-Red/05.-Configurar red en modo bridge.md
-      - NetPlan vs Network Manager vs systemd: ./01.-KVM/01.-Red/NetPlan vs Network Manager vs systemd.md
-    - 02.-Almacenamiento:
-      - 01.-Aprovisionamiento ligero de discos: ./01.-KVM/02.-Almacenamiento/01.-Aprovisionamiento ligero de discos.md
+  - 00.-KVM:
+    - ./00.-KVM/index.md
+    - 01.-Introducción:
+      - 01.-Qué es la virtualización: ./00.-KVM/01.-Introducción/01.-Qué es la virtualización.md
+      - 02.-Tipos: ./00.-KVM/01.-Introducción/02.-Tipos.md
+      - 03.-qemu-kvm: ./00.-KVM/01.-Introducción/03.-qemu-kvm.md
+      - 04.-libvirt: ./00.-KVM/01.-Introducción/04.-libvirt.md
+      - 05.-LXC: ./00.-KVM/01.-Introducción/05.-LXC.md
+    - 02.-Instalación:
+      - 01.-Escenario de instalación: ./00.-KVM/02.-Instalación/01.-Escenario de instalación.md
+      - 02.-Instalacion: ./00.-KVM/02.-Instalación/02.-Instalacion.md
+      - 03.-Conexión local no privilegiada a libvirt: ./00.-KVM/02.-Instalación/03.-Conexión local no privilegiada a libvirt.md
+      - 04.-Conexión local privilegiada a libvirt: ./00.-KVM/02.-Instalación/04.-Conexión local privilegiada a libvirt.md
+      - 05.-Conexión remota a libvirt: ./00.-KVM/02.-Instalación/05.-Conexión remota a libvirt.md
+    - 03.-Creación de MV desde el CLI:
+      - 01.-Creación de MV con virt-install: ./00.-KVM/03.-Creación de MV desde el CLI/01.-Creación de MV con virt-install.md
+      - 02.-Características de la MV: ./00.-KVM/03.-Creación de MV desde el CLI/02.-Características de la MV.md
+      - 03.-Gestión de MV con virsh: ./00.-KVM/03.-Creación de MV desde el CLI/03.-Gestión de MV con virsh.md
+      - 04.-Definición XML de una MV: ./00.-KVM/03.-Creación de MV desde el CLI/04.-Definición XML de una MV.md
+      - 05.-Modificación de una MV: ./00.-KVM/03.-Creación de MV desde el CLI/05.-Modificación de una MV.md
+    - 04.-Creación de MV con virt-manager:
+      - 01.-Primeros pasos con virt-manager: ./00.-KVM/04.-Creación de MV con virt-manager/01.-Primeros pasos con virt-manager.md
+      - 02.-Creación de MV linux: ./00.-KVM/04.-Creación de MV con virt-manager/02.-Creación de MV linux.md
+      - 03.-Gestión de MV: ./00.-KVM/04.-Creación de MV con virt-manager/03.-Gestión de MV.md
+      - 04.-Detalles de las MV: ./00.-KVM/04.-Creación de MV con virt-manager/04.-Detalles de las MV.md
+      - 05.-Creación de MV Wndows: ./00.-KVM/04.-Creación de MV con virt-manager/05.-Creación de MV Wndows.md
+    - 05.-Almacenamiento:
+      - 01.-Introducción al almacenamiento: ./00.-KVM/05.-Almacenamiento/01.-Introducción al almacenamiento.md
+      - 02.-Introducción al almacenamiento en QEMU⁄KVM + libvirt: ./00.-KVM/05.-Almacenamiento/02.-Introducción al almacenamiento en QEMU⁄KVM + libvirt.md
+      - 03.-Gestión de Pools de Almacenamiento: ./00.-KVM/05.-Almacenamiento/03.-Gestión de Pools de Almacenamiento.md
+      - 04.-Gestión de volúmenes de almacenamiento con libvirt: ./00.-KVM/05.-Almacenamiento/04.-Gestión de volúmenes de almacenamiento con libvirt.md
+      - 05.-Gestión de volúmenes de almacenamiento con herramientas específicas: ./00.-KVM/05.-Almacenamiento/05.-Gestión de volúmenes de almacenamiento con herramientas específicas.md
+      - 06.-Trabajar con volúmenes en las máquinas virtuales: ./00.-KVM/05.-Almacenamiento/06.-Trabajar con volúmenes en las máquinas virtuales.md
+      - 07.-Compresión de imágenes: ./00.-KVM/05.-Almacenamiento/07.-Compresión de imágenes.md
+    - 06.-Clonación y Snapshots:
+      - ./00.-KVM/06.-Clonación y Snapshots/index.md
+      - 01.-Clonación de máquinas virtuales: ./00.-KVM/06.-Clonación y Snapshots/01.-Clonación de máquinas virtuales.md
+      - 02.-Plantillas de MV: ./00.-KVM/06.-Clonación y Snapshots/02.-Plantillas de MV.md
+      - 03.-Clonación completa con plantillas: ./00.-KVM/06.-Clonación y Snapshots/03.-Clonación completa con plantillas.md
+      - 04.-Clonación enlazada con plantillas: ./00.-KVM/06.-Clonación y Snapshots/04.-Clonación enlazada con plantillas.md
+      - 05.-Snapshots de MV: ./00.-KVM/06.-Clonación y Snapshots/05.-Snapshots de MV.md
+    - 07.-Redes:
+      - 01.-Introduccion: ./00.-KVM/07.-Redes/01.-Introduccion.md
+      - 02.-Definicón de RV (Privadas): ./00.-KVM/07.-Redes/02.-Definicón de RV (Privadas).md
+      - 03.-Gestión de RV: ./00.-KVM/07.-Redes/03.-Gestión de RV.md
+      - 04.-Creación de un Puerte Externo con Linux Bridge: ./00.-KVM/07.-Redes/04.-Creación de un Puerte Externo con Linux Bridge.md
+      - 05.-Gestión de Redes Puentes (Públicas): ./00.-KVM/07.-Redes/05.-Gestión de Redes Puentes (Públicas).md
+      - 06.-Configuración de red en MV: ./00.-KVM/07.-Redes/06.-Configuración de red en MV.md
+    - 08.-LXC:
+      - 01.-Introduccion a LXC: ./00.-KVM/08.-LXC/01.-Introduccion a LXC.md
+      - 02.-Creación y gestión de contenedores: ./00.-KVM/08.-LXC/02.-Creación y gestión de contenedores.md
+      - 03.-Configuración de contenedores LXC: ./00.-KVM/08.-LXC/03.-Configuración de contenedores LXC.md
+      - 04.-Redes en LXC: ./00.-KVM/08.-LXC/04.-Redes en LXC.md
+      - 05.-Almacenamiento en LXC: ./00.-KVM/08.-LXC/05.-Almacenamiento en LXC.md
+      - 06.-Introducción a LXD: ./00.-KVM/08.-LXC/06.-Introducción a LXD.md
+    - 09.-Anexos:
+      - 01.-Uso de los puertos USB en KVM: ./00.-KVM/09.-Anexos/01.-Uso de los puertos USB en KVM.md
+      - 02.-Copiar y Pegar: ./00.-KVM/09.-Anexos/02.-Copiar y Pegar.md
+    - 10.-Prácticas:
+      - ./00.-KVM/10.-Prácticas/index.md
+      - 01.-Instrucciones para la captura: ./00.-KVM/10.-Prácticas/01.-Instrucciones para la captura.md
+      - 02.-Solucionario: ./00.-KVM/10.-Prácticas/02.-Solucionario.md
+  - 01.-Introducción al Hacking Ético:
+    - ./01.-Introducción al Hacking Ético/index.md
+    - 01.-Historia del hacking: ./01.-Introducción al Hacking Ético/01.-Historia del hacking.md
+    - 02.-Conceptos básicos de la seguridad de la información: ./01.-Introducción al Hacking Ético/02.-Conceptos básicos de la seguridad de la información.md
+    - 03.-Amenazas a la seguridad de la información: ./01.-Introducción al Hacking Ético/03.-Amenazas a la seguridad de la información.md
+    - 04.-Test de intrusión (Pentest): ./01.-Introducción al Hacking Ético/04.-Test de intrusión (Pentest).md
+    - 05.-Cómo convertirse en Hacker (from zero to hero): ./01.-Introducción al Hacking Ético/05.-Cómo convertirse en Hacker (from zero to hero).md
+    - 06.-Links de interés: ./01.-Introducción al Hacking Ético/06.-Links de interés.md
+    - 07.-Laboratorio de prácticas:
+      - ./01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/index.md
+      - 01.-Retos de la plataforma Atenea: ./01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/01.-Retos de la plataforma Atenea.md
+      - 02.-Mi primera máquina vulnerable (boot2root) DC-1: ./01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/02.-Mi primera máquina vulnerable (boot2root) DC-1.md
+      - 03.-Actividades finales:
+        - ./01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/03.-Actividades finales/index.md
+        - 01.-De comprobación: ./01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/03.-Actividades finales/01.-De comprobación.md
+        - 02.-De aplicación: ./01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/03.-Actividades finales/02.-De aplicación.md
+        - 03.-De ampliación: ./01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/03.-Actividades finales/03.-De ampliación.md
+      - 04.-Laboratorios de Introducción al hacking en Tryhackme: ./01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/04.-Laboratorios de Introducción al hacking en Tryhackme.md
+      - 04.-Solución:
+        - Informe_Auditoria_Seguridad_Fernandez_Automocion: ./01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/04.-Solución/Informe_Auditoria_Seguridad_Fernandez_Automocion.md
+      - 05.-Fichero de configuración de Tmux: ./01.-Introducción al Hacking Ético/07.-Laboratorio de prácticas/05.-Fichero de configuración de Tmux.md
+    - 08.-Ejercicio para entregar:
+      - ./01.-Introducción al Hacking Ético/08.-Ejercicio para entregar/index.md
+      - 01.-Actividades:
+        - ./01.-Introducción al Hacking Ético/08.-Ejercicio para entregar/01.-Actividades/index.md
+        - 01.- Diseñar el plan de auditoría: ./01.-Introducción al Hacking Ético/08.-Ejercicio para entregar/01.-Actividades/01.- Diseñar el plan de auditoría.md
+        - 02.-Organiza las fases de la auditoría: ./01.-Introducción al Hacking Ético/08.-Ejercicio para entregar/01.-Actividades/02.-Organiza las fases de la auditoría.md
+        - 03.-Presentación y valoración de vulnerabilidades: ./01.-Introducción al Hacking Ético/08.-Ejercicio para entregar/01.-Actividades/03.-Presentación y valoración de vulnerabilidades.md
+        - 04.-Información de interés: ./01.-Introducción al Hacking Ético/08.-Ejercicio para entregar/01.-Actividades/04.-Información de interés.md
+        - 05.-Entrega: ./01.-Introducción al Hacking Ético/08.-Ejercicio para entregar/01.-Actividades/05.-Entrega.md
+        - 06.-Solución: ./01.-Introducción al Hacking Ético/08.-Ejercicio para entregar/01.-Actividades/06.-Solución.md
+  - 02.-HE en entornos inalámbricos:
+    - ./02.-HE en entornos inalámbricos/index.md
+    - 01.-Conceptos generales de HE en entornos inalámbricos:
+      - ./02.-HE en entornos inalámbricos/01.-Conceptos generales de HE en entornos inalámbricos/index.md
+      - 01.-Diferencias entre bandas de frecuencia: ./02.-HE en entornos inalámbricos/01.-Conceptos generales de HE en entornos inalámbricos/01.-Diferencias entre bandas de frecuencia.md
+      - 02.-Componentes de una Red inalámbrica: ./02.-HE en entornos inalámbricos/01.-Conceptos generales de HE en entornos inalámbricos/02.-Componentes de una Red inalámbrica.md
+      - 03.-Terminología Redes WiFi: ./02.-HE en entornos inalámbricos/01.-Conceptos generales de HE en entornos inalámbricos/03.-Terminología Redes WiFi.md
+      - 04.-Tipos Redes Inalambricas: ./02.-HE en entornos inalámbricos/01.-Conceptos generales de HE en entornos inalámbricos/04.-Tipos Redes Inalambricas.md
+      - 05.-Equipamiento Hacking Inalámbrico: ./02.-HE en entornos inalámbricos/01.-Conceptos generales de HE en entornos inalámbricos/05.-Equipamiento Hacking Inalámbrico.md
+      - 06.-Modos Operación tarjetas WiFi: ./02.-HE en entornos inalámbricos/01.-Conceptos generales de HE en entornos inalámbricos/06.-Modos Operación tarjetas WiFi.md
+    - 02.-Análisis y recolección de datos en redes inalámbricas:
+      - ./02.-HE en entornos inalámbricos/02.-Análisis y recolección de datos en redes inalámbricas/index.md
+      - 01.-Necesidades Técnicas para la Monitorización: ./02.-HE en entornos inalámbricos/02.-Análisis y recolección de datos en redes inalámbricas/01.-Necesidades Técnicas para la Monitorización.md
+      - 02.-Modo Monitor de la NIC: ./02.-HE en entornos inalámbricos/02.-Análisis y recolección de datos en redes inalámbricas/02.-Modo Monitor de la NIC.md
+      - 03.-Monitorizando la red inalámbrica: ./02.-HE en entornos inalámbricos/02.-Análisis y recolección de datos en redes inalámbricas/03.-Monitorizando la red inalámbrica.md
+    - 03.-Ataques a redes inalámbricas:
+      - ./02.-HE en entornos inalámbricos/03.-Ataques a redes inalámbricas/index.md
+      - 01.-Ataques a redes OPEN: ./02.-HE en entornos inalámbricos/03.-Ataques a redes inalámbricas/01.-Ataques a redes OPEN.md
+      - 02.-Ataques a redes WEP: ./02.-HE en entornos inalámbricos/03.-Ataques a redes inalámbricas/02.-Ataques a redes WEP.md
+      - 03.-Ataques Redes WPA-WPA2_PSK: ./02.-HE en entornos inalámbricos/03.-Ataques a redes inalámbricas/03.-Ataques Redes WPA-WPA2_PSK.md
+      - 04.-Ataques Redes WPA WPA2 Enterprise: ./02.-HE en entornos inalámbricos/03.-Ataques a redes inalámbricas/04.-Ataques Redes WPA WPA2 Enterprise.md
+    - 04.-Reporting (Generación de Informes): ./02.-HE en entornos inalámbricos/04.-Reporting (Generación de Informes).md
+    - 05.-Prácticas:
+      - ./02.-HE en entornos inalámbricos/05.-Prácticas/index.md
+      - 01.-Revisión del diseño de la red Wi-Fi: ./02.-HE en entornos inalámbricos/05.-Prácticas/01.-Revisión del diseño de la red Wi-Fi.md
+  - 03.-Ataque y defensa en entorno de pruebas:
+    - ./03.-Ataque y defensa en entorno de pruebas/index.md
+    - 01.-Fase de reconocimiento (Footprinting):
+      - ./03.-Ataque y defensa en entorno de pruebas/01.-Fase de reconocimiento (Footprinting)/index.md
+      - 01.-Tipos de reconocimiento: ./03.-Ataque y defensa en entorno de pruebas/01.-Fase de reconocimiento (Footprinting)/01.-Tipos de reconocimiento.md
+      - 02.-Reconocimiento pasivo: ./03.-Ataque y defensa en entorno de pruebas/01.-Fase de reconocimiento (Footprinting)/02.-Reconocimiento pasivo.md
+      - 03.-Reconocimiento activo: ./03.-Ataque y defensa en entorno de pruebas/01.-Fase de reconocimiento (Footprinting)/03.-Reconocimiento activo.md
+    - 02.-Fase de escaneo (Fingerprinting):
+      - ./03.-Ataque y defensa en entorno de pruebas/02.-Fase de escaneo (Fingerprinting)/index.md
+      - 01.-Tipos y enfoque de los escaneos: ./03.-Ataque y defensa en entorno de pruebas/02.-Fase de escaneo (Fingerprinting)/01.-Tipos y enfoque de los escaneos.md
+      - 02.-Escaneo de red: ./03.-Ataque y defensa en entorno de pruebas/02.-Fase de escaneo (Fingerprinting)/02.-Escaneo de red.md
+      - 03.-Escaneo de servicios: ./03.-Ataque y defensa en entorno de pruebas/02.-Fase de escaneo (Fingerprinting)/03.-Escaneo de servicios.md
+      - 04.-Escaneo de vulnerabilidades: ./03.-Ataque y defensa en entorno de pruebas/02.-Fase de escaneo (Fingerprinting)/04.-Escaneo de vulnerabilidades.md
+      - 05.-Opciones Avanzadas de Nmap: ./03.-Ataque y defensa en entorno de pruebas/02.-Fase de escaneo (Fingerprinting)/05.-Opciones Avanzadas de Nmap.md
+      - 06.-Herramientas adicionales de búsqueda de vulnerabilidades: ./03.-Ataque y defensa en entorno de pruebas/02.-Fase de escaneo (Fingerprinting)/06.-Herramientas adicionales de búsqueda de vulnerabilidades.md
+    - 03.-Fase de explotación de vulnerabilidades (Exploitation):
+      - ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/index.md
+      - 01.-Vectores de Ataque: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/01.-Vectores de Ataque.md
+      - 02.-Concepto de Exploit: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/02.-Concepto de Exploit.md
+      - 03.-Concepto de Payload: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/03.-Concepto de Payload.md
+      - 04.-Herramienta Metasploit: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/04.-Herramienta Metasploit.md
+      - 05.-Herramienta `msfvenom`: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/05.-Herramienta `msfvenom`.md
+    - 04.-Interceptación, manipulación y monitoriazación del tráfico:
+      - ./03.-Ataque y defensa en entorno de pruebas/04.-Interceptación, manipulación y monitoriazación del tráfico/index.md
+      - 01.-Introducción: ./03.-Ataque y defensa en entorno de pruebas/04.-Interceptación, manipulación y monitoriazación del tráfico/01.-Introducción.md
+      - 02.-Manipulación e inyección de tráfico: ./03.-Ataque y defensa en entorno de pruebas/04.-Interceptación, manipulación y monitoriazación del tráfico/02.-Manipulación e inyección de tráfico.md
+    - 05.-Phishing:
+      - ./03.-Ataque y defensa en entorno de pruebas/05.-Phishing/index.md
+      - 01.-Introducción al phishing y sus tipos: ./03.-Ataque y defensa en entorno de pruebas/05.-Phishing/01.-Introducción al phishing y sus tipos.md
+      - 02.-Metodología de Phishing: ./03.-Ataque y defensa en entorno de pruebas/05.-Phishing/02.-Metodología de Phishing.md
+      - 03.-: ./03.-Ataque y defensa en entorno de pruebas/05.-Phishing/03.-.md
+    - 06.-Elevación de privilegios:
+      - ./03.-Ataque y defensa en entorno de pruebas/06.-Elevación de privilegios/index.md
+      - 01.-Introducción a la elevación de privilegios: ./03.-Ataque y defensa en entorno de pruebas/06.-Elevación de privilegios/01.-Introducción a la elevación de privilegios.md
+      - 02.-Elevación de privilegios en Linux: ./03.-Ataque y defensa en entorno de pruebas/06.-Elevación de privilegios/02.-Elevación de privilegios en Linux.md
+      - 03.-Elevación de privilegios en Windows: ./03.-Ataque y defensa en entorno de pruebas/06.-Elevación de privilegios/03.-Elevación de privilegios en Windows.md
+      - 04.-Herramientas de elevación de privilegios: ./03.-Ataque y defensa en entorno de pruebas/06.-Elevación de privilegios/04.-Herramientas de elevación de privilegios.md
+    - 07.-Prácticas:
+      - ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/index.md
+      - Contexto: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Contexto.md
+      - Práctica 01.-Fase de reconocimiento: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Práctica 01.-Fase de reconocimiento.md
+      - Práctica 02.-Instalación del Laboratorio con KVM⁄QEMU: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Práctica 02.-Instalación del Laboratorio con KVM⁄QEMU.md
+      - Práctica 03.-Fase de Escaneo: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Práctica 03.-Fase de Escaneo.md
+      - Práctica 04.-Fase de Explotación con Metasploit: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Práctica 04.-Fase de Explotación con Metasploit.md
+  - 99.-Anexos:
+    - ./99.-Anexos/index.md
+    - 01.-Conversor de OVA a QCOW2: ./99.-Anexos/01.-Conversor de OVA a QCOW2.md
 
 theme:
     features:
@@ -98,14 +239,15 @@ markdown_extensions:
 
 plugins:
   - search
-  - roamlinks
-  - mermaid2
+  - roamlinks:
+      separator: '-'
+  - mermaid2:
+      javascript: https://unpkg.com/mermaid/dist/mermaid.min.js
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://unpkg.com/mermaid/dist/mermaid.min.js 
 
 extra:
   static:

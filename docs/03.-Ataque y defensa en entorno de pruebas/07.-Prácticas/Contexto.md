@@ -1,0 +1,3 @@
+Una vez Luis ha completado el curso en el que ha adquirido los conocimientos necesarios para poder realizar una primera intrusión en un equipo remoto, es el momento de poder compartir estos conceptos con sus compañeros de trabajo para que todos puedan tener, al menos, unas nociones básicas de la temática que ha podido aprender Luis en el curso.
+
+Luis piensa que lo mejor para poder afianzar los conceptos es trabajar con ellos de manera práctica. Con este fin, decide crear un laboratorio de pruebas y resolver en él algunas de las actividades.

@@ -1,0 +1,319 @@
+::HE01001:: ¿Qué significa el término *hack* en el contexto del hacking?
+{
+    =Una solución rápida e ingeniosa para resolver un problema
+    ~%-25% Un error en el sistema informático
+    ~%-25% Una técnica para robar información
+    ~%-25% Un programa malicioso
+}
+
+::HE01002:: ¿Qué práctica consistía en piratear las redes telefónicas para realizar llamadas gratuitas?
+{
+    =Phreaking
+    ~%-25% Sniffing
+    ~%-25% Phishing
+    ~%-25% Spoofing
+}
+
+::HE01003:: ¿Quién escribió el *Manifiesto Hacker*?
+{
+    =Loyd Blankenship, conocido como The Mentor
+    ~%-25% John T. Draper, conocido como Captain Crunch
+    ~%-25% Kevin Mitnick
+    ~%-25% Vladimir Levin
+}
+
+::HE01004:: ¿Cuál de los siguientes principios NO es uno de los tres principios básicos de la seguridad de la información?
+{
+    =Autenticación
+    ~%-25% Confidencialidad
+    ~%-25% Integridad
+    ~%-25% Disponibilidad
+}
+
+::HE01005:: ¿Cuál de los siguientes tipos de hackers es conocido por actuar entre el bien y el mal?
+{
+    =Sombrero gris
+    ~%-25% Sombrero blanco
+    ~%-25% Sombrero negro
+    ~%-25% Script kiddies
+}
+
+::HE01006:: ¿Qué tipo de amenaza a la seguridad es un desastre natural?
+{
+    =Amenaza de origen natural
+    ~%-25% Amenaza del entorno
+    ~%-25% Amenaza de ingeniería social
+    ~%-25% Amenaza de defecto de aplicación
+}
+
+::HE01007:: ¿Qué tipo de ataque manipula a los usuarios para realizar acciones perjudiciales?
+{
+    =Ataque de ingeniería social
+    ~%-25% Ataque de fuerza bruta
+    ~%-25% Ataque de intermediario (MitM)
+    ~%-25% Ataque de DDoS
+}
+
+::HE01008:: ¿Cuál de los siguientes tipos de auditoría en pentesting asume que el auditor tiene acceso completo a la información interna de la empresa?
+{
+    =Auditoría de caja blanca
+    ~%-25% Auditoría de caja negra
+    ~%-25% Auditoría perimetral
+    ~%-25% Auditoría interna
+}
+
+::HE01009:: ¿Cuál es el objetivo de la fase de explotación en un test de intrusión?
+{
+    =Aprovechar vulnerabilidades para obtener acceso a los sistemas
+    ~%-25% Realizar un análisis preliminar de la empresa
+    ~%-25% Elaborar un informe ejecutivo
+    ~%-25% Realizar ingeniería social
+}
+
+::HE01010:: ¿Qué tipo de metodología de pentesting fue desarrollada por OWASP para aplicaciones web?
+{
+    =OWASP Web Security Testing Guide (WSTG)
+    ~%-25% PTES
+    ~%-25% OSSTMM
+    ~%-25% CAF
+}
+
+::HE01011:: ¿Qué principio de seguridad de la información asegura que solo las personas autorizadas accedan a la información?
+{
+    =Confidencialidad
+    ~%-25% Integridad
+    ~%-25% Disponibilidad
+    ~%-25% Autenticación
+}
+
+::HE01012:: ¿Cómo se clasifica la seguridad que previene daños, como controles de acceso y cortafuegos?
+{
+    =Seguridad activa
+    ~%-25% Seguridad pasiva
+    ~%-25% Seguridad física
+    ~%-25% Seguridad lógica
+}
+
+::HE01013:: ¿Qué hacker fue conocido por usar un silbato para hacer llamadas gratuitas en redes telefónicas?
+{
+    =John T. Draper (Captain Crunch)
+    ~%-25% Kevin Mitnick
+    ~%-25% Loyd Blankenship
+    ~%-25% Vladimir Levin
+}
+
+::HE01014:: ¿Qué tipo de malware está diseñado para cifrar información y pedir un rescate?
+{
+    =Ransomware
+    ~%-25% Spyware
+    ~%-25% Keylogger
+    ~%-25% Rootkit
+}
+
+::HE01015:: ¿Cuál de las siguientes opciones describe una vulnerabilidad de día cero?
+{
+    =Una vulnerabilidad para la que no existe un parche
+    ~%-25% Una vulnerabilidad solo explotable con acceso físico
+    ~%-25% Una vulnerabilidad obsoleta
+    ~%-25% Una vulnerabilidad con parche disponible
+}
+
+::HE01016:: ¿Cuál de los siguientes tipos de hackers busca reconocimiento político a través de sus acciones?
+{
+    =Hacktivista
+    ~%-25% Cracker
+    ~%-25% Insider
+    ~%-25% Spammer
+}
+
+::HE01017:: ¿Cuál es la diferencia entre un pentest y un ejercicio de Red Team?
+{
+    =El pentest es una acción concreta, mientras que el Red Team prueba defensas continuamente.
+    ~%-25% Ambos tienen el mismo enfoque de auditoría
+    ~%-25% El Red Team solo evalúa redes inalámbricas
+    ~%-25% El pentest se enfoca solo en ataques DDoS
+}
+
+::HE01018:: ¿Qué tipo de CTF (Capture the Flag) consiste en explotar una máquina hasta obtener la bandera de administrador?
+{
+    =Máquinas (boxes)
+    ~%-25% Retos (challenges)
+    ~%-25% Redes (networks)
+    ~%-25% Escenarios (scenarios)
+}
+
+::HE01019:: ¿Cuál de los siguientes NO es un tipo de ataque de ingeniería social?
+{
+    =Escaneo de puertos
+    ~%-25% Phishing
+    ~%-25% Vishing
+    ~%-25% Baiting
+}
+
+::HE01020:: ¿Qué vulnerabilidad permite a un atacante leer el registro de Windows 10 sin permisos?
+{
+    =HiveNightmare (CVE-2021-36934)
+    ~%-25% Log4Shell (CVE-2021-44228)
+    ~%-25% Spring4Shell (CVE-2022-22965)
+    ~%-25% Zerologon (CVE-2020-1472)
+}
+
+::HE01021:: ¿Qué ataque se basa en enviar múltiples peticiones para sobrecargar un servicio y colapsarlo?
+{
+    =Ataque de DDoS
+    ~%-25% Phishing
+    ~%-25% Man-in-the-Middle (MitM)
+    ~%-25% Spoofing
+}
+
+::HE01022:: ¿Cuál de los siguientes NO es un tipo de malware?
+{
+    =Exploit
+    ~%-25% Ransomware
+    ~%-25% Adware
+    ~%-25% Troyano
+}
+
+::HE01023:: ¿Cuál es el objetivo de la fase de documentación en un test de intrusión?
+{
+    =Elaborar un informe detallado del proceso y hallazgos
+    ~%-25% Obtener acceso inicial a los sistemas
+    ~%-25% Recolectar información de fuentes públicas
+    ~%-25% Realizar ingeniería social
+}
+
+::HE01024:: ¿Qué metodología de pentesting usa cinco canales de evaluación como la seguridad humana y la seguridad física?
+{
+    =OSSTMM
+    ~%-25% PTES
+    ~%-25% OWASP WSTG
+    ~%-25% CAF
+}
+
+::HE01025:: ¿Cuál de los siguientes equipos realiza labores de respuesta a incidentes y análisis forense?
+{
+    =Blue Team
+    ~%-25% Red Team
+    ~%-25% Black Team
+    ~%-25% Orange Team
+}
+
+::HE01026:: ¿Qué tipo de prueba en pentesting evalúa la fortaleza de las comunicaciones inalámbricas?
+{
+    =Auditoría wireless
+    ~%-25% Auditoría web
+    ~%-25% Auditoría de aplicaciones móviles
+    ~%-25% Prueba de estrés DoS/DDoS
+}
+
+::HE01027:: ¿Qué técnica de propagación de malware implica ocultarlo en archivos legítimos?
+{
+    =Esteganografía
+    ~%-25% Keylogging
+    ~%-25% Escaneo de puertos
+    ~%-25% Phishing
+}
+
+::HE01028:: ¿Cuál de los siguientes ataques se basa en la suplantación de datos de red para hacerse pasar por otro?
+{
+    =Spoofing
+    ~%-25% Sniffing
+    ~%-25% DDoS
+    ~%-25% Baiting
+}
+
+::HE01029:: ¿Qué técnica de seguridad ayuda a prevenir ataques de fuerza bruta a contraseñas?
+{
+    =Autenticación multifactor
+    ~%-25% Escaneo de puertos
+    ~%-25% Phishing
+    ~%-25% Shoulder surfing
+}
+
+::HE01030:: ¿Qué tipo de vulnerabilidad permite a los atacantes ejecutar código en el núcleo de un sistema operativo?
+{
+    =Vulnerabilidad de escalada de privilegios
+    ~%-25% Vulnerabilidad de inyección SQL
+    ~%-25% Vulnerabilidad de autenticación débil
+    ~%-25% Vulnerabilidad de cross-site scripting (XSS)
+}
+
+::HE01031:: ¿Qué metodología de pentesting incluye la fase de "interacciones previas" para definir el alcance y objetivos?
+{
+    =PTES
+    ~%-25% OSSTMM
+    ~%-25% OWASP WSTG
+    ~%-25% CAF
+}
+
+::HE01032:: ¿Qué distribución de Linux es popular entre los pentesters y hackers éticos?
+{
+    =Kali Linux
+    ~%-25% Ubuntu
+    ~%-25% Fedora
+    ~%-25% CentOS
+}
+
+::HE01033:: ¿Cuál de los siguientes NO es un tipo de CTF?
+{
+    =Forensics
+    ~%-25% Retos (challenges)
+    ~%-25% Máquinas (boxes)
+    ~%-25% Redes (networks)
+}
+
+::HE01034:: ¿Cuál es el principal objetivo de los retos CTF?
+{
+    =Practicar y mejorar habilidades de ciberseguridad
+    ~%-25% Obtener acceso ilegal a sistemas
+    ~%-25% Dañar los sistemas de los demás
+    ~%-25% Crear virus y malware
+}
+
+::HE01035:: ¿Cuál de los siguientes NO es un tipo de malware?
+{
+    =Backdoor
+    ~%-25% Ransomware
+    ~%-25% Keylogger
+    ~%-25% Gusano
+}
+
+::HE01036:: ¿Qué plataforma permite verificar si una cuenta ha sido comprometida en una brecha de datos?
+{
+    =Have I Been Pwned
+    ~%-25% Bugcrowd
+    ~%-25% Kali Linux
+    ~%-25% Metasploit
+}
+
+::HE01037:: ¿Qué significa el término *script kiddie* en el ámbito de la ciberseguridad?
+{
+    =Alguien sin conocimientos profundos que usa herramientas de otros para atacar sistemas
+    ~%-25% Un experto en seguridad informática
+    ~%-25% Un administrador de sistemas experimentado
+    ~%-25% Un hacker ético con certificaciones avanzadas
+}
+
+::HE01038:: ¿Qué es un ataque de intermediario (MitM)?
+{
+    =Un ataque donde el atacante intercepta y modifica el tráfico entre dos partes
+    ~%-25% Un ataque de denegación de servicio (DDoS)
+    ~%-25% Un ataque de fuerza bruta
+    ~%-25% Un ataque de suplantación
+}
+
+::HE01039:: ¿Qué técnica permite a los atacantes ocultar su código en el código fuente usando caracteres invisibles?
+{
+    =Ataque Trojan Source
+    ~%-25% Esteganografía
+    ~%-25% Phishing
+    ~%-25% Sniffing
+}
+
+::HE01040:: ¿Cuál es el propósito principal de la plataforma Zerodium?
+{
+    =Comprar vulnerabilidades de día cero
+    ~%-25% Vender herramientas de hacking ético
+    ~%-25% Educar a los usuarios sobre ciberseguridad
+    ~%-25% Brindar servicios de auditoría de seguridad
+}
