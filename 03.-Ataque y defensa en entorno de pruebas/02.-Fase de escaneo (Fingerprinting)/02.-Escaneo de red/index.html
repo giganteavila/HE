@@ -3911,6 +3911,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#arp-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arp-scan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#wireshark-tcpdump" class="md-nav__link">
     <span class="md-ellipsis">
       Wireshark / Tcpdump
@@ -4925,6 +4934,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#arp-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arp-scan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#wireshark-tcpdump" class="md-nav__link">
     <span class="md-ellipsis">
       Wireshark / Tcpdump
@@ -4989,35 +5007,33 @@
 <li>Detecta direcciones IP activas en la red.</li>
 <li>Funciona únicamente en redes internas, ya que se basa en el protocolo ARP.</li>
 </ul>
-<p>```bash
-   Currently scanning: Finished!   |   Screen View: Unique Hosts                                                </p>
-<p>1447 Captured ARP Req/Rep packets, from 11 hosts.   Total size: 82662                                        </p>
-<hr />
-<p>IP            At MAC Address     Count     Len  MAC Vendor / Hostname      </p>
-<hr />
-<p>10.20.50.30     bc:24:11:26:7b:03   1154   69240  Unknown vendor                                           <br />
- 10.20.50.139    08:3a:f2:aa:96:74    135    5670  Espressif Inc.                                           <br />
- 10.20.50.44     e8:65:d4:fe:0b:80     26    1560  Tenda Technology Co.,Ltd.Dongguan branch                 <br />
- 10.20.50.138    48:e7:29:89:c3:4c      5     210  Espressif Inc.                                           <br />
- 10.20.50.166    9c:6b:00:0b:f4:09      1      60  Unknown vendor                                           <br />
- 10.20.50.193    90:0f:0c:23:cf:45      1      42  CLOUD NETWORK TECHNOLOGY SINGAPORE PTE. LTD.             <br />
- 10.20.50.192    48:e7:da:ce:1b:0d     85    3570  AzureWave Technology Inc.                                <br />
- 10.20.50.95     bc:24:11:89:3c:f7     11     660  Unknown vendor                                           <br />
- 10.20.50.100    bc:24:11:8f:b0:09     10     600  Unknown vendor                                           <br />
- 10.20.50.99     bc:24:11:36:b2:d8     14     840  Unknown vendor                                           <br />
- 10.20.50.46     dc:ed:83:68:0f:1b      5     210  Beijing Xiaomi Mobile Software Co., Ltd   </p>
-<pre><code>
-### Arp-scan
+<pre><code class="language-bash">   Currently scanning: Finished!   |   Screen View: Unique Hosts                                                
 
-Arp-scan realiza consultas ARP Discovery en el dominio de broadcast para identificar equipos activos en la red.  
-**Características:**
-
-- Permite especificar la interfaz de red desde donde realizar el escaneo.
-- Detecta direcciones IP activas respondiendo a solicitudes ARP.
-- Al igual que Netdiscover, es útil únicamente en redes internas.
-
-```bash  
-└─# arp-scan 10.20.50.0/24  
+ 1447 Captured ARP Req/Rep packets, from 11 hosts.   Total size: 82662                                        
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 10.20.50.30     bc:24:11:26:7b:03   1154   69240  Unknown vendor                                             
+ 10.20.50.139    08:3a:f2:aa:96:74    135    5670  Espressif Inc.                                             
+ 10.20.50.44     e8:65:d4:fe:0b:80     26    1560  Tenda Technology Co.,Ltd.Dongguan branch                   
+ 10.20.50.138    48:e7:29:89:c3:4c      5     210  Espressif Inc.                                             
+ 10.20.50.166    9c:6b:00:0b:f4:09      1      60  Unknown vendor                                             
+ 10.20.50.193    90:0f:0c:23:cf:45      1      42  CLOUD NETWORK TECHNOLOGY SINGAPORE PTE. LTD.               
+ 10.20.50.192    48:e7:da:ce:1b:0d     85    3570  AzureWave Technology Inc.                                  
+ 10.20.50.95     bc:24:11:89:3c:f7     11     660  Unknown vendor                                             
+ 10.20.50.100    bc:24:11:8f:b0:09     10     600  Unknown vendor                                             
+ 10.20.50.99     bc:24:11:36:b2:d8     14     840  Unknown vendor                                             
+ 10.20.50.46     dc:ed:83:68:0f:1b      5     210  Beijing Xiaomi Mobile Software Co., Ltd   
+</code></pre>
+<h3 id="arp-scan">Arp-scan<a class="headerlink" href="#arp-scan" title="Permanent link">&para;</a></h3>
+<p>Arp-scan realiza consultas ARP Discovery en el dominio de broadcast para identificar equipos activos en la red.<br />
+<strong>Características:</strong></p>
+<ul>
+<li>Permite especificar la interfaz de red desde donde realizar el escaneo.</li>
+<li>Detecta direcciones IP activas respondiendo a solicitudes ARP.</li>
+<li>Al igual que Netdiscover, es útil únicamente en redes internas.</li>
+</ul>
+<pre><code class="language-bash">└─# arp-scan 10.20.50.0/24  
 Interface: wlan0, type: EN10MB, MAC: 5c:ba:ef:58:4d:a5, IPv4: 10.20.50.123  
 Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)  
 10.20.50.1      dc:2c:6e:d6:9f:ec       Routerboard.com  
@@ -5074,16 +5090,34 @@ PORT     STATE SERVICE
 MAC Address: 2C:C8:1B:9C:B4:FC (Routerboard.com)
 </code></pre>
 <ul>
-<li>Escaneo ICMP:</li>
+<li>Escaneo ICMP:
+<code>bash
+└─$ nmap -sP 10.20.50.*  
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-01-16 16:22 CET  
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0  
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0  
+Nmap scan report for 10.20.50.1  
+Host is up (0.0019s latency).  
+MAC Address: DC:2C:6E:D6:9F:EC (Routerboard.com)  
+Nmap scan report for 10.20.50.2  
+Host is up (0.0033s latency).  
+MAC Address: 00:23:18:0C:A5:47 (Toshiba)  
+Nmap scan report for 10.20.50.10  
+Host is up (0.019s latency).  
+MAC Address: 64:00:F1:37:28:06 (Cisco Systems)  
+Nmap scan report for 10.20.50.30  
+Host is up (0.012s latency).  
+MAC Address: 4C:03:4F:E4:16:3C (Intel Corporate)  
+Nmap scan report for 10.20.50.138  
+Host is up (0.32s latency).  
+MAC Address: 48:E7:29:89:C3:4C (Espressif)  
+Nmap scan report for 10.20.50.139  
+Host is up (0.41s latency).  
+MAC Address: 9C:6B:00:0B:F4:09 (ASRock Incorporation)  
+Nmap scan report for 10.20.50.123  
+Host is up.  
+Nmap done: 256 IP addresses (22 hosts up) scanned in 18.17 seconds</code></li>
 </ul>
-<pre><code class="language-bash">└─$ nmap -sP 172.31.*.*    
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-01-09 18:16 CET  
-Nmap scan report for 172.31.1.1  
-Host is up (0.000089s latency).  
-MAC Address: 2C:C8:1B:9C:B4:FC (Routerboard.com)  
-Nmap scan report for 172.31.1.204  
-Host is up.
-</code></pre>
 <h3 id="autoevaluacion"><strong>Autoevaluación</strong><a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h3>
 <p><strong>Pregunta:</strong><br />
 Indica cuáles de las siguientes herramientas realizan un descubrimiento o escaneo de los hosts de la red de manera totalmente pasiva (es decir, no generan tráfico activo hacia los hosts).</p>

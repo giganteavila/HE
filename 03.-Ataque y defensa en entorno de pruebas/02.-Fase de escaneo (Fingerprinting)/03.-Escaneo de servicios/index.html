@@ -5320,6 +5320,23 @@ Nmap done: 1 IP address (1 host up) scanned in 8.53 seconds
 - <code>-p [puerto/rango]</code>: Indica el puerto o rango de puertos que deseas escanear. Por ejemplo, -p 80 o -p 1-1000.
 - <code>--script version</code>: Invoca todos los scripts relacionados con la categoría <code>version</code>.
 - <code>[IP/rango]</code>: Especifica la dirección IP o rango de direcciones objetivo.</p>
+<pre><code class="language-bash">└─$ nmap -Pn -p 22-2000 --script version 10.20.50.1  
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-01-16 16:49 CET  
+Nmap scan report for 10.20.50.1  
+Host is up (0.012s latency).  
+Not shown: 1973 closed tcp ports (reset)  
+PORT     STATE SERVICE  
+22/tcp   open  ssh  
+53/tcp   open  domain  
+80/tcp   open  http  
+443/tcp  open  https  
+1723/tcp open  pptp  
+2000/tcp open  cisco-sccp  
+MAC Address: DC:2C:6E:D6:9F:EC (Routerboard.com)  
+Service Info: Host: rt-net-tic-01  
+
+Nmap done: 1 IP address (1 host up) scanned in 30.30 seconds
+</code></pre>
 <h2 id="tipos-de-escaneo-en-nmap">Tipos de Escaneo en <code>nmap</code><a class="headerlink" href="#tipos-de-escaneo-en-nmap" title="Permanent link">&para;</a></h2>
 <h3 id="tcp-connect-full-open-scan"><strong>TCP Connect (Full Open Scan)</strong><a class="headerlink" href="#tcp-connect-full-open-scan" title="Permanent link">&para;</a></h3>
 <p>La técnica de escaneo de puertos descrita corresponde al <strong>"Escaneo TCP Connect"</strong> (<code>-sT</code> en Nmap). Es el método por defecto utilizado por Nmap si no se tienen privilegios de administrador en el sistema (cuando no se puede enviar paquetes TCP personalizados).</p>
@@ -5351,6 +5368,17 @@ Nmap done: 1 IP address (1 host up) scanned in 8.53 seconds
 <p>Para realizar un escaneo <code>-sT</code>, simplemente usa:</p>
 <pre><code class="language-bash">nmap -sT [IP/rango] -p [puerto/rango]
 </code></pre>
+<pre><code class="language-bash">└─$ nmap -sT 10.20.50.1 -p 22                       
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-01-16 16:54 CET  
+Nmap scan report for 10.20.50.1  
+Host is up (0.010s latency).  
+
+PORT   STATE SERVICE  
+22/tcp open  ssh  
+MAC Address: DC:2C:6E:D6:9F:EC (Routerboard.com)  
+
+Nmap done: 1 IP address (1 host up) scanned in 0.21 seconds
+</code></pre>
 <h4 id="stealth-scan-syn-scan"><strong>Stealth Scan (SYN Scan)</strong><a class="headerlink" href="#stealth-scan-syn-scan" title="Permanent link">&para;</a></h4>
 <p>Envía un paquete SYN pero no completa el handshake, haciendo el escaneo más rápido.</p>
 <pre><code class="language-bash">nmap -sS [IP/rango] -p [puerto/rango]
@@ -5371,7 +5399,6 @@ Nmap done: 1 IP address (1 host up) scanned in 8.53 seconds
 <p>Detecta puertos UDP abiertos enviando datagramas UDP.</p>
 <pre><code class="language-bash">nmap -sU [IP/rango] -p [puerto/rango]
 </code></pre>
-<hr />
 <h2 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h2>
 <p><strong>Pregunta:</strong><br />
 ¿Cuáles de las siguientes herramientas realizan un escaneo pasivo de los hosts en la red?</p>

@@ -3943,6 +3943,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#en-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      En resumen:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#proyecto-vulscan" class="md-nav__link">
     <span class="md-ellipsis">
       Proyecto Vulscan
@@ -4942,6 +4951,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#en-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      En resumen:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#proyecto-vulscan" class="md-nav__link">
     <span class="md-ellipsis">
       Proyecto Vulscan
@@ -5029,15 +5047,28 @@
 
 <p>Después de haber localizado los servicios expuestos en los sistemas remotos, el software y la versión exacta de los mismos, es posible realizar una búsqueda para identificar posibles vulnerabilidades presentes en esas versiones concretas.</p>
 <p>Además del uso de otras técnicas y herramientas, se puede utilizar la herramienta <strong>nmap</strong> para realizar un escaneo de vulnerabilidades. Para esta tarea, nmap se apoya en los scripts de la categoría <strong>"vuln"</strong> disponibles.</p>
-<hr />
 <h3 id="scripts-de-deteccion-de-vulnerabilidades"><strong>Scripts de Detección de Vulnerabilidades</strong><a class="headerlink" href="#scripts-de-deteccion-de-vulnerabilidades" title="Permanent link">&para;</a></h3>
 <p>Existen scripts en nmap que buscan vulnerabilidades concretas en versiones específicas de algunos servicios. Estos scripts están englobados en la categoría <strong>"vuln"</strong> y pueden ejecutarse de forma conjunta.</p>
 <p><strong>Uso básico de los scripts "vuln" en nmap:</strong></p>
-<pre><code class="language-bash">nmap 192.168.1.1 -sV --script vuln
+<pre><code class="language-bash">nmap  10.20.50.1 -sV --script vuln      
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-01-16 17:00 CET  
+Pre-scan script results:  
+| broadcast-avahi-dos:    
+|   Discovered hosts:  
+|     224.0.0.251  
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).  
+|_  Hosts are all up (not vulnerable).
 </code></pre>
-<p><strong>Nota importante:</strong>
+<p>El resultado del escaneo muestra que el script <code>vuln</code> detectó una posible vulnerabilidad relacionada con <strong>Avahi</strong> (un servicio de descubrimiento de servicios en red similar a Bonjour). El script <code>broadcast-avahi-dos</code> detecta un <strong>Denial of Service (DoS)</strong> debido a un paquete NULL UDP enviado a un host en la red, que corresponde al <strong>CVE-2011-1002</strong>.</p>
+<p>En este caso, el resultado indica lo siguiente:</p>
+<ul>
+<li><strong>Hosts descubiertos</strong>: <code>224.0.0.251</code> es una dirección multicast, que se utiliza por Avahi para la difusión en la red local.</li>
+<li><strong>Vulnerabilidad</strong>: El script menciona que, en teoría, podría haber un DoS (Denial of Service) con un paquete NULL UDP, pero el mensaje final <strong>"_Hosts are all up (not vulnerable)"</strong> indica que <strong>no hay hosts vulnerables</strong> en la red para este caso.</li>
+</ul>
+<h3 id="en-resumen">En resumen:<a class="headerlink" href="#en-resumen" title="Permanent link">&para;</a></h3>
+<p>El escaneo muestra que no se han encontrado vulnerabilidades activas para el <strong>CVE-2011-1002</strong> en el host objetivo (<code>10.20.50.1</code>), lo cual es una buena noticia, ya que significa que el sistema está protegido contra esa vulnerabilidad en particular. Sin embargo, el script identificó una dirección de multicast asociada con Avahi, pero no encontró ningún problema que represente un riesgo de seguridad.
+<strong>Nota importante:</strong>
 - Es obligatorio forzar la enumeración de servicios con el operador <strong><code>-sV</code></strong>. De lo contrario, los scripts no dispondrán de la información necesaria para mapear posibles vulnerabilidades.</p>
-<hr />
 <h3 id="proyecto-vulscan"><strong>Proyecto Vulscan</strong><a class="headerlink" href="#proyecto-vulscan" title="Permanent link">&para;</a></h3>
 <p>El proyecto <strong>Vulscan</strong> utiliza nmap para buscar vulnerabilidades basándose en las versiones de los servicios detectados. Este proyecto se apoya en un script NSE y una base de datos local de vulnerabilidades.</p>
 <p><strong>Uso básico de Vulscan:</strong>
@@ -5045,15 +5076,14 @@
 2. Ejecuta el script como parte de un comando de nmap:
    <code>bash
    nmap 192.168.1.1 -sV --script vulscan/vulscan.nse</code></p>
+<p><img alt="image-20250116171756903" src="../img/image-20250116171756903.png" /></p>
 <p><strong>Nota:</strong><br />
 Al igual que los scripts de la categoría <strong>"vuln"</strong>, Vulscan requiere la enumeración de servicios con <strong><code>-sV</code></strong> para obtener resultados precisos.</p>
-<hr />
 <h3 id="consideraciones-importantes"><strong>Consideraciones Importantes</strong><a class="headerlink" href="#consideraciones-importantes" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Herramientas como <strong>nmap</strong> indican posibles vulnerabilidades basadas en el software y su versión. <strong>No garantizan que el sistema sea vulnerable.</strong></li>
 <li>Para confirmar una vulnerabilidad, es necesario realizar una explotación controlada de la misma.</li>
 </ul>
-<hr />
 <h2 id="autoevaluacion"><strong>Autoevaluación</strong><a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h2>
 <h3 id="pregunta-1"><strong>Pregunta 1:</strong><a class="headerlink" href="#pregunta-1" title="Permanent link">&para;</a></h3>
 <p>¿La herramienta nmap se puede utilizar para realizar los tres tipos de escaneo (red, servicios y vulnerabilidades)?</p>
@@ -5062,7 +5092,6 @@ Al igual que los scripts de la categoría <strong>"vuln"</strong>, Vulscan requi
 <strong>Respuesta:</strong> Verdadero.<br />
 Nmap tiene opciones para localizar equipos en la red, enumerar puertos abiertos y servicios activos, y realizar pruebas específicas con los scripts de la categoría <strong>"vuln"</strong>.</li>
 </ul>
-<hr />
 <h3 id="pregunta-2"><strong>Pregunta 2:</strong><a class="headerlink" href="#pregunta-2" title="Permanent link">&para;</a></h3>
 <p>¿Cuando utilizamos algunos scripts de la categoría <strong>"vuln"</strong>, no hace falta indicarle a nmap que enumere las versiones de los servicios?</p>
 <ul>
@@ -5070,7 +5099,6 @@ Nmap tiene opciones para localizar equipos en la red, enumerar puertos abiertos 
 <strong>Respuesta:</strong> Falso.<br />
 Si no forzamos la enumeración de servicios con <strong><code>-sV</code></strong>, los scripts de nmap no podrán identificar vulnerabilidades porque desconocen las versiones del software.</li>
 </ul>
-<hr />
 <h3 id="pregunta-3"><strong>Pregunta 3:</strong><a class="headerlink" href="#pregunta-3" title="Permanent link">&para;</a></h3>
 <p>¿Los escaneos de red tratan de localizar equipos activos en la red únicamente mediante el uso del protocolo ICMP?</p>
 <ul>
@@ -5078,7 +5106,6 @@ Si no forzamos la enumeración de servicios con <strong><code>-sV</code></strong
 <strong>Respuesta:</strong> Falso.<br />
 Los escaneos de red pueden localizar equipos activos utilizando los protocolos ARP, ICMP o mediante escaneos TCP.</li>
 </ul>
-<hr />
 <h3 id="pregunta-4"><strong>Pregunta 4:</strong><a class="headerlink" href="#pregunta-4" title="Permanent link">&para;</a></h3>
 <p>¿Para comprobar las versiones de los servicios, las herramientas de enumeración inician una comunicación con cada puerto concreto?</p>
 <ul>
