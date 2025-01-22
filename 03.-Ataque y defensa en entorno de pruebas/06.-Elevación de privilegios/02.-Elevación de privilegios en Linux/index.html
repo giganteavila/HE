@@ -4487,21 +4487,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Elevación de privilegios - vectores en Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#para-saber-mas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Para saber más
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -4886,21 +4871,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Elevación de privilegios - vectores en Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#para-saber-mas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Para saber más
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -4944,35 +4914,33 @@
 
   <h1>02.-Elevación de privilegios en Linux</h1>
 
+<p><img alt="" src="../img/imagen.jpeg" /></p>
 <h2 id="elevacion-de-privilegios-vectores-en-linux"><strong>Elevación de privilegios - vectores en Linux</strong><a class="headerlink" href="#elevacion-de-privilegios-vectores-en-linux" title="Permanent link">&para;</a></h2>
 <p>Existen distintos vectores que nos permiten elevar nuestros privilegios en un sistema <strong>Linux</strong>. A continuación, se muestran los más comunes:</p>
-<ol>
+<ul>
 <li>
-<p><strong>Vulnerabilidades del Kernel:</strong><br />
-    En caso de realizar una explotación del kernel, el nivel de privilegios obtenido es el más alto.</p>
+<p><strong>Vulnerabilidades del Kernel:</strong>  En caso de realizar una explotación del kernel, el nivel de privilegios obtenido es el más alto.</p>
 </li>
 <li>
-<p><strong>Vulnerabilidades en servicios:</strong><br />
-    La explotación del servicio otorga el mismo nivel de privilegios que el usuario que inició el servicio.</p>
+<p><strong>Vulnerabilidades en servicios:</strong> La explotación del servicio otorga el mismo nivel de privilegios que el usuario que inició el servicio.</p>
 </li>
 <li>
-<p><strong>Escritura en cron:</strong><br />
-    En caso de disponer de privilegios para modificar las tareas del servicio <strong>cron</strong>, podemos modificarlo para iniciar un proceso con el usuario que queramos.</p>
+<p><strong>Escritura en cron:</strong>  En caso de disponer de privilegios para modificar las tareas del servicio <strong>cron</strong>, podemos modificarlo para iniciar un proceso con el usuario que queramos.</p>
 </li>
 <li>
-<p><strong>Configuración sudo:</strong><br />
-    Si un usuario puede realizar <strong>sudo</strong> o puede ejecutar ciertos binarios como <strong>sudo</strong>.</p>
+<p><strong>Configuración sudo:</strong>  Si un usuario puede realizar <strong>sudo</strong> o puede ejecutar ciertos binarios como <strong>sudo</strong>.</p>
 </li>
 <li>
-<p><strong>Binarios con SUID:</strong><br />
-    Binarios que, al ejecutarse, lo hacen con los privilegios del usuario dueño del binario.</p>
+<p><strong>Binarios con SUID:</strong>  Binarios que, al ejecutarse, lo hacen con los privilegios del usuario dueño del binario.</p>
 </li>
-</ol>
-<hr />
-<h3 id="para-saber-mas"><strong>Para saber más</strong><a class="headerlink" href="#para-saber-mas" title="Permanent link">&para;</a></h3>
-<p>A continuación os dejamos <strong>Otras técnicas de elevación de privilegios</strong>, de la página <strong>HackTricks</strong>. Es una página muy recomendable con información sobre las distintas técnicas de elevación de privilegios en sistemas <strong>Linux</strong>.</p>
-<hr />
-<h2 id="autoevaluacion"><strong>Autoevaluación</strong><a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h2>
+</ul>
+<blockquote>
+<p><strong>Para saber más</strong></p>
+<p>A continuación os dejamos <a href="https://book.hacktricks.wiki/en/linux-hardening/linux-privilege-escalation-checklist.html"><strong>Otras técnicas de elevación de privilegios</strong></a>, de la página <strong>HackTricks</strong>. Es una página muy recomendable con información sobre las distintas técnicas de elevación de privilegios en sistemas <strong>Linux</strong>.</p>
+<p>También os dejamos los <a href="https://www.youtube.com/playlist?list=PLjG9EfEtwbvIrGFTx4XctK8IxkUJkAEqP">videos</a> de los ejercicios de elevación de privilegios en
+Windows del curso LPE Workshop.</p>
+</blockquote>
+<h2 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h2>
 <p><strong>¿Cuál de las siguientes técnicas de elevación de privilegios permite elevar privilegios en Linux aprovechándose de que al utilizar un binario éste se ejecuta con los privilegios del usuario al que pertenece?</strong></p>
 <ul>
 <li>Configuración de sudo.</li>
@@ -4980,7 +4948,6 @@
 <li>Escritura en CRON.</li>
 <li>Explotación de vulnerabilidad en kernel.</li>
 </ul>
-<hr />
 <h3 id="solucion"><strong>Solución</strong><a class="headerlink" href="#solucion" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Incorrecto</strong></li>
