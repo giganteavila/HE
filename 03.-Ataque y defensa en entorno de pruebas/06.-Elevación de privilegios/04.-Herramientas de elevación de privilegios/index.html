@@ -4529,20 +4529,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#windows" class="md-nav__link">
     <span class="md-ellipsis">
       Windows
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4862,20 +4856,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#windows" class="md-nav__link">
     <span class="md-ellipsis">
       Windows
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4899,57 +4887,50 @@
 <p>Existen distintas herramientas que automatizan la detección de vectores de elevación de privilegios. A continuación, se detallan algunas de las más utilizadas:</p>
 <h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>LinPEAS:</strong><ul>
+<li>
+<p><a href="https://github.com/carlospolop/PEASS-ng">LinPEAS</a></p>
+<ul>
 <li>Script en bash que localiza posibles vectores de elevación de privilegios en Linux.</li>
-<li><a href="https://github.com/carlospolop/PEASS-ng">LinPEAS</a></li>
 </ul>
 </li>
 <li>
-<p><strong>LinEnum:</strong></p>
+<p><a href="https://github.com/rebootuser/LinEnum">LinEnum</a></p>
 <ul>
 <li>Script en bash que localiza posibles vectores de elevación de privilegios en Linux, basado en defectos de configuración.</li>
-<li><a href="https://github.com/rebootuser/LinEnum">LinEnum</a></li>
 </ul>
 </li>
 </ul>
-<hr />
-<h3 id="windows"><strong>Windows</strong><a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>WinPEAS:</strong></p>
-<ul>
+<li><a href="https://github.com/carlospolop/PEASS-ng">WinPEAS</a><ul>
 <li>Herramienta que localiza posibles vectores de elevación de privilegios en Windows.</li>
 <li>Disponible en una versión en <strong>PowerShell</strong> y otra ejecutable.</li>
-<li><a href="https://github.com/carlospolop/PEASS-ng">WinPEAS</a></li>
-<li>
-<p><strong>PrivescCheck:</strong></p>
+</ul>
 </li>
 <li>
-<p>Script en <strong>PowerShell</strong> que localiza posibles vectores de elevación de privilegios en Windows.</p>
+<p><a href="https://github.com/itm4n/PrivescCheck">PrivescCheck</a></p>
+<ul>
+<li>Script en <strong>PowerShell</strong> que localiza posibles vectores de elevación de privilegios en Windows.</li>
+</ul>
 </li>
-<li><a href="https://github.com/itm4n/PrivescCheck">PrivescCheck</a></li>
 <li>
-<p><strong>Watson:</strong></p>
-</li>
-<li>
-<p>Aplicación en formato binario que intenta localizar actualizaciones no instaladas en el sistema. Estas actualizaciones podrían ser aprovechadas por un exploit público para elevar los privilegios.</p>
-</li>
+<p><a href="https://github.com/rasta-mouse/Watson">Watson</a></p>
+<ul>
+<li>Aplicación en formato binario que intenta localizar actualizaciones no instaladas en el sistema. Estas actualizaciones podrían ser aprovechadas por un exploit público para elevar los privilegios.</li>
 <li><strong>Nota:</strong> Requiere compilación en <strong>.NET</strong>.</li>
-<li><a href="https://github.com/rasta-mouse/Watson">Watson</a></li>
-<li>
-<p><strong>SeatBelt:</strong></p>
+</ul>
 </li>
 <li>
-<p>Herramienta que localiza posibles vectores de elevación de privilegios en Windows debido a una configuración incorrecta en los sistemas.</p>
-</li>
+<p><a href="https://github.com/GhostPack/Seatbelt">SeatBelt</a></p>
+<ul>
+<li>Herramienta que localiza posibles vectores de elevación de privilegios en Windows debido a una configuración incorrecta en los sistemas.</li>
 <li><strong>Nota:</strong> Requiere compilación con <strong>Visual Studio</strong>.</li>
-<li><a href="https://github.com/GhostPack/Seatbelt">SeatBelt</a></li>
 </ul>
 </li>
 </ul>
 <blockquote>
 <p><strong>Para saber más</strong></p>
-<p>A continuación os dejamos un <a href="https://www.youtube.com/watch?v=6qUTqnp39YU">video</a> de Carlos Polop, el creador de LinPEAS/WinPEAS en el que explica de primera mano el funcionamiento de estas dos herramientas para localizar posibles vectores de escalada de privilegios en un sistema.</p>
+<p>A continuación se recomienda un <a href="https://www.youtube.com/watch?v=6qUTqnp39YU">video</a> de Carlos Polop, el creador de LinPEAS/WinPEAS en el que explica de primera mano el funcionamiento de estas dos herramientas para localizar posibles vectores de escalada de privilegios en un sistema.</p>
 </blockquote>
 
 
