@@ -138,17 +138,16 @@ nav:
       - 01.-Vectores de Ataque: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/01.-Vectores de Ataque.md
       - 02.-Concepto de Exploit: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/02.-Concepto de Exploit.md
       - 03.-Concepto de Payload: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/03.-Concepto de Payload.md
-      - 04.-Herramienta Metasploit: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/04.-Herramienta Metasploit.md
+      - 04.-Herramienta `metasploit`: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/04.-Herramienta `metasploit`.md
       - 05.-Herramienta `msfvenom`: ./03.-Ataque y defensa en entorno de pruebas/03.-Fase de explotación de vulnerabilidades (Exploitation)/05.-Herramienta `msfvenom`.md
-    - 04.-Interceptación, manipulación y monitoriazación del tráfico:
-      - ./03.-Ataque y defensa en entorno de pruebas/04.-Interceptación, manipulación y monitoriazación del tráfico/index.md
-      - 01.-Introducción: ./03.-Ataque y defensa en entorno de pruebas/04.-Interceptación, manipulación y monitoriazación del tráfico/01.-Introducción.md
-      - 02.-Manipulación e inyección de tráfico: ./03.-Ataque y defensa en entorno de pruebas/04.-Interceptación, manipulación y monitoriazación del tráfico/02.-Manipulación e inyección de tráfico.md
+    - 04.-Intercepción, manipulación y monitoriazación del tráfico:
+      - ./03.-Ataque y defensa en entorno de pruebas/04.-Intercepción, manipulación y monitoriazación del tráfico/index.md
+      - 01.-Introducción: ./03.-Ataque y defensa en entorno de pruebas/04.-Intercepción, manipulación y monitoriazación del tráfico/01.-Introducción.md
+      - 02.-Manipulación e inyección de tráfico: ./03.-Ataque y defensa en entorno de pruebas/04.-Intercepción, manipulación y monitoriazación del tráfico/02.-Manipulación e inyección de tráfico.md
     - 05.-Phishing:
       - ./03.-Ataque y defensa en entorno de pruebas/05.-Phishing/index.md
       - 01.-Introducción al phishing y sus tipos: ./03.-Ataque y defensa en entorno de pruebas/05.-Phishing/01.-Introducción al phishing y sus tipos.md
       - 02.-Metodología de Phishing: ./03.-Ataque y defensa en entorno de pruebas/05.-Phishing/02.-Metodología de Phishing.md
-      - 03.-: ./03.-Ataque y defensa en entorno de pruebas/05.-Phishing/03.-.md
     - 06.-Elevación de privilegios:
       - ./03.-Ataque y defensa en entorno de pruebas/06.-Elevación de privilegios/index.md
       - 01.-Introducción a la elevación de privilegios: ./03.-Ataque y defensa en entorno de pruebas/06.-Elevación de privilegios/01.-Introducción a la elevación de privilegios.md
@@ -162,6 +161,10 @@ nav:
       - Práctica 02.-Instalación del Laboratorio con KVM⁄QEMU: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Práctica 02.-Instalación del Laboratorio con KVM⁄QEMU.md
       - Práctica 03.-Fase de Escaneo: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Práctica 03.-Fase de Escaneo.md
       - Práctica 04.-Fase de Explotación con Metasploit: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Práctica 04.-Fase de Explotación con Metasploit.md
+      - Solucion Practica 01: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Solucion Practica 01.md
+      - Solucion Practica 02: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Solucion Practica 02.md
+      - Solucion Practica 03: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Solucion Practica 03.md
+      - Solucion Practica 04: ./03.-Ataque y defensa en entorno de pruebas/07.-Prácticas/Solucion Practica 04.md
   - 99.-Anexos:
     - ./99.-Anexos/index.md
     - 01.-Conversor de OVA a QCOW2: ./99.-Anexos/01.-Conversor de OVA a QCOW2.md

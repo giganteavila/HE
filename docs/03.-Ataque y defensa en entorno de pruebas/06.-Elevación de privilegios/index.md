@@ -1,3 +1,5 @@
+# 06.-Elevación de Privilegios
+
 Las técnicas de elevación de privilegios se encuentran a medio camino entre la "Fase de
 Explotación" y la "Fase de Postexplotación".
 Esta circunstancia se debe a que ciertos vectores de explotación nos proporcionan acceso a la

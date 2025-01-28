@@ -1,0 +1,8 @@
+CETI/
+CajónHE/
+mkdocs.yml
+nav.py
+nav.yml
+poetry.lock
+publica.sh
+pyproject.toml

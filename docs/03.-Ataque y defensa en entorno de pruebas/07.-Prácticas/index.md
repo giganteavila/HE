@@ -58,7 +58,7 @@ Decidida a resolver sus dudas, **Paloma** envía un correo al personal docente p
 
 ## **Respuesta del instructor**
 
-El instructor encargado del grupo de aprendizaje responde a **Paloma**, explicando que los factores que expone son efectivamente limitantes. Sin embargo, existen técnicas como el **Pivoting**, que permiten solventar esta problemática y explorar redes segmentadas.
+El instructor encargado del grupo de aprendizaje responde a **Paloma**, explicando que los factores que expone son efectivamente limitantes. Sin embargo, existen técnicas como el **[Pivoting](https://deephacking.tech/que-es-el-pivoting/)**, que permiten solventar esta problemática y explorar redes segmentadas.
 
 **Paloma**, motivada por la respuesta, afirma que el curso en el que está participando resolverá todas sus dudas.
 
