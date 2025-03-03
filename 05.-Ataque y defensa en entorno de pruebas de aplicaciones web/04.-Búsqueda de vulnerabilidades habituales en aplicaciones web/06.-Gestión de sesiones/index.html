@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Pr%C3%A1ctica%2004.-Ejecuci%C3%B3n%20de%20inyecci%C3%B3n%20SQL%20con%20BurpSuite/">
+        <link rel="prev" href="../05.-Pruebas%20de%20autorizaci%C3%B3n/">
       
       
-        <link rel="next" href="../../../99.-Anexos/">
+        <link rel="next" href="../07.-Validaci%C3%B3n%20de%20los%20puntos%20de%20entrada/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Práctica 05.-Extraer datos con sqlmap - Hacking Ético</title>
+        <title>06.-Gestión de sesiones - Hacking Ético</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#extraccion-del-banner-de-la-base-de-datos-con-sqlmap-en-dvwa" class="md-skip">
+        <a href="#gestion-de-sesiones" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Práctica 05.-Extraer datos con sqlmap
+              06.-Gestión de sesiones
             
           </span>
         </div>
@@ -6192,275 +6192,6 @@
                 
   
   
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    04.-Búsqueda de vulnerabilidades habituales en aplicaciones web
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_5">
-            <span class="md-nav__icon md-icon"></span>
-            04.-Búsqueda de vulnerabilidades habituales en aplicaciones web
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/01.-Fundaci%C3%B3n%20OWASP/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    01.-Fundación OWASP
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/02.-Pruebas%20de%20configuraci%C3%B3n%20y%20despliegue/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    02.-Pruebas de configuración y despliegue
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/03.-Pruebas%20de%20gesti%C3%B3n%20de%20identidad/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    03.-Pruebas de gestión de identidad
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/04.-Pruebas%20de%20autenticaci%C3%B3n/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    04.-Pruebas de autenticación
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/05.-Pruebas%20de%20autorizaci%C3%B3n/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    05.-Pruebas de autorización
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/06.-Gersti%C3%B3n%20de%20sesiones/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    06.-Gerstión de sesiones
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/07.-Validaci%C3%B3n%20de%20los%20puntos%20de%20entrada/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    07.-Validación de los puntos de entrada
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/08.-An%C3%A1lisis%20de%20los%20c%C3%B3digos%20de%20error/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    08.-Análisis de los códigos de error
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04.-B%C3%BAsqueda%20de%20vulnerabilidades%20habituales%20en%20aplicaciones%20web/09.-Vulnerabilidades%20de%20la%20l%C3%B3gica%20de%20negocio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    09.-Vulnerabilidades de la lógica de negocio
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -6470,6 +6201,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -6496,7 +6231,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" checked>
         
           
           
@@ -6505,23 +6240,23 @@
               
   
   <span class="md-ellipsis">
-    07.-Práctica
+    04.-Búsqueda de vulnerabilidades habituales en aplicaciones web
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_5">
             <span class="md-nav__icon md-icon"></span>
-            07.-Práctica
+            04.-Búsqueda de vulnerabilidades habituales en aplicaciones web
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6534,11 +6269,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contexto/" class="md-nav__link">
+      <a href="../01.-Fundaci%C3%B3n%20OWASP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Contexto
+    01.-Fundación OWASP
   </span>
   
 
@@ -6555,11 +6290,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Escenario/" class="md-nav__link">
+      <a href="../02.-Pruebas%20de%20configuraci%C3%B3n%20y%20despliegue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Escenario
+    02.-Pruebas de configuración y despliegue
   </span>
   
 
@@ -6576,11 +6311,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Pr%C3%A1ctica%2001.-Fuerza%20Bruta%20con%20BurpSuite/" class="md-nav__link">
+      <a href="../03.-Pruebas%20de%20gesti%C3%B3n%20de%20identidad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Práctica 01.-Fuerza Bruta con BurpSuite
+    03.-Pruebas de gestión de identidad
   </span>
   
 
@@ -6597,11 +6332,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Pr%C3%A1ctica%2002.-Cross%20Site%20Scripting%20Almacenado%20con%20BurpSuite/" class="md-nav__link">
+      <a href="../04.-Pruebas%20de%20autenticaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Práctica 02.-Cross Site Scripting Almacenado con BurpSuite
+    04.-Pruebas de autenticación
   </span>
   
 
@@ -6618,32 +6353,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Pr%C3%A1ctica%2003.-Ejecuci%C3%B3n%20remota%20de%20c%C3%B3digo%20con%20BurpSuite/" class="md-nav__link">
+      <a href="../05.-Pruebas%20de%20autorizaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Práctica 03.-Ejecución remota de código con BurpSuite
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Pr%C3%A1ctica%2004.-Ejecuci%C3%B3n%20de%20inyecci%C3%B3n%20SQL%20con%20BurpSuite/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Práctica 04.-Ejecución de inyección SQL con BurpSuite
+    05.-Pruebas de autorización
   </span>
   
 
@@ -6671,7 +6385,7 @@
           
   
   <span class="md-ellipsis">
-    Práctica 05.-Extraer datos con sqlmap
+    06.-Gestión de sesiones
   </span>
   
 
@@ -6682,7 +6396,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica 05.-Extraer datos con sqlmap
+    06.-Gestión de sesiones
   </span>
   
 
@@ -6702,63 +6416,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#extraccion-del-banner-de-la-base-de-datos-con-sqlmap-en-dvwa" class="md-nav__link">
+  <a href="#gestion-de-sesiones" class="md-nav__link">
     <span class="md-ellipsis">
-      Extracción del Banner de la Base de Datos con sqlmap en DVWA
+      Gestión de sesiones
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-requisitos-previos" class="md-nav__link">
+  <a href="#atributos-de-las-cookies-de-sesion" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Requisitos Previos
+      Atributos de las cookies de sesión
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-identificar-la-url-vulnerable-en-la-funcionalidad-sql-injection" class="md-nav__link">
+  <a href="#validacion-del-tiempo-de-la-sesion" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Identificar la URL Vulnerable en la Funcionalidad "SQL Injection"
+      Validación del tiempo de la sesión
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-utilizar-sqlmap-para-extraer-el-banner-de-la-base-de-datos" class="md-nav__link">
+  <a href="#incorrecto-cierre-de-sesion" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Utilizar sqlmap para Extraer el Banner de la Base de Datos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-interpretar-los-resultados" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Interpretar los Resultados
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-prevencion-del-ataque" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Prevención del Ataque
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Conclusión
+      Incorrecto cierre de sesión
     </span>
   </a>
   
@@ -6768,6 +6455,292 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07.-Validaci%C3%B3n%20de%20los%20puntos%20de%20entrada/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07.-Validación de los puntos de entrada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08.-An%C3%A1lisis%20de%20los%20c%C3%B3digos%20de%20error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08.-Análisis de los códigos de error
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09.-Vulnerabilidades%20de%20la%20l%C3%B3gica%20de%20negocio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09.-Vulnerabilidades de la lógica de negocio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05.-Pr%C3%A1ctica/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    05.-Práctica
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            05.-Práctica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Pr%C3%A1ctica/Contexto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contexto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Pr%C3%A1ctica/Escenario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Escenario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Pr%C3%A1ctica/Pr%C3%A1ctica%2001.-Fuerza%20Bruta%20con%20BurpSuite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 01.-Fuerza Bruta con BurpSuite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Pr%C3%A1ctica/Pr%C3%A1ctica%2002.-Cross%20Site%20Scripting%20Almacenado%20con%20BurpSuite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 02.-Cross Site Scripting Almacenado con BurpSuite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Pr%C3%A1ctica/Pr%C3%A1ctica%2003.-Ejecuci%C3%B3n%20remota%20de%20c%C3%B3digo%20con%20BurpSuite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 03.-Ejecución remota de código con BurpSuite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Pr%C3%A1ctica/Pr%C3%A1ctica%2004.-Ejecuci%C3%B3n%20de%20inyecci%C3%B3n%20SQL%20con%20BurpSuite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 04.-Ejecución de inyección SQL con BurpSuite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Pr%C3%A1ctica/Pr%C3%A1ctica%2005.-Extraer%20datos%20con%20sqlmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 05.-Extraer datos con sqlmap
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -6897,63 +6870,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#extraccion-del-banner-de-la-base-de-datos-con-sqlmap-en-dvwa" class="md-nav__link">
+  <a href="#gestion-de-sesiones" class="md-nav__link">
     <span class="md-ellipsis">
-      Extracción del Banner de la Base de Datos con sqlmap en DVWA
+      Gestión de sesiones
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-requisitos-previos" class="md-nav__link">
+  <a href="#atributos-de-las-cookies-de-sesion" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Requisitos Previos
+      Atributos de las cookies de sesión
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-identificar-la-url-vulnerable-en-la-funcionalidad-sql-injection" class="md-nav__link">
+  <a href="#validacion-del-tiempo-de-la-sesion" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Identificar la URL Vulnerable en la Funcionalidad "SQL Injection"
+      Validación del tiempo de la sesión
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-utilizar-sqlmap-para-extraer-el-banner-de-la-base-de-datos" class="md-nav__link">
+  <a href="#incorrecto-cierre-de-sesion" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Utilizar sqlmap para Extraer el Banner de la Base de Datos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-interpretar-los-resultados" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Interpretar los Resultados
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-prevencion-del-ataque" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Prevención del Ataque
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Conclusión
+      Incorrecto cierre de sesión
     </span>
   </a>
   
@@ -6974,46 +6920,32 @@
                   
 
 
-  <h1>Práctica 05.-Extraer datos con sqlmap</h1>
+  <h1>06.-Gestión de sesiones</h1>
 
-<h3 id="extraccion-del-banner-de-la-base-de-datos-con-sqlmap-en-dvwa"><strong>Extracción del Banner de la Base de Datos con sqlmap en DVWA</strong><a class="headerlink" href="#extraccion-del-banner-de-la-base-de-datos-con-sqlmap-en-dvwa" title="Permanent link">&para;</a></h3>
-<p>En esta práctica, <strong>utilizaremos la herramienta sqlmap</strong> para explotar la vulnerabilidad de <strong>inyección SQL (SQLi)</strong> en la funcionalidad <strong>"SQL Injection"</strong> de <strong>Damn Vulnerable Web Application (DVWA)</strong> y extraer el <strong>banner de la base de datos</strong>, que nos proporcionará información sobre el motor y la versión del sistema de gestión de bases de datos (DBMS).</p>
-<hr />
-<h2 id="1-requisitos-previos"><strong>1. Requisitos Previos</strong><a class="headerlink" href="#1-requisitos-previos" title="Permanent link">&para;</a></h2>
-<p>✔️ <strong>DVWA ejecutándose en Metasploitable</strong>
- ✔️ <strong>Nivel de seguridad configurado en "Low"</strong> (<code>DVWA Security → Low</code>)
- ✔️ <strong>sqlmap instalado</strong> en la máquina atacante (Kali Linux o Parrot OS)</p>
-<hr />
-<h2 id="2-identificar-la-url-vulnerable-en-la-funcionalidad-sql-injection"><strong>2. Identificar la URL Vulnerable en la Funcionalidad "SQL Injection"</strong><a class="headerlink" href="#2-identificar-la-url-vulnerable-en-la-funcionalidad-sql-injection" title="Permanent link">&para;</a></h2>
-<p>Para utilizar <strong>sqlmap</strong>, primero debemos localizar la <strong>URL vulnerable</strong> de la funcionalidad SQL Injection en DVWA.</p>
-<p>📌 <strong>Ejemplo de URL de prueba:</strong></p>
-<pre><code>http://&lt;IP-METASPLOITABLE&gt;/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit
-</code></pre>
-<p>⚠️ <strong>Reemplaza <code>&lt;IP-METASPLOITABLE&gt;</code> con la IP real de tu máquina Metasploitable.</strong></p>
-<hr />
-<h2 id="3-utilizar-sqlmap-para-extraer-el-banner-de-la-base-de-datos"><strong>3. Utilizar sqlmap para Extraer el Banner de la Base de Datos</strong><a class="headerlink" href="#3-utilizar-sqlmap-para-extraer-el-banner-de-la-base-de-datos" title="Permanent link">&para;</a></h2>
-<p>Ahora, ejecutaremos <strong>sqlmap</strong> para obtener información sobre el <strong>banner de la base de datos</strong> (versión y detalles del DBMS).</p>
-<p>🔹 <strong>Comando sqlmap para extraer el banner:</strong></p>
-<pre><code class="language-bash">sqlmap -u &quot;http://&lt;IP-METASPLOITABLE&gt;/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit&quot; --banner
-</code></pre>
-<hr />
-<h2 id="4-interpretar-los-resultados"><strong>4. Interpretar los Resultados</strong><a class="headerlink" href="#4-interpretar-los-resultados" title="Permanent link">&para;</a></h2>
-<p>Si la aplicación es vulnerable, sqlmap mostrará un resultado similar a este:</p>
-<pre><code class="language-bash">Database Management System: MySQL
-Server version: 5.5.60-0+deb7u1 (Debian)
-</code></pre>
-<p>📌 <strong>Esto confirma que el backend utiliza MySQL 5.5.60.</strong></p>
-<hr />
-<h2 id="5-prevencion-del-ataque"><strong>5. Prevención del Ataque</strong><a class="headerlink" href="#5-prevencion-del-ataque" title="Permanent link">&para;</a></h2>
-<p>Para mitigar vulnerabilidades de inyección SQL, es recomendable:</p>
-<p>🔹 <strong>Usar consultas parametrizadas (<code>Prepared Statements</code>).</strong>
- 🔹 <strong>Escapar caracteres especiales antes de ejecutar consultas SQL.</strong>
- 🔹 <strong>Implementar validación estricta de entradas del usuario.</strong>
- 🔹 <strong>Limitar los privilegios de la base de datos a solo las operaciones necesarias.</strong></p>
-<hr />
-<h2 id="6-conclusion"><strong>6. Conclusión</strong><a class="headerlink" href="#6-conclusion" title="Permanent link">&para;</a></h2>
-<p>Usando <strong>sqlmap</strong>, hemos logrado identificar la versión exacta del DBMS explotando una vulnerabilidad de <strong>inyección SQL en DVWA</strong>. Con esta información, un atacante podría buscar vulnerabilidades específicas para esa versión de MySQL y realizar ataques más avanzados.</p>
-<p><strong>¡Puedes continuar probando sqlmap para extraer nombres de bases de datos, tablas y registros!</strong> 🚀</p>
+<h2 id="gestion-de-sesiones">Gestión de sesiones<a class="headerlink" href="#gestion-de-sesiones" title="Permanent link">&para;</a></h2>
+<p>Tal y como avanzamos en apartados anteriores, el protocolo HTTP/HTTPS es un protocolo de comunicación no orientado a la conexión. Para suplir esta carencia y poder identificar las peticiones de cada usuario legítimo de la aplicación, es necesario enviar al usuario un identificador de la sesión (un ticket que identifica de manera inequívoca al usuario en la aplicación) una vez se ha autenticado. Normalmente este identificador se envía en cada petición HTTP del usuario a través de las cookies o de una cabecera específica.</p>
+<p>Este tipo de pruebas tratan de comprobar si existe algún defecto en la configuración o en la manera en la que la aplicación gestiona las sesiones del usuario para identificar al usuario en el aplicativo.</p>
+<h2 id="atributos-de-las-cookies-de-sesion">Atributos de las cookies de sesión<a class="headerlink" href="#atributos-de-las-cookies-de-sesion" title="Permanent link">&para;</a></h2>
+<p>En caso de que el identificador de sesión del usuario se envíe a través de las cookies, se ha de comprobar que éstas cuentan con todos los atributos de seguridad habilitados para proteger este identificador de que pueda ser robado. Estos atributos se especifican en el momento en el que se genera la cookie (a través de la cabecera de la respuesta HTTP "set-cookie") y se transmiten, al navegador del usuario, en la cabecera “set-cookie” de la respuesta HTTP enviada por el servidor. A continuación, se enumeran los atributos más comunes que se han de comprobar:</p>
+<ul>
+<li><strong>Secure</strong>
+   Atributo que fuerza al navegador del usuario a transmitir la cookie únicamente a través del protocolo HTTPS. De esta manera se evita que se pueda forzar al usuario a transmitir esta cookie mediante HTTP y que pueda ser interceptada mediante ataques de Man in The Middle (ataque ssl-strip).</li>
+<li><strong>HttpOnly</strong>
+   Atributo que especifica que la cookie no puede ser transmitida a través de scripts de cliente. Es decir, no se puede extraer la cookie a través de órdenes JavaScript y por tanto no se podría robar el identificador de sesión utilizando ataques de tipo Cross Site Scripting (este tipo de ataques se detallarán más adelante).</li>
+<li><strong>Domain</strong>
+   Atributo que indica el dominio en el cual la cookie es válida y por lo tanto a los dominios a los que será enviada la cookie. Por ejemplo, si nuestro aplicativo se encuentra en un dominio de tipo cloud como azure <code>https://www.mi_applicacion.azure.com</code> si restringimos el dominio de nuestra cookie de sesión a todo el dominio <code>*.azure.com</code> obligaremos al navegador del usuario a entregar este identificador de sesión a cualquier aplicación dentro del dominio <code>azure.com</code>. En caso que el usuario visitara algún otro aplicativo alojado en el dominio de Azure también se transmitiría el identificador de sesión de nuestro aplicativo al aplicativo de otro dominio.</li>
+<li><strong>Path</strong>
+   Muy similar al atributo anterior, pero en este caso se restringe el path en el cual la cookie es utilizada. Por ejemplo, es muy común en cierto tipo de ISP gratuitos que te ofrecen un alojamiento web en un determinado path del dominio del ISP. Por ejemplo <code>https://sites.ucm.es/aplicativo</code> en este caso cada departamento de la universidad tiene un path distinto en el que cuelgan su aplicativo web. En caso de no restringir el path al correspondiente al de nuestro aplicativo estaremos enviando nuestra cookie (con nuestro identificador de sesión) a cualquier aplicativo dentro del dominio <code>sites.ucm.es</code> (o incluso <code>ucm.es</code> dependiendo del valor del atributo domain), pero no a otros dominios con el mismo path.</li>
+<li><strong>Expires</strong>
+   Indica la fecha en la cual el navegador del usuario deja de utilizar esta cookie. Es una manera de eliminar la cookie de la caché del navegador, aunque si el servidor tiene un tiempo de validez del identificador de sesión más amplio, el identificador seguiría siendo válido, lo único que el navegador del usuario legítimo ya habría descartado ese identificador de sesión y no lo enviaría a la aplicación.</li>
+</ul>
+<p><img alt="" src="../img/image-20250227195817904.png" /></p>
+<h2 id="validacion-del-tiempo-de-la-sesion">Validación del tiempo de la sesión<a class="headerlink" href="#validacion-del-tiempo-de-la-sesion" title="Permanent link">&para;</a></h2>
+<p>Este tipo de pruebas tratan de conocer el rango de tiempo que un identificador de sesión es válido en el servidor. Como hemos visto en el apartado anterior, <strong>expires</strong> sólo controla el tiempo que el navegador del usuario mantiene la cookie en la caché. Pero si un atacante ha conseguido robar el identificador de sesión previamente, podría utilizarlo para suplantar la identidad del usuario legítimo en el servidor mientras que el identificador de sesión sea válido en el servidor. Se recomienda que el identificador de sesión tenga una validez en el servidor de entre <strong>15 – 60 minutos</strong>.</p>
+<p>Para realizar esta prueba basta con acceder a un recurso utilizando un identificador de sesión que se haya utilizado tiempo atrás.</p>
+<h2 id="incorrecto-cierre-de-sesion">Incorrecto cierre de sesión<a class="headerlink" href="#incorrecto-cierre-de-sesion" title="Permanent link">&para;</a></h2>
+<p>De manera similar al anterior, en este caso el problema radica en que cuando el usuario cierra la sesión (mediante la funcionalidad de cierre de sesión) el servidor no invalida el identificador de sesión utilizado por el usuario y podría seguir siendo válido en la aplicación hasta que su tiempo de vida caduque en el servidor.</p>
+<p>La manera de comprobar esta situación es cerrar la sesión del usuario en el aplicativo y probar a acceder a un recurso legítimo del usuario con el identificador de sesión que tenía antes de cerrar la sesión.</p>
 
 
 
